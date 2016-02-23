@@ -1,6 +1,6 @@
 # ArithmeticTools
 
-[![Build Status](https://travis-ci.org/jsbean/DNM.svg)](https://travis-ci.org/dn-m/Arithmetic)
+[![Build Status](https://travis-ci.org/dn-m/ArithmeticTools.svg)](https://travis-ci.org/dn-m/ArithmeticTools)
 
 Basic arithmetic types and operations. For iOS and OSX platforms.
 
