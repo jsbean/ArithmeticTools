@@ -14,6 +14,16 @@
 		078142881C7CED15004B68D3 /* ArithmeticTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078142551C7CECD5004B68D3 /* ArithmeticTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781428A1C7CED35004B68D3 /* ArithmeticTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078142521C7CECD5004B68D3 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0781428C1C7CED3C004B68D3 /* ArithmeticTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		078142911C7CF0C9004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142901C7CF0C9004B68D3 /* ArrayTools.framework */; };
+		078142931C7CF0DB004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142921C7CF0DB004B68D3 /* ArrayTools.framework */; };
+		0781429A1C7CF157004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142961C7CF157004B68D3 /* ArithmeticType.swift */; };
+		0781429B1C7CF157004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142961C7CF157004B68D3 /* ArithmeticType.swift */; };
+		0781429C1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */; };
+		0781429D1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */; };
+		0781429E1C7CF157004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142981C7CF157004B68D3 /* Functions.swift */; };
+		0781429F1C7CF157004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142981C7CF157004B68D3 /* Functions.swift */; };
+		078142A01C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */; };
+		078142A11C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +75,12 @@
 		078142631C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078142711C7CECE0004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		078142901C7CF0C9004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
+		078142921C7CF0DB004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
+		078142961C7CF157004B68D3 /* ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticType.swift; path = ../../Arithmetic/Arithmetic/ArithmeticType.swift; sourceTree = "<group>"; };
+		078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+ArithmeticType.swift"; path = "../../Arithmetic/Arithmetic/Array+ArithmeticType.swift"; sourceTree = "<group>"; };
+		078142981C7CF157004B68D3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = ../../Arithmetic/Arithmetic/Functions.swift; sourceTree = "<group>"; };
+		078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SequenceType+ArithmeticType.swift"; path = "../../Arithmetic/Arithmetic/SequenceType+ArithmeticType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078142911C7CF0C9004B68D3 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				078142931C7CF0DB004B68D3 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +126,7 @@
 				078142541C7CECD5004B68D3 /* ArithmeticTools */,
 				078142601C7CECD5004B68D3 /* ArithmeticToolsTests */,
 				078142531C7CECD5004B68D3 /* Products */,
+				0781428D1C7CF092004B68D3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +144,10 @@
 		078142541C7CECD5004B68D3 /* ArithmeticTools */ = {
 			isa = PBXGroup;
 			children = (
+				078142961C7CF157004B68D3 /* ArithmeticType.swift */,
+				078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */,
+				078142981C7CF157004B68D3 /* Functions.swift */,
+				078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */,
 				078142571C7CECD5004B68D3 /* Info.plist */,
 			);
 			path = ArithmeticTools;
@@ -137,6 +160,31 @@
 				078142631C7CECD5004B68D3 /* Info.plist */,
 			);
 			path = ArithmeticToolsTests;
+			sourceTree = "<group>";
+		};
+		0781428D1C7CF092004B68D3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0781428E1C7CF095004B68D3 /* iOS */,
+				0781428F1C7CF099004B68D3 /* Mac */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0781428E1C7CF095004B68D3 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				078142901C7CF0C9004B68D3 /* ArrayTools.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		0781428F1C7CF099004B68D3 /* Mac */ = {
+			isa = PBXGroup;
+			children = (
+				078142921C7CF0DB004B68D3 /* ArrayTools.framework */,
+			);
+			name = Mac;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -169,6 +217,7 @@
 				0781424E1C7CECD5004B68D3 /* Frameworks */,
 				0781424F1C7CECD5004B68D3 /* Headers */,
 				078142501C7CECD5004B68D3 /* Resources */,
+				078142941C7CF0ED004B68D3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -206,6 +255,7 @@
 				0781426D1C7CECE0004B68D3 /* Frameworks */,
 				0781426E1C7CECE0004B68D3 /* Headers */,
 				0781426F1C7CECE0004B68D3 /* Resources */,
+				078142951C7CF118004B68D3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -310,11 +360,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		078142941C7CF0ED004B68D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ArrayTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		078142951C7CF118004B68D3 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/Mac/ArrayTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0781424D1C7CECD5004B68D3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781429A1C7CF157004B68D3 /* ArithmeticType.swift in Sources */,
+				0781429C1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */,
+				078142A01C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
+				0781429E1C7CF157004B68D3 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0781429B1C7CF157004B68D3 /* ArithmeticType.swift in Sources */,
+				0781429D1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */,
+				078142A11C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
+				0781429F1C7CF157004B68D3 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,26 +537,37 @@
 		078142671C7CECD5004B68D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticTools;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		078142681C7CECD5004B68D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -480,6 +580,7 @@
 		0781426A1C7CECD5004B68D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -490,6 +591,7 @@
 		0781426B1C7CECD5004B68D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -500,12 +602,17 @@
 		078142831C7CECE0004B68D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ArithmeticTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -515,18 +622,24 @@
 				PRODUCT_NAME = ArithmeticTools;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		078142841C7CECE0004B68D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/Mac",
+				);
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ArithmeticTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -544,6 +657,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
@@ -558,6 +672,7 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
