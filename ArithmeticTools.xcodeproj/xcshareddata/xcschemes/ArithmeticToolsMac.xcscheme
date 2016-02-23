@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "078142701C7CECE0004B68D3"
-               BuildableName = "ArithmeticToolsMac.framework"
+               BuildableName = "ArithmeticTools.framework"
                BlueprintName = "ArithmeticToolsMac"
                ReferencedContainer = "container:ArithmeticTools.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142701C7CECE0004B68D3"
-            BuildableName = "ArithmeticToolsMac.framework"
+            BuildableName = "ArithmeticTools.framework"
             BlueprintName = "ArithmeticToolsMac"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142701C7CECE0004B68D3"
-            BuildableName = "ArithmeticToolsMac.framework"
+            BuildableName = "ArithmeticTools.framework"
             BlueprintName = "ArithmeticToolsMac"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142701C7CECE0004B68D3"
-            BuildableName = "ArithmeticToolsMac.framework"
+            BuildableName = "ArithmeticTools.framework"
             BlueprintName = "ArithmeticToolsMac"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>

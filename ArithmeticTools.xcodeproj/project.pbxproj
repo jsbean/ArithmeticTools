@@ -16,14 +16,14 @@
 		0781428C1C7CED3C004B68D3 /* ArithmeticTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		078142911C7CF0C9004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142901C7CF0C9004B68D3 /* ArrayTools.framework */; };
 		078142931C7CF0DB004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142921C7CF0DB004B68D3 /* ArrayTools.framework */; };
-		0781429A1C7CF157004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142961C7CF157004B68D3 /* ArithmeticType.swift */; };
-		0781429B1C7CF157004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142961C7CF157004B68D3 /* ArithmeticType.swift */; };
-		0781429C1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */; };
-		0781429D1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */; };
-		0781429E1C7CF157004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142981C7CF157004B68D3 /* Functions.swift */; };
-		0781429F1C7CF157004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142981C7CF157004B68D3 /* Functions.swift */; };
-		078142A01C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */; };
-		078142A11C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */; };
+		078142A61C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */; };
+		078142A71C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */; };
+		078142A81C7CF3F1004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */; };
+		078142A91C7CF3F1004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */; };
+		078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A41C7CF3F1004B68D3 /* Functions.swift */; };
+		078142AB1C7CF3F1004B68D3 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A41C7CF3F1004B68D3 /* Functions.swift */; };
+		078142AC1C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */; };
+		078142AD1C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,10 +77,10 @@
 		0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142901C7CF0C9004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
 		078142921C7CF0DB004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
-		078142961C7CF157004B68D3 /* ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArithmeticType.swift; path = ../../Arithmetic/Arithmetic/ArithmeticType.swift; sourceTree = "<group>"; };
-		078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+ArithmeticType.swift"; path = "../../Arithmetic/Arithmetic/Array+ArithmeticType.swift"; sourceTree = "<group>"; };
-		078142981C7CF157004B68D3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Functions.swift; path = ../../Arithmetic/Arithmetic/Functions.swift; sourceTree = "<group>"; };
-		078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "SequenceType+ArithmeticType.swift"; path = "../../Arithmetic/Arithmetic/SequenceType+ArithmeticType.swift"; sourceTree = "<group>"; };
+		078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticType.swift; sourceTree = "<group>"; };
+		078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ArithmeticType.swift"; sourceTree = "<group>"; };
+		078142A41C7CF3F1004B68D3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SequenceType+ArithmeticType.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,10 +144,10 @@
 		078142541C7CECD5004B68D3 /* ArithmeticTools */ = {
 			isa = PBXGroup;
 			children = (
-				078142961C7CF157004B68D3 /* ArithmeticType.swift */,
-				078142971C7CF157004B68D3 /* Array+ArithmeticType.swift */,
-				078142981C7CF157004B68D3 /* Functions.swift */,
-				078142991C7CF157004B68D3 /* SequenceType+ArithmeticType.swift */,
+				078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */,
+				078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */,
+				078142A41C7CF3F1004B68D3 /* Functions.swift */,
+				078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */,
 				078142571C7CECD5004B68D3 /* Info.plist */,
 			);
 			path = ArithmeticTools;
@@ -396,10 +396,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0781429A1C7CF157004B68D3 /* ArithmeticType.swift in Sources */,
-				0781429C1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */,
-				078142A01C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
-				0781429E1C7CF157004B68D3 /* Functions.swift in Sources */,
+				078142A61C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */,
+				078142A81C7CF3F1004B68D3 /* Array+ArithmeticType.swift in Sources */,
+				078142AC1C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
+				078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -415,10 +415,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0781429B1C7CF157004B68D3 /* ArithmeticType.swift in Sources */,
-				0781429D1C7CF157004B68D3 /* Array+ArithmeticType.swift in Sources */,
-				078142A11C7CF157004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
-				0781429F1C7CF157004B68D3 /* Functions.swift in Sources */,
+				078142A71C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */,
+				078142A91C7CF3F1004B68D3 /* Array+ArithmeticType.swift in Sources */,
+				078142AD1C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift in Sources */,
+				078142AB1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -701,6 +701,7 @@
 				078142681C7CECD5004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078142691C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -709,6 +710,7 @@
 				0781426B1C7CECD5004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078142821C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMac" */ = {
 			isa = XCConfigurationList;
@@ -717,6 +719,7 @@
 				078142841C7CECE0004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078142851C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMacTests" */ = {
 			isa = XCConfigurationList;
@@ -725,6 +728,7 @@
 				078142871C7CECE0004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
