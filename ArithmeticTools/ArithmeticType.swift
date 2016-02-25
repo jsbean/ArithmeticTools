@@ -12,6 +12,9 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     static func zero() -> Self
     static func one() -> Self
+    
+    static var max: Self { get }
+    static var min: Self { get }
 
     static func + (augend: Self, addend: Self) -> Self
     static func - (minuend: Self, subtrahend: Self) -> Self
@@ -288,6 +291,9 @@ extension Float: ArithmeticType {
     public static func zero() -> Float { return 0 }
     public static func one() -> Float { return 1 }
     
+    public static var max: Float { return FLT_MAX }
+    public static var min: Float { return FLT_MIN }
+    
     public static func mod(dividend: Float, _ modulus: Float) -> Float {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -315,6 +321,9 @@ extension Double: ArithmeticType {
     
     public static func zero() -> Double { return 0 }
     public static func one() -> Double { return 1 }
+    
+    public static var max: Double { return DBL_MAX }
+    public static var min: Double { return DBL_MIN }
     
     public static func mod(dividend: Double, _ modulus: Double) -> Double {
         let result = dividend % modulus
