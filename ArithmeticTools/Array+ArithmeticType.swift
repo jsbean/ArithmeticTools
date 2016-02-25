@@ -24,7 +24,6 @@ extension Array where Element: ArithmeticType {
         case let sum as Int64: return Float(sum) / Float(count)
         case let sum as UInt64: return Float(sum) / Float(count)
         case let sum as Float: return sum / Float(count)
-        case let sum as Float80: return Float(sum) / Float(count)
         case let sum as Double: return Float(sum) / Float(count)
         default: fatalError("Unable to compute value")
         }
