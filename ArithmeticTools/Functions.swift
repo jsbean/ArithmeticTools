@@ -9,6 +9,6 @@
 import Foundation
 
 public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
-    if b == T.zero() { return a }
+    if b == T.zero { return a }
     return greatestCommonDivisor(b, T.mod(a,b))
 }
