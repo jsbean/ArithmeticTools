@@ -33,17 +33,24 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 |**`isPrime`**| `isPrime: Bool`|
 |**`format`**| `format(f: String) -> String` |
 
+***
+
 ### SequenceType Extensions
 
-```Swift
-public var sum: Generator.Element
-```
-
-```Swift
-public var gcd: Generator.Element?
-```
+#### Instance Variables
+| Name | Signature |
+-------|-----------|
+|**`sum`**| `sum: Generator.Element`|
+|**`gcd`**| `gcd: Generator.Element?` |
 
 ### Array Extensions
+
+#### Instance Variables
+| Name | Signature |
+-------|-----------|
+|**`mean`**|`mean: Float`|  
+|**`cumulative`**|`cumulative: [Element]`|
+|**`cumulativeWithValue`**|`cumulativeWithValue: [(Element, Element)]`|
 
 ```Swift
 public var mean: Float
