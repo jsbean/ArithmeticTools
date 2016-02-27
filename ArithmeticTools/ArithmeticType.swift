@@ -43,7 +43,7 @@ extension Int: ArithmeticType {
     
     // default: [0, 2^32]
     public static func random(min min: Int = 0, var max: Int = Int.max) -> Int {
-        max = max >= Int(UInt32.max) ? Int(UInt32.max) : max + 1
+        max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max + 1
         let range = max - min
         return Int(arc4random_uniform(UInt32(range))) + min
     }
@@ -256,7 +256,7 @@ extension Float: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Float = 0, max: Float = 1.0) -> Float {
+    public static func random(min min: Float = 0.0, max: Float = 1.0) -> Float {
         let range = max - min
         return ((Float(arc4random())) / Float(UINT32_MAX) * range) + min
     }
