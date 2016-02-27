@@ -77,20 +77,9 @@ extension Int8: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: Int8 = Int8.min, max: Int8 = Int8.min) -> Int8 {
         return 0
@@ -109,20 +98,9 @@ extension UInt8: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: UInt8 = UInt8.min, max: UInt8 = UInt8.min) -> UInt8 {
         return 0
@@ -141,20 +119,9 @@ extension Int16: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: Int16 = Int16.min, max: Int16 = Int16.min) -> Int16 {
         return 0
@@ -173,20 +140,9 @@ extension UInt16: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: UInt16 = UInt16.min, max: UInt16 = UInt16.min) -> UInt16 {
         return 0
@@ -205,20 +161,9 @@ extension Int32: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: Int32 = Int32.min, max: Int32 = Int32.min) -> Int32 {
         return 0
@@ -238,20 +183,9 @@ extension UInt32: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: UInt32 = UInt32.min, max: UInt32 = UInt32.min) -> UInt32 {
         return 0
@@ -270,20 +204,9 @@ extension Int64: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: Int64 = Int64.min, max: Int64 = Int64.min) -> Int64 {
         return 0
@@ -302,20 +225,9 @@ extension UInt64: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return Int(self).isPrime }
+    public var isEven: Bool { return Int(self).isEven }
+    public var isOdd: Bool { return Int(self).isOdd }
     
     public func random(min min: UInt64 = UInt64.min, max: UInt64 = UInt64.min) -> UInt64 {
         return 0
@@ -337,20 +249,9 @@ extension Float: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
+    public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
+    public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
     
     public func random(min min: Float = Float.min, max: Float = Float.min) -> Float {
         return 0
@@ -372,20 +273,9 @@ extension Double: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
 
-    public var isPrime: Bool {
-        if self % 1 != 0 { return true }
-        return Int(self).isPrime
-    }
-    
-    public var isEven: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isEven
-    }
-    
-    public var isOdd: Bool {
-        if self % 1 != 0 { return false }
-        return Int(self).isOdd
-    }
+    public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
+    public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
+    public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
     
     public func random(min min: Double = Double.min, max: Double = Double.min) -> Double {
         return 0
