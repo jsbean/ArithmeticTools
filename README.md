@@ -7,7 +7,7 @@ Basic arithmetic types and operations. For iOS and OSX platforms.
 ## Usage
 
 ### ArithmeticType
-The `protocol ArithmeticType` unifies [IntegerLiteralConvertible](http://swiftdoc.org/v2.1/protocol/IntegerLiteralConvertible/hierarchy/) types:
+The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://swiftdoc.org/v2.1/protocol/IntegerLiteralConvertible/hierarchy/) types:
 - `Int`, `In8`, `UInt8`, `Int16`, `UInt16`, `Int32`, `UInt32`, `Int64`, `UInt64`
 - `Float`, `Double`
 
