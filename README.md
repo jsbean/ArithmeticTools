@@ -43,6 +43,8 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 |**`sum`**| `sum: Generator.Element`|
 |**`gcd`**| `gcd: Generator.Element?` |
 
+***
+
 ### Array Extensions
 
 #### Instance Variables
@@ -51,18 +53,6 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 |**`mean`**|`mean: Float`|  
 |**`cumulative`**|`cumulative: [Element]`|
 |**`cumulativeWithValue`**|`cumulativeWithValue: [(Element, Element)]`|
-
-```Swift
-public var mean: Float
-```
-
-```Swift
-public var cumulative: [Element]
-```
-
-```Swift
-public var cumulativeWithValue: [(Element, Element)]
-```
 
 ### Free functions
 ```Swift 
