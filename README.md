@@ -9,8 +9,18 @@ Basic arithmetic types and operations. For iOS and OSX platforms.
 ### ArithmeticType
 
 The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://swiftdoc.org/v2.1/protocol/IntegerLiteralConvertible/hierarchy/) types:
-- `Int`, `In8`, `UInt8`, `Int16`, `UInt16`, `Int32`, `UInt32`, `Int64`, `UInt64`
-- `Float`, `Double`
+
+| IntegerType | FloatingPointType |
+| ------------|-------------------|
+|`Int`        | `Float`           |
+|`In8`        | `Double`          |
+|`UInt8`      |                   |
+|`Int16`      |                   |
+| `UInt16`    |                   |
+|`Int32`      |                   |
+|`UInt32`     |                   |
+|`Int64`      |                   |
+|`UInt64`     |                   |
 
 #### Type Variables
 | Name | Signature |
@@ -33,8 +43,6 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 |**`isPrime`**| `isPrime: Bool`|
 |**`format`**| `format(f: String) -> String` |
 
-***
-
 ### SequenceType Extensions
 
 #### Instance Variables
@@ -42,8 +50,6 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 -------|-----------|
 |**`sum`**| `sum: Generator.Element`|
 |**`gcd`**| `gcd: Generator.Element?` |
-
-***
 
 ### Array Extensions
 
