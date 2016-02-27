@@ -55,9 +55,10 @@ The `protocol` **`ArithmeticType`** unifies [IntegerLiteralConvertible](http://s
 |**`cumulativeWithValue`**|`cumulativeWithValue: [(Element, Element)]`|
 
 ### Free functions
-```Swift 
-public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T
-```
+
+| Name | Signature |
+-------|-----------|
+|**`greatestCommonDivisor`**|`greatestCommonDivisor((a: T, _ b: T) -> T`|
 
 ```Swift
 greatestCommonDivisor(4,12) // 4
