@@ -258,7 +258,7 @@ extension Float: ArithmeticType {
     
     public static func random(min min: Float = 0, max: Float = 1.0) -> Float {
         let range = max - min
-        return ((Float(UInt32(arc4random())) / Float(UINT32_MAX)) * range) + min
+        return ((Float(arc4random())) / Float(UINT32_MAX) * range) + min
     }
     
     public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
