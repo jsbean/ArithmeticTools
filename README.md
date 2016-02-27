@@ -13,21 +13,26 @@ Unifies [IntegerLiteralConvertible](http://swiftdoc.org/v2.1/protocol/IntegerLit
 
 Check out this [article](http://www.codingexplorer.com/integers-and-numeric-literals-in-swift/) on integers and numeric literals in Swift.
 
-```Swift
-var isPrime: Bool { get }
-```
+#### Type Variables
+| Name | Signature |
+-------|-----------|
+| **`zero`**| `zero: Bool` |
+| **`one`**| `one: Bool` |
+| **`min`**| `min: Self` |
+| **`max`**| `max: Self` |
 
-```Swift
-var isEven: Bool { get }
-```
+#### Type Methods
+| Name | Signature |
+-------|-----------|
+| **`random`**| `random(min min: Self = ..., max: Self = ...) -> ` |
 
-```Swift
-var isOdd: Bool { get }
-```
-
-```Swift
-func format(f: String) -> String
-```
+#### Instance Variables
+| Name | Signature |
+-------|-----------|
+|**`isEven`**| `isEven: Bool`|
+|**`isOdd`**| `isOdd: Bool` |
+|**`isPrime`**| `isPrime: Bool`|
+|**`format`**| `format(f: String) -> String` |
 
 ### SequenceType Extensions
 
