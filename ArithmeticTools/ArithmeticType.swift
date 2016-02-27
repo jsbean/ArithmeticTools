@@ -15,6 +15,8 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     static var max: Self { get }
     static var min: Self { get }
+    
+    static func random(min min: Self, max: Self) -> Self
 
     static func + (augend: Self, addend: Self) -> Self
     static func - (minuend: Self, subtrahend: Self) -> Self
@@ -25,8 +27,6 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     var isPrime: Bool { get }
     var isEven: Bool { get }
     var isOdd: Bool { get }
-    
-    func random(min min: Self, max: Self) -> Self
     
     func format(f: String) -> String
 }
@@ -41,6 +41,13 @@ extension Int: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    // default: [0, 2^32]
+    public static func random(min min: Int = 0, var max: Int = Int.max) -> Int {
+        max = max >= Int(UInt32.max) ? Int(UInt32.max) : max + 1
+        let range = max - min
+        return Int(arc4random_uniform(UInt32(range))) + min
+    }
+    
     public var isPrime: Bool {
         if self <= 1 { return false }
         if self <= 3 { return true }
@@ -52,17 +59,8 @@ extension Int: ArithmeticType {
         return true
     }
     
-    public var isEven: Bool {
-        return self % 2 == 0
-    }
-    
-    public var isOdd: Bool {
-        return self % 2 != 0
-    }
-    
-    public func random(min min: Int = Int.min, max: Int = Int.min) -> Int {
-        return 0
-    }
+    public var isEven: Bool { return self % 2 == 0 }
+    public var isOdd: Bool { return self % 2 != 0 }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -77,13 +75,15 @@ extension Int8: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: Int8 = Int8.min, max: Int8 = Int8.max) -> Int8 {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     
-    public func random(min min: Int8 = Int8.min, max: Int8 = Int8.min) -> Int8 {
-        return 0
-    }
+
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -98,13 +98,15 @@ extension UInt8: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: UInt8 = UInt8.min, max: UInt8 = UInt8.max) -> UInt8 {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     
-    public func random(min min: UInt8 = UInt8.min, max: UInt8 = UInt8.min) -> UInt8 {
-        return 0
-    }
+
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -119,13 +121,13 @@ extension Int16: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: Int16 = Int16.min, max: Int16 = Int16.max) -> Int16 {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-    public func random(min min: Int16 = Int16.min, max: Int16 = Int16.min) -> Int16 {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -140,13 +142,14 @@ extension UInt16: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: UInt16 = UInt16.min, max: UInt16 = UInt16.max) -> UInt16
+    {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-    public func random(min min: UInt16 = UInt16.min, max: UInt16 = UInt16.min) -> UInt16 {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -161,13 +164,13 @@ extension Int32: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: Int32 = Int32.min, max: Int32 = Int32.max) -> Int32 {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-    public func random(min min: Int32 = Int32.min, max: Int32 = Int32.min) -> Int32 {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -183,13 +186,16 @@ extension UInt32: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: UInt32 = UInt32.min, max: UInt32 = UInt32.max) -> UInt32
+    {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     
-    public func random(min min: UInt32 = UInt32.min, max: UInt32 = UInt32.min) -> UInt32 {
-        return 0
-    }
+
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -204,13 +210,13 @@ extension Int64: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: Int64 = Int64.min, max: Int64 = Int64.max) -> Int64 {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-    public func random(min min: Int64 = Int64.min, max: Int64 = Int64.min) -> Int64 {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -225,13 +231,14 @@ extension UInt64: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: UInt64 = UInt64.min, max: UInt64 = UInt64.max) -> UInt64
+    {
+        return 0
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-    public func random(min min: UInt64 = UInt64.min, max: UInt64 = UInt64.min) -> UInt64 {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -249,13 +256,14 @@ extension Float: ArithmeticType {
         return result < 0 ? result + modulus : result
     }
     
+    public static func random(min min: Float = 0, max: Float = 1.0) -> Float {
+        let range = max - min
+        return ((Float(UInt32(arc4random())) / Float(UINT32_MAX)) * range) + min
+    }
+    
     public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
     public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
     public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
-    
-    public func random(min min: Float = Float.min, max: Float = Float.min) -> Float {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -272,14 +280,15 @@ extension Double: ArithmeticType {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
+    
+    public static func random(min min: Double = Double.min, max: Double = Double.max) -> Double
+    {
+        return 0
+    }
 
     public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
     public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
     public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
-    
-    public func random(min min: Double = Double.min, max: Double = Double.min) -> Double {
-        return 0
-    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
