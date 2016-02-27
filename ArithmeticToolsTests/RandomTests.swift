@@ -15,7 +15,7 @@ class RandomTests: XCTestCase {
         for _ in 0..<1000 {
             let r = Int.random()
             XCTAssert(r >= 0)
-            XCTAssert(r <= Int(UInt32.max))
+            XCTAssert(r <= Int(UInt32.max / 2))
         }
     }
     
