@@ -4,6 +4,20 @@
 
 Basic arithmetic types and operations. For iOS and OSX platforms.
 
+***
+
+<a name="integration"></a>
+## Integration
+
+### Carthage
+Integrate **ArithmeticTools** into your OSX or iOS project with [Carthage](https://github.com/Carthage/Carthage).
+
+1. Follow [these instructions](https://github.com/Carthage/Carthage#installing-carthage) to install Carthage, if necessary.
+2. Add `github "dn-m/ArithmeticTools"` to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile) 
+3. Follow [these instructions](https://github.com/Carthage/Carthage#adding-frameworks-to-an-application) to integrate **ArithmeticTools** into your OSX or iOS project.
+
+***
+
 ## Usage
 
 ### ArithmeticType
@@ -70,13 +84,3 @@ The `protocol` **`ArithmeticType`** unifies [`IntegerLiteralConvertible`](http:/
 greatestCommonDivisor(4,12) // 4
 greatestCommonDivisor(6.0, 9.0) // 3.0
 ```
-
-## Integration
-
-### Carthage
-The best way to integrate **ArithmeticTools** into your iOS or OSX project is with [Carthage](https://github.com/Carthage/Carthage).
-
-Follow [these instructions](https://github.com/Carthage/Carthage#installing-carthage) to install Carthage.
-
-1. Add **Arithmetic** to your Cartfile: ```github "dn-m/ArithmeticTools"```
-2. Update Carthage from the command line: ```carthage update```
