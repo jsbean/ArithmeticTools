@@ -5,7 +5,7 @@ jazzy \
   --author James Bean \
   --author_url http://jamesbean.info \
   --github_url https://github.com/dn-m/ArithmeticTools \
-  --module-version 1.0.1 \
+  --module-version 0.1.8 \
   --module ArithmeticTools \
   --root-url https://dn-m.github.io \
   --output ../site/ArithmeticTools \
