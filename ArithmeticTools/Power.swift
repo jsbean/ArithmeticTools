@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import ArrayTools
 
 public func closestPowerOfTwoTo<T: ArithmeticType>(target: T) -> T? {
     return closestPowerOfTwoWith(coefficient: 2, toTarget: target)
