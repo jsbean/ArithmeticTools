@@ -15,5 +15,5 @@ extension SequenceType where Generator.Element: ArithmeticType {
     public var gcd: Generator.Element? {
         guard let min = self.minElement() else { return nil }
         return self.map { greatestCommonDivisor(min, $0) }.minElement()
-    }    
+    }
 }

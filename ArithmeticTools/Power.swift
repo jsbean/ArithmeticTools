@@ -7,9 +7,17 @@
 //
 
 import Foundation
+import ArrayTools
 
-public func closestPowerOfTwoWith<T: ArithmeticType>(coefficient: T, toTarget target: T) -> T?
+public func closestPowerOfTwoTo<T: ArithmeticType>(target: T) -> T? {
+    return closestPowerOfTwoWith(coefficient: 2, toTarget: target)
+}
+
+public func closestPowerOfTwoWith<T: ArithmeticType>(
+    coefficient coefficient: T, toTarget target: T
+) -> T?
 {
-    
-    return nil
+    let powerSequence = PowerSequence(coefficient: coefficient, max: target, doOvershoot: true)
+    let powersOfTwo = powerSequence.map { $0 }
+    return powersOfTwo.closestTo(target)
 }
