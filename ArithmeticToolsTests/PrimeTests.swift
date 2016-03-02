@@ -27,7 +27,7 @@ class PrimeTests: XCTestCase {
         XCTAssertFalse(9.0.isPrime)
     }
     
-    func testFloatIsPrimeDecimalTrue() {
-        XCTAssertTrue(9.2.isPrime)
+    func testFloatIsPrimeDecimalFalse() {
+        XCTAssertFalse(9.2.isPrime)
     }
 }

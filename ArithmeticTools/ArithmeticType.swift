@@ -26,9 +26,11 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     static func abs(value: Self) -> Self
     
+    var isInteger: Bool { get }
     var isPrime: Bool { get }
     var isEven: Bool { get }
     var isOdd: Bool { get }
+    var isPowerOfTwo: Bool { get }
     
     func format(f: String) -> String
 }
@@ -54,6 +56,8 @@ extension Int: ArithmeticType {
         return value < 0 ? -value : value
     }
     
+    public var isInteger: Bool { return true }
+    
     public var isPrime: Bool {
         if self <= 1 { return false }
         if self <= 3 { return true }
@@ -67,6 +71,7 @@ extension Int: ArithmeticType {
     
     public var isEven: Bool { return self % 2 == 0 }
     public var isOdd: Bool { return self % 2 != 0 }
+    public var isPowerOfTwo: Bool { return self != 0 && (self & (self - 1) == 0) }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -89,9 +94,11 @@ extension Int8: ArithmeticType {
         return value < 0 ? -value : value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -114,9 +121,11 @@ extension UInt8: ArithmeticType {
         return value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -139,9 +148,11 @@ extension Int16: ArithmeticType {
         return value < 0 ? -value : value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -165,9 +176,11 @@ extension UInt16: ArithmeticType {
         return value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -190,9 +203,11 @@ extension Int32: ArithmeticType {
         return value < 0 ? -value : value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -217,9 +232,11 @@ extension UInt32: ArithmeticType {
         return value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -242,9 +259,11 @@ extension Int64: ArithmeticType {
         return value < 0 ? -value : value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -268,9 +287,11 @@ extension UInt64: ArithmeticType {
         return value
     }
     
+    public var isInteger: Bool { return true }
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
+    public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -297,9 +318,11 @@ extension Float: ArithmeticType {
         return ((Float(arc4random())) / Float(UINT32_MAX) * range) + min
     }
     
-    public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
-    public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
-    public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
+    public var isInteger: Bool { return self % 1 == 0 }
+    public var isPrime: Bool { return isInteger ? Int(self).isPrime : false }
+    public var isEven: Bool { return isInteger ? Int(self).isEven : false }
+    public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
+    public var isPowerOfTwo: Bool { return isInteger ? Int(self).isPowerOfTwo : false }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -326,9 +349,11 @@ extension Double: ArithmeticType {
         return value < 0 ? -value : value
     }
 
-    public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }
-    public var isEven: Bool { return self % 1 != 0 ? false : Int(self).isEven }
-    public var isOdd: Bool { return self % 1 != 0 ? false : Int(self).isOdd }
+    public var isInteger: Bool { return self % 1 == 0 }
+    public var isPrime: Bool { return isInteger ? Int(self).isPrime : false }
+    public var isEven: Bool { return isInteger ? Int(self).isEven : false }
+    public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
+    public var isPowerOfTwo: Bool { return isInteger ? Int(self).isPowerOfTwo : false }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
