@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "078141BD1C7CBCF8004B68D3"
-               BuildableName = "ArrayToolsMac.framework"
+               BuildableName = "ArrayTools.framework"
                BlueprintName = "ArrayToolsMac"
                ReferencedContainer = "container:ArrayTools.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078141BD1C7CBCF8004B68D3"
-            BuildableName = "ArrayToolsMac.framework"
+            BuildableName = "ArrayTools.framework"
             BlueprintName = "ArrayToolsMac"
             ReferencedContainer = "container:ArrayTools.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078141BD1C7CBCF8004B68D3"
-            BuildableName = "ArrayToolsMac.framework"
+            BuildableName = "ArrayTools.framework"
             BlueprintName = "ArrayToolsMac"
             ReferencedContainer = "container:ArrayTools.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078141BD1C7CBCF8004B68D3"
-            BuildableName = "ArrayToolsMac.framework"
+            BuildableName = "ArrayTools.framework"
             BlueprintName = "ArrayToolsMac"
             ReferencedContainer = "container:ArrayTools.xcodeproj">
          </BuildableReference>

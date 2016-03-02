@@ -8,6 +8,11 @@
 
 import Foundation
 
+/**
+ Errors thrown when trying to do bad things to an `Array`
+ */
 public enum ArrayError: ErrorType {
+    
+    /// Error thrown when trying to remove an `Element` that is not there.
     case RemovalError
 }

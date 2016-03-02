@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		078141A31C7CBCE4004B68D3 /* ArrayTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078141A21C7CBCE4004B68D3 /* ArrayTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078141AA1C7CBCE5004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0781419F1C7CBCE4004B68D3 /* ArrayTools.framework */; };
-		078141AF1C7CBCE5004B68D3 /* ArrayToolsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078141AE1C7CBCE5004B68D3 /* ArrayToolsTests.swift */; };
 		078141C81C7CBCF8004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078141BE1C7CBCF8004B68D3 /* ArrayTools.framework */; };
 		078141D51C7CBD27004B68D3 /* ArrayTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078141A21C7CBCE4004B68D3 /* ArrayTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		078141DB1C7CBD58004B68D3 /* ArrayTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078141BE1C7CBCF8004B68D3 /* ArrayTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,6 +25,18 @@
 		078141EC1C7CBDC6004B68D3 /* ReplaceElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078141E21C7CBDC6004B68D3 /* ReplaceElements.swift */; };
 		078141EE1C7CBDFB004B68D3 /* ListProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078141ED1C7CBDFB004B68D3 /* ListProcessing.swift */; };
 		078141EF1C7CBDFB004B68D3 /* ListProcessing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078141ED1C7CBDFB004B68D3 /* ListProcessing.swift */; };
+		07994EA11C7E379900296896 /* ElementsAtIndicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994E9E1C7E379900296896 /* ElementsAtIndicesTests.swift */; };
+		07994EA21C7E379900296896 /* ElementsAtIndicesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994E9E1C7E379900296896 /* ElementsAtIndicesTests.swift */; };
+		07994EA31C7E379900296896 /* RemoveElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994E9F1C7E379900296896 /* RemoveElementsTests.swift */; };
+		07994EA41C7E379900296896 /* RemoveElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994E9F1C7E379900296896 /* RemoveElementsTests.swift */; };
+		07994EA51C7E379900296896 /* ReplaceElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994EA01C7E379900296896 /* ReplaceElementsTests.swift */; };
+		07994EA61C7E379900296896 /* ReplaceElementsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994EA01C7E379900296896 /* ReplaceElementsTests.swift */; };
+		07994F881C7EA0A700296896 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994F871C7EA0A700296896 /* Stack.swift */; };
+		07994F891C7EA0A700296896 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994F871C7EA0A700296896 /* Stack.swift */; };
+		07994F8B1C7EA10F00296896 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994F8A1C7EA10F00296896 /* StackTests.swift */; };
+		07994F8C1C7EA10F00296896 /* StackTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07994F8A1C7EA10F00296896 /* StackTests.swift */; };
+		07E00A711C85F12E008478C7 /* AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E00A701C85F12E008478C7 /* AnyObject.swift */; };
+		07E00A721C85F12E008478C7 /* AnyObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E00A701C85F12E008478C7 /* AnyObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +84,6 @@
 		078141A21C7CBCE4004B68D3 /* ArrayTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ArrayTools.h; path = ArrayTools/ArrayTools.h; sourceTree = "<group>"; };
 		078141A41C7CBCE4004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078141A91C7CBCE5004B68D3 /* ArrayToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrayToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		078141AE1C7CBCE5004B68D3 /* ArrayToolsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayToolsTests.swift; sourceTree = "<group>"; };
 		078141B01C7CBCE5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078141BE1C7CBCF8004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArrayTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		078141C71C7CBCF8004B68D3 /* ArrayToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArrayToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -83,6 +93,12 @@
 		078141E11C7CBDC6004B68D3 /* RemoveElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveElements.swift; sourceTree = "<group>"; };
 		078141E21C7CBDC6004B68D3 /* ReplaceElements.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceElements.swift; sourceTree = "<group>"; };
 		078141ED1C7CBDFB004B68D3 /* ListProcessing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListProcessing.swift; sourceTree = "<group>"; };
+		07994E9E1C7E379900296896 /* ElementsAtIndicesTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElementsAtIndicesTests.swift; sourceTree = "<group>"; };
+		07994E9F1C7E379900296896 /* RemoveElementsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveElementsTests.swift; sourceTree = "<group>"; };
+		07994EA01C7E379900296896 /* ReplaceElementsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReplaceElementsTests.swift; sourceTree = "<group>"; };
+		07994F871C7EA0A700296896 /* Stack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		07994F8A1C7EA10F00296896 /* StackTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackTests.swift; sourceTree = "<group>"; };
+		07E00A701C85F12E008478C7 /* AnyObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,12 +159,14 @@
 		078141A11C7CBCE4004B68D3 /* ArrayTools */ = {
 			isa = PBXGroup;
 			children = (
+				078141E01C7CBDC6004B68D3 /* Error.swift */,
 				078141ED1C7CBDFB004B68D3 /* ListProcessing.swift */,
 				078141DE1C7CBDC6004B68D3 /* ElementsAtIndices.swift */,
 				078141DF1C7CBDC6004B68D3 /* Equatable.swift */,
-				078141E01C7CBDC6004B68D3 /* Error.swift */,
+				07E00A701C85F12E008478C7 /* AnyObject.swift */,
 				078141E11C7CBDC6004B68D3 /* RemoveElements.swift */,
 				078141E21C7CBDC6004B68D3 /* ReplaceElements.swift */,
+				07994F871C7EA0A700296896 /* Stack.swift */,
 				078141A41C7CBCE4004B68D3 /* Info.plist */,
 			);
 			path = ArrayTools;
@@ -157,7 +175,10 @@
 		078141AD1C7CBCE5004B68D3 /* ArrayToolsTests */ = {
 			isa = PBXGroup;
 			children = (
-				078141AE1C7CBCE5004B68D3 /* ArrayToolsTests.swift */,
+				07994E9E1C7E379900296896 /* ElementsAtIndicesTests.swift */,
+				07994E9F1C7E379900296896 /* RemoveElementsTests.swift */,
+				07994EA01C7E379900296896 /* ReplaceElementsTests.swift */,
+				07994F8A1C7EA10F00296896 /* StackTests.swift */,
 				078141B01C7CBCE5004B68D3 /* Info.plist */,
 			);
 			path = ArrayToolsTests;
@@ -340,7 +361,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				078141E51C7CBDC6004B68D3 /* Equatable.swift in Sources */,
+				07E00A711C85F12E008478C7 /* AnyObject.swift in Sources */,
 				078141EB1C7CBDC6004B68D3 /* ReplaceElements.swift in Sources */,
+				07994F881C7EA0A700296896 /* Stack.swift in Sources */,
 				078141E71C7CBDC6004B68D3 /* Error.swift in Sources */,
 				078141E91C7CBDC6004B68D3 /* RemoveElements.swift in Sources */,
 				078141EE1C7CBDFB004B68D3 /* ListProcessing.swift in Sources */,
@@ -352,7 +375,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078141AF1C7CBCE5004B68D3 /* ArrayToolsTests.swift in Sources */,
+				07994F8B1C7EA10F00296896 /* StackTests.swift in Sources */,
+				07994EA51C7E379900296896 /* ReplaceElementsTests.swift in Sources */,
+				07994EA31C7E379900296896 /* RemoveElementsTests.swift in Sources */,
+				07994EA11C7E379900296896 /* ElementsAtIndicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +387,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				078141E61C7CBDC6004B68D3 /* Equatable.swift in Sources */,
+				07E00A721C85F12E008478C7 /* AnyObject.swift in Sources */,
 				078141EC1C7CBDC6004B68D3 /* ReplaceElements.swift in Sources */,
+				07994F891C7EA0A700296896 /* Stack.swift in Sources */,
 				078141E81C7CBDC6004B68D3 /* Error.swift in Sources */,
 				078141EA1C7CBDC6004B68D3 /* RemoveElements.swift in Sources */,
 				078141EF1C7CBDFB004B68D3 /* ListProcessing.swift in Sources */,
@@ -373,6 +401,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07994F8C1C7EA10F00296896 /* StackTests.swift in Sources */,
+				07994EA61C7E379900296896 /* ReplaceElementsTests.swift in Sources */,
+				07994EA41C7E379900296896 /* RemoveElementsTests.swift in Sources */,
+				07994EA21C7E379900296896 /* ElementsAtIndicesTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +521,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -507,6 +540,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -519,17 +553,20 @@
 		078141B71C7CBCE5004B68D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArrayToolsTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		078141B81C7CBCE5004B68D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -542,12 +579,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -565,12 +603,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = ArrayTools/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -586,7 +625,8 @@
 		078141D31C7CBCF8004B68D3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayToolsTests/Info.plist;
@@ -595,13 +635,15 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArrayToolsMacTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		078141D41C7CBCF8004B68D3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "-";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = ArrayToolsTests/Info.plist;
@@ -632,6 +674,7 @@
 				078141B51C7CBCE5004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078141B61C7CBCE5004B68D3 /* Build configuration list for PBXNativeTarget "ArrayToolsTests" */ = {
 			isa = XCConfigurationList;
@@ -640,6 +683,7 @@
 				078141B81C7CBCE5004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078141CF1C7CBCF8004B68D3 /* Build configuration list for PBXNativeTarget "ArrayToolsMac" */ = {
 			isa = XCConfigurationList;
@@ -648,6 +692,7 @@
 				078141D11C7CBCF8004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		078141D21C7CBCF8004B68D3 /* Build configuration list for PBXNativeTarget "ArrayToolsMacTests" */ = {
 			isa = XCConfigurationList;
@@ -656,6 +701,7 @@
 				078141D41C7CBCF8004B68D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

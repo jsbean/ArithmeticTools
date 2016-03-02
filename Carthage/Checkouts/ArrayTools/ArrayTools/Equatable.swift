@@ -10,10 +10,18 @@ import Foundation
 
 extension Array where Element: Equatable {
     
+    // MARK: Where Element: Equatable
+    
     /**
-    - parameter element: Element for which to check frequency
+    Get amount of a given `Element` in `Array`.
+    
+    >`[1,2,2,2,3,4,2].amountOf(2) -> 4`
+    
+    >`[1,2,3,4].amountOf(5) -> 0`
+    
+    - parameter element: `Element` for which to check amount.
 
-    - returns: Frequency of Element in Array
+    - returns: Amount of `Element` in `Array`
     */
     public func amountOf(element: Element) -> Int {
         
@@ -27,7 +35,9 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Extract all instances of Element in Array
+    Extract all instances of `Element` in `Array`.
+     
+    >`[1,2,2,2,3,4].extractAllOf(2) -> ([2,2,2], [1,3,4])`
 
     - parameter element: Element to extract
 
@@ -51,11 +61,13 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Sort the contents of an Array with the order of contents in another Array
+    Sort the contents of `Array` with the order of contents in another `Array`.
+     
+    >`["a","b","c","d].sortWithOrderOfContentsIn(["b","c","d"]) -> ["b","c","d","a"]`
 
-    - parameter array: Array containing the desired order of Elements
+    - parameter array: `Array` containing the desired order of `Elements`
 
-    - returns: Array of elements sorted with the desired order
+    - returns: `Array` of `Elements` sorted with the desired order
     */
     public func sortWithOrderOfContentsIn(array: [Element]) -> [Element] {
         
@@ -82,7 +94,9 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Create a 2-tuple containing duplicates extracted from the array, and the leftover Elements
+    Create a 2-tuple containing duplicates extracted from `Array`, and the leftover `Elements`
+     
+    >`[1,2,2,2,3,4,4].extractDuplicates() -> ([2,2,4],[1,2,3,4])`
 
     - returns: (extracted duplicates, leftovers)
     */
@@ -102,7 +116,11 @@ extension Array where Element: Equatable {
         return extractDuplicatesFrom(self, duplicates: [], leftovers: [])
     }
     
-    /// Array of Elements containing only single instances of any Element
+    /**
+     `Array` of `Elements` containing only single instances of any `Element`.
+     
+     >`[1,2,2,3,4,4].unique -> [1,2,3,4]`
+     */
     public var unique: [Element] {
         
         func extractUniqueValuesFrom(array: [Element], var to result: [Element]) -> [Element] {
@@ -115,24 +133,30 @@ extension Array where Element: Equatable {
     }
     
     /**
-    Get index of equatable value type in Array
+    Get index of `Element` in `Array`
+     
+    >`["c","a","t","s"].indexOf("t") -> 2`
+     
+    >`["c","a","t","s"].indexOf("k") -> nil`
 
     - parameter value: Value for index to be found
 
-    - returns: Index of value, if present
+    - returns: Index of first instance of value, if present. Otherwise, `nil`.
     */
-    func indexOf(value: Element) -> Int? {
+    public func indexOf(value: Element) -> Int? {
         for (index, el) in self.enumerate() { if el == value { return index } }
         return nil
     }
     
     /**
-    Replace element with new element
+    Replace `Element` with new `Element`
+     
+    >`["a","c","g","t"].replace("g", withElement: "b") -> ["a","c","b","t"]`
 
-    - parameter element:    Element to be replaced, if present in Array
-    - parameter newElement: New element to replace given element
+    - parameter element:    `Element` to be replaced, if present in `Array`
+    - parameter newElement: New `Element` to replace given `Element`
     */
-    mutating func replace(element: Element, withElement newElement: Element) {
+    public mutating func replace(element: Element, withElement newElement: Element) {
         if let index = indexOf(element) {
             removeAtIndex(index)
             insert(element, atIndex: index)

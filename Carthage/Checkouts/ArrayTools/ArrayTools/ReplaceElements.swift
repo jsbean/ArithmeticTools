@@ -10,16 +10,19 @@ import Foundation
 
 extension Array {
     
+    // MARK: - Replace Elements
+    
     /**
     Replace element at index with a new element
 
     - parameter index:      Index of element to be replaced
     - parameter newElement: New element to replace element at index
     */
-    mutating func replaceElementAt<T: Any>(index: Int, withElement newElement: T) throws {
+    public mutating func replaceElementAt(index: Int, withElement newElement: Element) throws
+    {
         guard index > 0 && index < self.count else { throw ArrayError.RemovalError }
         removeAtIndex(index)
-        insert(newElement as! Element, atIndex: index)
+        insert(newElement, atIndex: index)
     }
     
     /**
@@ -27,7 +30,7 @@ extension Array {
 
     - parameter newElement: New element to replace last element
     */
-    mutating func replaceLastWith(element: Element) throws {
+    public mutating func replaceLastWith(element: Element) throws {
         guard self.count > 0 else { throw ArrayError.RemovalError }
         removeLast()
         append(element)
@@ -38,7 +41,7 @@ extension Array {
 
     - parameter newElement: New element to replace first element
     */
-    mutating func replaceFirstWith(element: Element) throws {
+    public mutating func replaceFirstWith(element: Element) throws {
         try removeFirst()
         insert(element, atIndex: 0)
     }

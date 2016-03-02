@@ -9,25 +9,32 @@
 import Foundation
 
 extension Array {
+
+    // MARK: - Elements At Indices
     
     /**
-    - parameter index: Index of desired object.
+    - parameter index: Index of desired `Element`.
 
-    - returns: Element at index if present. Otherwise nil.
+    - returns: `Element` at index if present. Otherwise `nil`.
     */
     public subscript (safe index: Int) -> Element? {
         return indices ~= index ? self[index] : nil
     }
     
-    /// Second element in an Array
+    /// Second `Element` in an `Array`
     public var second: Element? {
-        if count < 2 { return nil }
+        guard count > 1 else { return nil }
         return self[1] as Element
     }
     
-    /// Second-to-last element in Array
+    /// Second-to-last `Element` in `Array`
     public var penultimate: Element? {
-        if count < 2 { return nil }
+        guard count > 1 else { return nil }
         return self[self.count - 2] as Element
+    }
+    
+    public func last(amount amount: Int) -> [Element]? {
+        guard count >= amount else { return nil }
+        return Array(self[(self.count - amount)..<self.count])
     }
 }
