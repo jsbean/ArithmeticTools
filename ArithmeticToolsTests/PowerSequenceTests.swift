@@ -23,9 +23,14 @@ class PowerSequenceTests: XCTestCase {
         XCTAssertEqual(filtered, [4,8,16,32])
     }
     
-    func testNon2Base() {
+    func testNon2Base_3() {
         let powerSequence = PowerSequence(base: 3, max: 24)
         let mapped = powerSequence.map { $0 }
         XCTAssertEqual(mapped, [3,6,12,24])
+    }
+    
+    func testNon2Base_7() {
+        let powerSequence = PowerSequence(base: 7, max: 56).map { $0 }
+        XCTAssertEqual(powerSequence, [7,14,28,56])
     }
 }

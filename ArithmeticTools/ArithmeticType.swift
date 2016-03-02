@@ -24,6 +24,8 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     static func / (dividend: Self, divisor: Self) -> Self
     static func mod (dividend: Self, _ modulus: Self) -> Self
     
+    static func abs(value: Self) -> Self
+    
     var isPrime: Bool { get }
     var isEven: Bool { get }
     var isOdd: Bool { get }
@@ -46,6 +48,10 @@ extension Int: ArithmeticType {
         max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max + 1
         let range = max - min
         return Int(arc4random_uniform(UInt32(range))) + min
+    }
+    
+    public static func abs(value: Int) -> Int {
+        return value < 0 ? -value : value
     }
     
     public var isPrime: Bool {
@@ -79,11 +85,13 @@ extension Int8: ArithmeticType {
         return 0
     }
     
+    public static func abs(value: Int8) -> Int8 {
+        return value < 0 ? -value : value
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -102,11 +110,13 @@ extension UInt8: ArithmeticType {
         return 0
     }
     
+    public static func abs(value: UInt8) -> UInt8 {
+        return value
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -123,6 +133,10 @@ extension Int16: ArithmeticType {
     
     public static func random(min min: Int16 = Int16.min, max: Int16 = Int16.max) -> Int16 {
         return 0
+    }
+    
+    public static func abs(value: Int16) -> Int16 {
+        return value < 0 ? -value : value
     }
     
     public var isPrime: Bool { return Int(self).isPrime }
@@ -147,6 +161,10 @@ extension UInt16: ArithmeticType {
         return 0
     }
     
+    public static func abs(value: UInt16) -> UInt16 {
+        return value
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
@@ -166,6 +184,10 @@ extension Int32: ArithmeticType {
     
     public static func random(min min: Int32 = Int32.min, max: Int32 = Int32.max) -> Int32 {
         return 0
+    }
+    
+    public static func abs(value: Int32) -> Int32 {
+        return value < 0 ? -value : value
     }
     
     public var isPrime: Bool { return Int(self).isPrime }
@@ -190,12 +212,14 @@ extension UInt32: ArithmeticType {
     {
         return 0
     }
+
+    public static func abs(value: UInt32) -> UInt32 {
+        return value
+    }
     
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
-    
-
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -212,6 +236,10 @@ extension Int64: ArithmeticType {
     
     public static func random(min min: Int64 = Int64.min, max: Int64 = Int64.max) -> Int64 {
         return 0
+    }
+    
+    public static func abs(value: Int64) -> Int64 {
+        return value < 0 ? -value : value
     }
     
     public var isPrime: Bool { return Int(self).isPrime }
@@ -236,6 +264,10 @@ extension UInt64: ArithmeticType {
         return 0
     }
     
+    public static func abs(value: UInt64) -> UInt64 {
+        return value
+    }
+    
     public var isPrime: Bool { return Int(self).isPrime }
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
@@ -254,6 +286,10 @@ extension Float: ArithmeticType {
     public static func mod(dividend: Float, _ modulus: Float) -> Float {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
+    }
+    
+    public static func abs(value: Float) -> Float {
+        return value < 0 ? -value : value
     }
     
     public static func random(min min: Float = 0.0, max: Float = 1.0) -> Float {
@@ -284,6 +320,10 @@ extension Double: ArithmeticType {
     public static func random(min min: Double = Double.min, max: Double = Double.max) -> Double
     {
         return 0
+    }
+    
+    public static func abs(value: Double) -> Double {
+        return value < 0 ? -value : value
     }
 
     public var isPrime: Bool { return self % 1 != 0 ? true : Int(self).isPrime }

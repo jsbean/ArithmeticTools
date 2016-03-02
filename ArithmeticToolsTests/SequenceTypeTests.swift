@@ -45,4 +45,16 @@ class SequenceTypeTests: XCTestCase {
         let array: [Int] = [9,12,21]
         XCTAssertEqual(array.gcd!, 3)
     }
+    
+    func testClosestOver() {
+        let array: [Float] = [2.5, 6.7, 9.2, 5.24]
+        let closest = array.closest(target: 7.1)!
+        XCTAssertEqual(closest, 6.7)
+    }
+    
+    func testClosestUnder() {
+        let array = [1,4,7]
+        let closest = array.closest(target: 6)
+        XCTAssertEqual(closest, 7)
+    }
 }
