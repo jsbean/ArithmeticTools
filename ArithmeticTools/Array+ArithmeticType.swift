@@ -48,7 +48,7 @@ extension Array where Element: ArithmeticType {
         return accumulate(self, result: [], sum: 0)
     }
     
-    public func closest(target target: Element) -> Element? {
+    public func closestTo(target: Element) -> Element? {
         guard count > 0 else { return nil }
         var cur = self[0]
         var diff = Element.abs(target - cur)
