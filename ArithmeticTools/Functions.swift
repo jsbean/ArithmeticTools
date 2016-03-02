@@ -11,3 +11,7 @@ import Foundation
 public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
     return b == T.zero ? a : greatestCommonDivisor(b, T.mod(a,b))
 }
+
+public func closerTo<T: ArithmeticType>(target: T, a: T, b: T) -> T {
+    return T.abs(a - target) <= T.abs(b - target) ? a : b
+}

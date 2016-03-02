@@ -21,6 +21,8 @@
 		074276CE1C877EE400D50A30 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CC1C877EE400D50A30 /* Power.swift */; };
 		074276D01C877EF700D50A30 /* PowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CF1C877EF700D50A30 /* PowerTests.swift */; };
 		074276D11C877EF700D50A30 /* PowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CF1C877EF700D50A30 /* PowerTests.swift */; };
+		07652E101C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
+		07652E111C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
 		078142561C7CECD5004B68D3 /* ArithmeticTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078142551C7CECD5004B68D3 /* ArithmeticTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781425D1C7CECD5004B68D3 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142521C7CECD5004B68D3 /* ArithmeticTools.framework */; };
 		0781427B1C7CECE0004B68D3 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */; };
@@ -97,6 +99,7 @@
 		074276C91C8775B800D50A30 /* PowerSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSequenceTests.swift; sourceTree = "<group>"; };
 		074276CC1C877EE400D50A30 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		074276CF1C877EF700D50A30 /* PowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerTests.swift; sourceTree = "<group>"; };
+		07652E0F1C8788B300359A03 /* CloserToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloserToTests.swift; sourceTree = "<group>"; };
 		078142521C7CECD5004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142551C7CECD5004B68D3 /* ArithmeticTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ArithmeticTools.h; path = ArithmeticTools/ArithmeticTools.h; sourceTree = "<group>"; };
 		078142571C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -212,6 +215,7 @@
 				078142AE1C7CF494004B68D3 /* EvenTests.swift */,
 				071F3C711C8227F300F6BD28 /* RandomTests.swift */,
 				078142AF1C7CF494004B68D3 /* GreatestCommonDivisorTests.swift */,
+				07652E0F1C8788B300359A03 /* CloserToTests.swift */,
 				078142B01C7CF494004B68D3 /* OddTests.swift */,
 				078142B11C7CF494004B68D3 /* PrimeTests.swift */,
 				078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */,
@@ -479,6 +483,7 @@
 				074276CA1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */,
 				078142B31C7CF494004B68D3 /* EvenTests.swift in Sources */,
 				078142B71C7CF494004B68D3 /* OddTests.swift in Sources */,
+				07652E101C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142B91C7CF494004B68D3 /* PrimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -509,6 +514,7 @@
 				074276CB1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */,
 				078142B41C7CF494004B68D3 /* EvenTests.swift in Sources */,
 				078142B81C7CF494004B68D3 /* OddTests.swift in Sources */,
+				07652E111C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142BA1C7CF494004B68D3 /* PrimeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
