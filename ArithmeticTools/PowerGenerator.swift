@@ -12,17 +12,28 @@ public class PowerGenerator<T: ArithmeticType>: GeneratorType {
     
     public typealias Element = T
     
+    private let doOvershoot: Bool
+    private var hasOvershot: Bool = false
+    
     private var power: T
-    private var base: T
+    private var coefficient: T
     private var max: T?
     
-    public init(base: T, max: T? = nil) {
-        self.power = base
-        self.base = base
+    public init(coefficient: T, max: T? = nil, doOvershoot: Bool = false) {
+        self.power = coefficient
+        self.coefficient = coefficient
         self.max = max
+        self.doOvershoot = doOvershoot
     }
 
     public func next() -> Element? {
+        if doOvershoot {
+            if hasOvershot { return nil }
+            if power > max {
+                hasOvershot = true
+                return power
+            }
+        }
         let result = power
         power = power * 2
         if let max = max { return result <= max ? result : nil }
