@@ -18,6 +18,5 @@ public func closestPowerOfTwoWith<T: ArithmeticType>(
 ) -> T?
 {
     let powerSequence = PowerSequence(coefficient: coefficient, max: target, doOvershoot: true)
-    let powersOfTwo = powerSequence.map { $0 }
-    return powersOfTwo.closestTo(target)
+    return powerSequence.map { $0 }.closestTo(target)
 }
