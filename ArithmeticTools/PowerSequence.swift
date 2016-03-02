@@ -10,17 +10,17 @@ import Foundation
 
 public class PowerSequence<T: ArithmeticType>: SequenceType {
 
-    private let min: T
+    private let base: T
     private let max: T
     
     public typealias Generator = PowerGenerator<T>
     
-    public init(min: T, max: T) {
-        self.min = min
+    public init(base: T, max: T) {
+        self.base = base
         self.max = max
     }
     
     public func generate() -> Generator {
-        return PowerGenerator(min: min, max: max)
+        return PowerGenerator(base: base, max: max)
     }
 }
