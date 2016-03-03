@@ -9,7 +9,7 @@
 import Foundation
 
 /**
- Get greatest common divisor of two values.
+ Get the greatest common divisor of two values.
  
  - parameter a: One value
  - parameter b: Another value

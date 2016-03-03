@@ -36,10 +36,54 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
 
     // MARK: - Arithmetic Binary Operators
     
+    /**
+    Get the sum of two ArithmeticType values.
+    
+    - parameter augend: Augend
+    - parameter addend: Addend
+    
+    - returns: Sum of augend and addend
+    */
     static func + (augend: Self, addend: Self) -> Self
+    
+    /**
+     Get the difference of two ArithmeticType values.
+     
+     - parameter minuend:    Minuend
+     - parameter subtrahend: Subtrahend
+     
+     - returns: Difference of minuend and subtrahend
+     */
     static func - (minuend: Self, subtrahend: Self) -> Self
+    
+    /**
+     Get the product of two ArithmeticType values.
+     
+     - parameter multiplicand: Multiplicand
+     - parameter multiplier:   Multiplier
+     
+     - returns: Product of multiplicand and multiplier
+     */
     static func * (multiplicand: Self, multiplier: Self) -> Self
+    
+    /**
+     Get the quotient of two ArithmeticType values.
+     
+     - parameter dividend: Dividend
+     - parameter divisor:  Divisor
+     
+     - returns: Quotient of dividend and divisor
+     */
     static func / (dividend: Self, divisor: Self) -> Self
+    
+    /**
+     Get the remainder of two ArithmeticType values.
+     
+     - parameter dividend: Dividend
+     - parameter modulus:  Modulus
+     
+     - returns: Remainder of dividend and modulus
+     */
     static func mod (dividend: Self, _ modulus: Self) -> Self
     
     // MARK: - Arithmatic Unary Operators
