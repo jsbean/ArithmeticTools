@@ -8,10 +8,27 @@
 
 import Foundation
 
+/**
+ Get greatest common divisor of two values.
+ 
+ - parameter a: One value
+ - parameter b: Another value
+ 
+ - returns: Greatest common divisor of two values
+ */
 public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
-    return b == T.zero ? a : greatestCommonDivisor(b, T.mod(a,b))
+    return b == 0 ? a : greatestCommonDivisor(b, T.mod(a,b))
 }
 
+/**
+ Get the closer of two values to a target value.
+ 
+ - parameter target: Target value to check for closest value
+ - parameter a:      One value to check distance from target
+ - parameter b:      Another value to check distance from target
+ 
+ - returns: Value closer to target value
+ */
 public func closerTo<T: ArithmeticType>(target: T, a: T, b: T) -> T {
     return T.abs(a - target) <= T.abs(b - target) ? a : b
 }

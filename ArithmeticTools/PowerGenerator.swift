@@ -8,8 +8,12 @@
 
 import Foundation
 
+/// Power-of-two Generator
 public class PowerGenerator<T: ArithmeticType>: GeneratorType {
     
+    // MARK: - Associated Types
+    
+    /// This GeneratorType generates ArithmeticType values
     public typealias Element = T
     
     private let doOvershoot: Bool
@@ -19,13 +23,27 @@ public class PowerGenerator<T: ArithmeticType>: GeneratorType {
     private var coefficient: T
     private var max: T?
     
+    // MARK: - Initializers
+    
+    /**
+     Create a PowerGenerator.
+     
+     - parameter coefficient: Coefficient that multiplies base of exponential expression
+     - parameter max:         Maximum value of generated powers-of-two
+     - parameter doOvershoot: If generator includes the next power-of-two greater than max
+     
+     - returns: Initialized PowerGenerator
+     */
     public init(coefficient: T, max: T? = nil, doOvershoot: Bool = false) {
         self.power = coefficient
         self.coefficient = coefficient
         self.max = max
         self.doOvershoot = doOvershoot
     }
+    
+    // MARK: - Instance Methods
 
+    /// Advance to the next element and return it, or nil if no next element exists.
     public func next() -> Element? {
         if doOvershoot {
             if hasOvershot { return nil }
