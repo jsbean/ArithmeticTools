@@ -10,10 +10,18 @@ import Foundation
 
 extension SequenceType where Generator.Element: ArithmeticType {
     
-    /// Sum of elements in Sequence
+    /**
+     Sum of elements in Sequence
+     
+     >`[1,2,4].sum -> 7`
+    */
     public var sum: Generator.Element { return reduce(0, combine: +) }
     
-    /// Greatest common divisor of elements in Sequence
+    /**
+     Greatest common divisor of elements in Sequence
+     
+     >`[8,12].gcd -> 4`
+    */
     public var gcd: Generator.Element? {
         guard let min = self.minElement() else { return nil }
         return self.map { greatestCommonDivisor(min, $0) }.minElement()

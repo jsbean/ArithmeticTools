@@ -17,7 +17,7 @@ public class PowerSequence<T: ArithmeticType>: SequenceType {
     
     // MARK: - Associated Types
     
-    /// PowerGenerator ArithmeticType values
+    /// PowerGenerator generates ArithmeticType values.
     public typealias Generator = PowerGenerator<T>
     
     // MARK: - Initializers
