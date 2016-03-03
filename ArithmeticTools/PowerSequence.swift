@@ -9,7 +9,7 @@
 import Foundation
 
 /// Power-of-two Sequence
-public class PowerSequence<T: ArithmeticType>: SequenceType {
+internal class PowerSequence<T: ArithmeticType>: SequenceType {
 
     private let doOvershoot: Bool
     private let coefficient: T
@@ -18,7 +18,7 @@ public class PowerSequence<T: ArithmeticType>: SequenceType {
     // MARK: - Associated Types
     
     /// PowerGenerator generates ArithmeticType values.
-    public typealias Generator = PowerGenerator<T>
+    internal typealias Generator = PowerGenerator<T>
     
     // MARK: - Initializers
     
@@ -31,7 +31,7 @@ public class PowerSequence<T: ArithmeticType>: SequenceType {
     
     - returns: Initialized PowerSequence
     */
-    public init(coefficient: T, max: T, doOvershoot: Bool = false) {
+    internal init(coefficient: T, max: T, doOvershoot: Bool = false) {
         self.coefficient = coefficient
         self.max = max
         self.doOvershoot = doOvershoot
@@ -44,7 +44,7 @@ public class PowerSequence<T: ArithmeticType>: SequenceType {
     
     - returns: PowerGenerator
     */
-    public func generate() -> Generator {
+    internal func generate() -> Generator {
         return PowerGenerator(coefficient: coefficient, max: max, doOvershoot: doOvershoot)
     }
 }

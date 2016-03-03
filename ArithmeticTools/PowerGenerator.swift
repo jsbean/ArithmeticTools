@@ -9,12 +9,12 @@
 import Foundation
 
 /// Power-of-two Generator
-public class PowerGenerator<T: ArithmeticType>: GeneratorType {
+internal class PowerGenerator<T: ArithmeticType>: GeneratorType {
     
     // MARK: - Associated Types
     
     /// This GeneratorType generates ArithmeticType values
-    public typealias Element = T
+    internal typealias Element = T
     
     private let doOvershoot: Bool
     private var hasOvershot: Bool = false
@@ -34,7 +34,7 @@ public class PowerGenerator<T: ArithmeticType>: GeneratorType {
      
      - returns: Initialized PowerGenerator
      */
-    public init(coefficient: T, max: T? = nil, doOvershoot: Bool = false) {
+    internal init(coefficient: T, max: T? = nil, doOvershoot: Bool = false) {
         self.power = coefficient
         self.coefficient = coefficient
         self.max = max
@@ -44,7 +44,7 @@ public class PowerGenerator<T: ArithmeticType>: GeneratorType {
     // MARK: - Instance Methods
 
     /// Advance to the next element and return it, or nil if no next element exists.
-    public func next() -> Element? {
+    internal func next() -> Element? {
         if doOvershoot {
             if hasOvershot { return nil }
             if power > max {
