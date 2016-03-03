@@ -11,7 +11,11 @@ import Foundation
 /**
  Get power-of-two value that is closest to a target value.
  
+ >`closestPowerOfTwo(13) -> 16`
+ 
  - note: If two values are equidistant from the target value, the lesser value is returned.
+ 
+ >`closestPowerOfTwo(12) -> 8`
  
  - parameter target: Value to check for closest power-of-two
  
@@ -24,7 +28,11 @@ public func closestPowerOfTwoTo<T: ArithmeticType>(target: T) -> T? {
 /**
  Get power-of-two value (with coefficient) that is closest to a target value.
 
-  - note: If two values are equidistant from the target value, the lesser value is returned.
+ >`closestPowerOfTwoWith(coefficient: 3, toTarget: 22) -> 24`
+
+ - note: If two values are equidistant from the target value, the lesser value is returned.
+ 
+ >`closestPowerOfTwoWith(coefficient: 3, toTarget: 18) -> 12`
  
  - parameter coefficient: Coefficient
  - parameter target:      Value to check for closest power-of-two
