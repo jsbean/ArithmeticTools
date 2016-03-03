@@ -14,7 +14,7 @@ import Foundation
  */
 public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
-    // MARK: Type Variables
+    // MARK: Type Properties
     
     /// Maximum value for conforming type
     static var max: Self { get }
