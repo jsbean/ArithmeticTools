@@ -11,11 +11,11 @@ import Foundation
 /**
  Get power-of-two value that is closest to a target value.
  
- >`closestPowerOfTwo(13) -> 16`
+ >`closestPowerOfTwoTo(13) -> 16`
  
  - note: If two values are equidistant from the target value, the lesser value is returned.
  
- >`closestPowerOfTwo(12) -> 8`
+ >`closestPowerOfTwoTo(12) -> 8`
  
  - parameter target: Value to check for closest power-of-two
  
