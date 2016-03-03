@@ -11,7 +11,7 @@ import ArrayTools
 
 extension Array where Element: ArithmeticType {
     
-    /// Average of elements in Array
+    /// Average of elements in Array.
     public var mean: Float? {
         if count == 0 { return nil }
         switch sum {
@@ -31,7 +31,7 @@ extension Array where Element: ArithmeticType {
     }
     
     /** 
-     Cumulative representation of elements in Array
+     Cumulative representation of elements in Array.
      
      >`[1,2,2].cumulative -> [0,1,3]`
      
@@ -45,9 +45,9 @@ extension Array where Element: ArithmeticType {
     }
     
     /**
-     Returns (position, value)
+     Returns (position, value).
      
-     >`[1,2,2].cumulateWithValue -> [(0,1),(1,2),(3,2)]`
+     >`[1,2,2].cumulativeWithValue -> [(0,1),(1,2),(3,2)]`
     */
     public var cumulativeWithValue: [(Element, Element)] {
         func accumulate(array: [Element], result: [(Element, Element)], sum: Element)
@@ -60,7 +60,7 @@ extension Array where Element: ArithmeticType {
     }
     
     /**
-     Closest value in Array to target value
+     Get the closest value in Array to target value.
      
      - parameter target: Value to check for closest component
      
