@@ -86,7 +86,7 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
      */
     static func mod (dividend: Self, _ modulus: Self) -> Self
     
-    // MARK: - Arithmatic Unary Operators
+    // MARK: - Arithmetic Unary Operators
     
     /**
     Get the absolute value of ArithmeticType value.
