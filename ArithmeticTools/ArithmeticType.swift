@@ -90,12 +90,21 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     static func abs(value: Self) -> Self
     
-    // MARK: Instance Variables
+    // MARK: Instance Properties
     
+    /// If ArithmeticType value is integral.
     var isInteger: Bool { get }
+    
+    /// If ArithmeticType value is prime.
     var isPrime: Bool { get }
+    
+    /// If ArithmeticType value is even.
     var isEven: Bool { get }
+    
+    /// If ArithmeticType value is odd.
     var isOdd: Bool { get }
+    
+    /// If ArithmeticType value is a power-of-two.
     var isPowerOfTwo: Bool { get }
     
     // MARK: Instance Methods
