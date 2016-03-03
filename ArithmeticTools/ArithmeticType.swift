@@ -16,18 +16,33 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     // MARK: Type Variables
     
+    /// Maximum value for conforming type
     static var max: Self { get }
+    
+    /// Minumum value for conforming type
     static var min: Self { get }
     
     // MARK: Type Methods
     
+    /**
+    Make a random value for conforming type
+    
+    - parameter min: Lower bound (inclusive) for random value
+    - parameter max: Upper bound (inclusive) for random value
+    
+    - returns: Random value in specified range
+    */
     static func random(min min: Self, max: Self) -> Self
 
+    // MARK: - Arithmetic Binary Operators
+    
     static func + (augend: Self, addend: Self) -> Self
     static func - (minuend: Self, subtrahend: Self) -> Self
     static func * (multiplicand: Self, multiplier: Self) -> Self
     static func / (dividend: Self, divisor: Self) -> Self
     static func mod (dividend: Self, _ modulus: Self) -> Self
+    
+    // MARK: - Arithmatic Unary Operators
     
     static func abs(value: Self) -> Self
     
