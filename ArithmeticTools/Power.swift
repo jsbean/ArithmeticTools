@@ -47,5 +47,5 @@ public func closestPowerOfTwoWith<T: ArithmeticType>(
     guard !pseq.isEmpty else { return nil }
     guard pseq.count > 1 else { return pseq.first! }
     let lastPair = pseq.last(amount: 2)!
-    return closerTo(target, a: lastPair[0], b: lastPair[1])
+    return closerTo(target: target, a: lastPair[0], b: lastPair[1])
 }
