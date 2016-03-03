@@ -88,6 +88,13 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     // MARK: - Arithmatic Unary Operators
     
+    /**
+    Get the absolute value of ArithmeticType value.
+    
+    - parameter value: Value for which to get absolute value
+    
+    - returns: Absolute value of value
+    */
     static func abs(value: Self) -> Self
     
     // MARK: Instance Properties
