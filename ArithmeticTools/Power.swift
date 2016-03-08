@@ -25,6 +25,13 @@ public func closestPowerOfTwoTo<T: ArithmeticType>(target: T) -> T? {
     return closestPowerOfTwoWith(coefficient: 2, to: target)
 }
 
+/**
+ Get power-of-two value that is closest to and less than a target value.
+ 
+ - parameter target: Value to check for closest to and less than power-of-two
+ 
+ - returns: Power-of-two value closest to and lesser target alue
+ */
 public func closestPowerOfTwoUnder<T: ArithmeticType>(target: T) -> T? {
     return closestPowerOfTwoWith(coefficient: 2, under: target)
 }
@@ -53,6 +60,14 @@ public func closestPowerOfTwoWith<T: ArithmeticType>(coefficient coefficient: T,
     return closerTo(target: target, a: lastPair[0], b: lastPair[1])
 }
 
+/**
+ Get power-of-two value (with coefficient) that is closest to and less than a target value.
+ 
+ - parameter coefficient: Coefficient
+ - parameter target:      Value to check for closest and lesser power-of-two
+ 
+ - returns: Power-of-two (with coefficient) closest to and less than target value
+ */
 public func closestPowerOfTwoWith<T: ArithmeticType>(coefficient coefficient: T,
     under target: T
 ) -> T?
