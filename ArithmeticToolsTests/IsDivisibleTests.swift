@@ -11,15 +11,15 @@ import XCTest
 
 class IsDivisibleTests: XCTestCase {
 
-    func testIntIsDividableByFalsePrime() {
+    func testIntIsDivisibleByFalsePrime() {
         XCTAssertFalse(17.isDivisibleBy(3))
     }
     
-    func testIntIsDividableByFalse() {
+    func testIntIsDivisibleByFalse() {
         XCTAssertFalse(9.isDivisibleBy(4))
     }
     
-    func testIntIsDividableByTrue() {
+    func testIntIsDivisibleByTrue() {
         XCTAssert(42.isDivisibleBy(21))
     }
 }

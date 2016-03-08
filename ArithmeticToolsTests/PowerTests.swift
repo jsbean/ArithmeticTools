@@ -11,23 +11,28 @@ import XCTest
 
 class PowerTests: XCTestCase {
 
+    func testClosestPowerOfTwoUnder() {
+        let closest = closestPowerOfTwoUnder(7)!
+        XCTAssertEqual(closest, 4)
+    }
+    
     func testClosestPowerOf2() {
         let closest = closestPowerOfTwoTo(19)!
         XCTAssertEqual(closest, 16)
     }
     
     func testClosestPowerOf2_coeff2() {
-        let closest = closestPowerOfTwoWith(coefficient: 2, toTarget: 13)!
+        let closest = closestPowerOfTwoWith(coefficient: 2, to: 13)!
         XCTAssertEqual(closest, 16)
     }
     
     func testClosestPowerOf2_coeff3() {
-        let closest = closestPowerOfTwoWith(coefficient: 3, toTarget: 11)!
+        let closest = closestPowerOfTwoWith(coefficient: 3, to: 11)!
         XCTAssertEqual(closest, 12)
     }
     
     func testClosestPowerOf2_coeff11() {
-        let closest = closestPowerOfTwoWith(coefficient: 11, toTarget: 13)!
+        let closest = closestPowerOfTwoWith(coefficient: 11, to: 13)!
         XCTAssertEqual(closest, 11)
     }
     
