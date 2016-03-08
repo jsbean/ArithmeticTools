@@ -9,7 +9,7 @@
 import XCTest
 @testable import ArithmeticTools
 
-class IsDividableTests: XCTestCase {
+class IsDivisibleTests: XCTestCase {
 
     func testIntIsDividableByFalsePrime() {
         XCTAssertFalse(17.isDivisibleBy(3))
