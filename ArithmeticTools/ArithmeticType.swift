@@ -116,6 +116,8 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     // MARK: Instance Methods
     
+    func isDivisibleBy(value: Self) -> Bool
+    
     func format(f: String) -> String
 }
 
@@ -154,6 +156,8 @@ extension Int: ArithmeticType {
     public var isOdd: Bool { return self % 2 != 0 }
     public var isPowerOfTwo: Bool { return self != 0 && (self & (self - 1) == 0) }
     
+    public func isDivisibleBy(value: Int) -> Bool { return self % value == 0 }
+    
     public func format(f: String) -> String { return String(format(f), self) }
 }
 
@@ -177,6 +181,10 @@ extension Int8: ArithmeticType {
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
+
+    public func isDivisibleBy(value: Int8) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -202,6 +210,10 @@ extension UInt8: ArithmeticType {
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
+    public func isDivisibleBy(value: UInt8) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
+    
     public func format(f: String) -> String { return String(format(f), self) }
 }
 
@@ -225,6 +237,10 @@ extension Int16: ArithmeticType {
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
+    
+    public func isDivisibleBy(value: Int16) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -251,6 +267,10 @@ extension UInt16: ArithmeticType {
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
+    public func isDivisibleBy(value: UInt16) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
+    
     public func format(f: String) -> String { return String(format(f), self) }
 }
 
@@ -274,6 +294,10 @@ extension Int32: ArithmeticType {
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
+    
+    public func isDivisibleBy(value: Int32) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -301,6 +325,10 @@ extension UInt32: ArithmeticType {
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
     
+    public func isDivisibleBy(value: UInt32) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
+    
     public func format(f: String) -> String { return String(format(f), self) }
 }
 
@@ -324,6 +352,10 @@ extension Int64: ArithmeticType {
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
+    
+    public func isDivisibleBy(value: Int64) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -349,6 +381,10 @@ extension UInt64: ArithmeticType {
     public var isEven: Bool { return Int(self).isEven }
     public var isOdd: Bool { return Int(self).isOdd }
     public var isPowerOfTwo: Bool { return Int(self).isPowerOfTwo }
+    
+    public func isDivisibleBy(value: UInt64) -> Bool {
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
@@ -378,6 +414,11 @@ extension Float: ArithmeticType {
     public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
     public var isPowerOfTwo: Bool { return isInteger ? Int(self).isPowerOfTwo : false }
     
+    public func isDivisibleBy(value: Float) -> Bool {
+        guard isInteger else { return false }
+        return Int(self).isDivisibleBy(Int(value))
+    }
+    
     public func format(f: String) -> String { return String(format(f), self) }
 }
 
@@ -405,6 +446,11 @@ extension Double: ArithmeticType {
     public var isEven: Bool { return isInteger ? Int(self).isEven : false }
     public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
     public var isPowerOfTwo: Bool { return isInteger ? Int(self).isPowerOfTwo : false }
+    
+    public func isDivisibleBy(value: Double) -> Bool {
+        guard isInteger else { return false }
+        return Int(self).isDivisibleBy(Int(value))
+    }
     
     public func format(f: String) -> String { return String(format(f), self) }
 }
