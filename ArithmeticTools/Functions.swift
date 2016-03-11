@@ -26,17 +26,13 @@ public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
 /**
  Get the closer of two values to a target value.
  
- >`closerTo(target: 11, a: 12, b: 3) -> 12`
+ >`closer(to: 11, a: 12, b: 3) -> 12`
  
  - note: If the distances between both values and the target value are equivalent, the first
  value (a) is returned.
  
- >`closerTo(target: 6, a: 4, b: 8) -> 4`
- 
- - parameter target: Target value to check for closest value
- - parameter a:      ArithmeticType value to check distance from target
- - parameter b:      ArithmeticType value to check distance from target
- 
+ >`closer(to: 6, a: 4, b: 8) -> 4`
+
  - returns: Value closer to target value
  */
 public func closer<T: ArithmeticType>(to target: T, a: T, b: T) -> T {
