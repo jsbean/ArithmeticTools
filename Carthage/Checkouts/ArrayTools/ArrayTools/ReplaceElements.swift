@@ -18,7 +18,7 @@ extension Array {
     - parameter index:      Index of element to be replaced
     - parameter newElement: New element to replace element at index
     */
-    public mutating func replaceElementAt(index: Int, withElement newElement: Element) throws
+    public mutating func replaceElement(at index: Int, withElement newElement: Element) throws
     {
         guard index > 0 && index < self.count else { throw ArrayError.RemovalError }
         removeAtIndex(index)
@@ -30,7 +30,7 @@ extension Array {
 
     - parameter newElement: New element to replace last element
     */
-    public mutating func replaceLastWith(element: Element) throws {
+    public mutating func replaceLast(with element: Element) throws {
         guard self.count > 0 else { throw ArrayError.RemovalError }
         removeLast()
         append(element)
@@ -41,7 +41,7 @@ extension Array {
 
     - parameter newElement: New element to replace first element
     */
-    public mutating func replaceFirstWith(element: Element) throws {
+    public mutating func replaceFirst(with element: Element) throws {
         try removeFirst()
         insert(element, atIndex: 0)
     }

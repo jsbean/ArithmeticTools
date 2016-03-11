@@ -48,13 +48,13 @@ class SequenceTypeTests: XCTestCase {
     
     func testClosestOver() {
         let array: [Float] = [2.5, 6.7, 9.2, 5.24]
-        let closest = array.closestTo(7.1)!
+        let closest = array.closest(to: 7.1)!
         XCTAssertEqual(closest, 6.7)
     }
     
     func testClosestUnder() {
         let array = [1,4,7]
-        let closest = array.closestTo(6)
+        let closest = array.closest(to: 6)
         XCTAssertEqual(closest, 7)
     }
 }

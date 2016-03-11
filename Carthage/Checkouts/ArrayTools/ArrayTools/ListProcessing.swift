@@ -30,7 +30,7 @@ Construct an `Array` from a `head` and a `tail`
 
 - returns: New `Array` with the first element `head`, and the remaining elements of `tail`
 */
-public func + <T: Any>(head: T, tail: [T]) -> [T] {
+public func + <T>(head: T, tail: [T]) -> [T] {
     return [head] + tail
 }
 
@@ -42,6 +42,6 @@ Append an element
 
 - returns: New `Array` with `item` appended to the end of `list`
 */
-public func + <T: Any>(list: [T], item: T) -> [T] {
+public func + <T>(list: [T], item: T) -> [T] {
     return list + [item]
 }

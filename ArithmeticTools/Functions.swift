@@ -22,6 +22,7 @@ public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
     return b == 0 ? a : greatestCommonDivisor(b, T.mod(a,b))
 }
 
+
 /**
  Get the closer of two values to a target value.
  
@@ -38,6 +39,6 @@ public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
  
  - returns: Value closer to target value
  */
-public func closerTo<T: ArithmeticType>(target target: T, a: T, b: T) -> T {
+public func closer<T: ArithmeticType>(to target: T, a: T, b: T) -> T {
     return T.abs(a - target) <= T.abs(b - target) ? a : b
 }

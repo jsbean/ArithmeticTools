@@ -66,7 +66,7 @@ extension Array where Element: ArithmeticType {
      
      - returns: Value closest to target is !self.isEmpty. Otherwise nil.
      */
-    public func closestTo(target: Element) -> Element? {
+    public func closest(to target: Element) -> Element? {
         guard !self.isEmpty else { return nil }
         var cur = self[0]
         var diff = Element.abs(target - cur)

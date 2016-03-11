@@ -19,8 +19,8 @@ public extension Array where Element: AnyObject {
     
     - returns: If Array contains object
     */
-    func containsObject(object: Element) -> Bool {
-        return indexOfObject(object) != nil
+    func contains(object: Element) -> Bool {
+        return index(of: object) != nil
     }
     
     /**
@@ -30,7 +30,7 @@ public extension Array where Element: AnyObject {
      
      - returns: Index of object, if present. Otherwise `nil`.
      */
-    func indexOfObject(object: Element) -> Int? {
+    func index(of object: Element) -> Int? {
         for (index, el) in self.enumerate() { if el === object { return index } }
         return nil
     }
@@ -40,8 +40,7 @@ public extension Array where Element: AnyObject {
      
      - parameter object: Object to remove
      */
-    mutating func removeObject(object: Element) {
-        let index: Int? = indexOfObject(object)
-        if index != nil { removeAtIndex(index!) }
+    mutating func remove(of object: Element) {
+        if let i = index(of: object) { removeAtIndex(i) }
     }
 }

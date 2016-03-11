@@ -12,14 +12,14 @@ import XCTest
 class IsDivisibleTests: XCTestCase {
 
     func testIntIsDivisibleByFalsePrime() {
-        XCTAssertFalse(17.isDivisibleBy(3))
+        XCTAssertFalse(17.isDivisible(by: 3))
     }
     
     func testIntIsDivisibleByFalse() {
-        XCTAssertFalse(9.isDivisibleBy(4))
+        XCTAssertFalse(9.isDivisible(by: 4))
     }
     
     func testIntIsDivisibleByTrue() {
-        XCTAssert(42.isDivisibleBy(21))
+        XCTAssert(42.isDivisible(by: 21))
     }
 }

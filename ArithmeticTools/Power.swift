@@ -9,35 +9,29 @@
 import Foundation
 
 /**
- Get power-of-two value that is closest to a target value.
- 
  >`closestPowerOfTwoTo(13) -> 16`
  
  - note: If two values are equidistant from the target value, the lesser value is returned.
  
  >`closestPowerOfTwoTo(12) -> 8 (not 16)`
  
- - parameter target: Value to check for closest power-of-two
- 
  - returns: Power-of-two value closest to target value
  */
-public func closestPowerOfTwoTo<T: ArithmeticType>(target: T) -> T? {
-    return closestPowerOfTwoWith(coefficient: 2, to: target)
+public func closestPowerOfTwo<T: ArithmeticType>(to target: T) -> T? {
+    return closestPowerOfTwo(withCoefficient: 2, to: target)
 }
 
+
 /**
- Get power-of-two value that is closest to and less than a target value.
- 
- - parameter target: Value to check for closest to and less than power-of-two
- 
- - returns: Power-of-two value closest to and lesser target alue
+ - returns: Power-of-two value closest to and less than target alue
  */
-public func closestPowerOfTwoUnder<T: ArithmeticType>(target: T) -> T? {
-    return closestPowerOfTwoWith(coefficient: 2, under: target)
+public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
+    return closestPowerOfTwo(withCoefficient: 2, under: target)
 }
 
+
+
 /**
- Get power-of-two value (with coefficient) that is closest to a target value.
 
  >`closestPowerOfTwoWith(coefficient: 3, toTarget: 22) -> 24`
 
@@ -45,35 +39,30 @@ public func closestPowerOfTwoUnder<T: ArithmeticType>(target: T) -> T? {
  
  >`closestPowerOfTwoWith(coefficient: 3, toTarget: 18) -> 12 (not 24)`
  
- - parameter coefficient: Coefficient
+ - parameter coefficient: Coefficient of exponential expression
  - parameter target:      Value to check for closest power-of-two
  
  - returns: Power-of-two value (with coefficient) closest to target value
  */
-public func closestPowerOfTwoWith<T: ArithmeticType>(coefficient coefficient: T,
+public func closestPowerOfTwo<T: ArithmeticType>(withCoefficient coefficient: T,
     to target: T
 ) -> T?
 {
     let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: true))
     guard !pseq.isEmpty else { return nil }
     guard let lastPair = pseq.last(amount: 2) else { return pseq.first! }
-    return closerTo(target: target, a: lastPair[0], b: lastPair[1])
+    return closer(to: target, a: lastPair[0], b: lastPair[1])
 }
 
 /**
- Get power-of-two value (with coefficient) that is closest to and less than a target value.
- 
- - parameter coefficient: Coefficient
- - parameter target:      Value to check for closest and lesser power-of-two
- 
  - returns: Power-of-two (with coefficient) closest to and less than target value
  */
-public func closestPowerOfTwoWith<T: ArithmeticType>(coefficient coefficient: T,
+public func closestPowerOfTwo<T: ArithmeticType>(withCoefficient coefficient: T,
     under target: T
 ) -> T?
 {
     let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: false))
     guard !pseq.isEmpty else { return nil }
     guard let lastPair = pseq.last(amount: 2) else { return pseq.first! }
-    return closerTo(target: target, a: lastPair[0], b: lastPair[1])
+    return closer(to: target, a: lastPair[0], b: lastPair[1])
 }
