@@ -33,11 +33,11 @@ public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
 
 /**
 
- >`closestPowerOfTwo(withCoefficient: 3, toTarget: 22) -> 24`
+ >`closestPowerOfTwo(withCoefficient: 3, to: 22) -> 24`
 
  - note: If two values are equidistant from the target value, the lesser value is returned.
  
- >`closestPowerOfTwo(withCoefficient: 3, toTarget: 18) -> 12 (not 24)`
+ >`closestPowerOfTwo(withCoefficient: 3, to: 18) -> 12 (not 24)`
  
  - parameter coefficient: Coefficient of exponential expression
  - parameter target:      Value to check for closest power-of-two
