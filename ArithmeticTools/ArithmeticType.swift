@@ -12,7 +12,7 @@ import Foundation
  ArithmeticType unifies IntegerLiteralConvertible types (Integer and FloatingPoint) for
  generic use.
  */
-public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
+public protocol ArithmeticType: Comparable {
     
     // MARK: Type Properties
     
@@ -21,6 +21,10 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
     
     /// Minumum value for conforming type
     static var min: Self { get }
+    
+    static var zero: Self { get }
+    static var one: Self { get }
+    static var two: Self { get }
     
     // MARK: Type Methods
     
@@ -123,6 +127,10 @@ public protocol ArithmeticType: Comparable, IntegerLiteralConvertible {
 
 extension Int: ArithmeticType {
     
+    public static var zero: Int { return 0 }
+    public static var one: Int { return 1 }
+    public static var two: Int { return 2 }
+    
     public static func mod(dividend: Int, _ modulus: Int) -> Int {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -163,6 +171,10 @@ extension Int: ArithmeticType {
 
 extension Int8: ArithmeticType {
     
+    public static var zero: Int8 { return 0 }
+    public static var one: Int8 { return 1 }
+    public static var two: Int8 { return 2 }
+    
     public static func mod(dividend: Int8, _ modulus: Int8) -> Int8 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -190,6 +202,10 @@ extension Int8: ArithmeticType {
 }
 
 extension UInt8: ArithmeticType {
+    
+    public static var zero: UInt8 { return 0 }
+    public static var one: UInt8 { return 1 }
+    public static var two: UInt8 { return 2 }
     
     public static func mod(dividend: UInt8, _ modulus: UInt8) -> UInt8 {
         let result = dividend % modulus
@@ -219,6 +235,10 @@ extension UInt8: ArithmeticType {
 
 extension Int16: ArithmeticType {
     
+    public static var zero: Int16 { return 0 }
+    public static var one: Int16 { return 1 }
+    public static var two: Int16 { return 2 }
+    
     public static func mod(dividend: Int16, _ modulus: Int16) -> Int16 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -246,6 +266,10 @@ extension Int16: ArithmeticType {
 }
 
 extension UInt16: ArithmeticType {
+    
+    public static var zero: UInt16 { return 0 }
+    public static var one: UInt16 { return 1 }
+    public static var two: UInt16 { return 2 }
     
     public static func mod(dividend: UInt16, _ modulus: UInt16) -> UInt16 {
         let result = dividend % modulus
@@ -276,6 +300,10 @@ extension UInt16: ArithmeticType {
 
 extension Int32: ArithmeticType {
     
+    public static var zero: Int32 { return 0 }
+    public static var one: Int32 { return 1 }
+    public static var two: Int32 { return 2 }
+    
     public static func mod(dividend: Int32, _ modulus: Int32) -> Int32 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -304,6 +332,10 @@ extension Int32: ArithmeticType {
 
 
 extension UInt32: ArithmeticType {
+    
+    public static var zero: UInt32 { return 0 }
+    public static var one: UInt32 { return 1 }
+    public static var two: UInt32 { return 2 }
     
     public static func mod(dividend: UInt32, _ modulus: UInt32) -> UInt32 {
         let result = dividend % modulus
@@ -334,6 +366,10 @@ extension UInt32: ArithmeticType {
 
 extension Int64: ArithmeticType {
     
+    public static var zero: Int64 { return 0 }
+    public static var one: Int64 { return 1 }
+    public static var two: Int64 { return 2 }
+    
     public static func mod(dividend: Int64, _ modulus: Int64) -> Int64 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
@@ -361,6 +397,10 @@ extension Int64: ArithmeticType {
 }
 
 extension UInt64: ArithmeticType {
+    
+    public static var zero: UInt64 { return 0 }
+    public static var one: UInt64 { return 1 }
+    public static var two: UInt64 { return 2 }
     
     public static func mod(dividend: UInt64, _ modulus: UInt64) -> UInt64 {
         let result = dividend % modulus
@@ -390,6 +430,10 @@ extension UInt64: ArithmeticType {
 }
 
 extension Float: ArithmeticType {
+    
+    public static var zero: Float { return 0 }
+    public static var one: Float { return 1 }
+    public static var two: Float { return 2 }
     
     public static var max: Float { return FLT_MAX }
     public static var min: Float { return FLT_MIN }
@@ -423,6 +467,10 @@ extension Float: ArithmeticType {
 }
 
 extension Double: ArithmeticType {
+    
+    public static var zero: Double { return 0 }
+    public static var one: Double { return 1 }
+    public static var two: Double { return 2 }
     
     public static var max: Double { return DBL_MAX }
     public static var min: Double { return DBL_MIN }

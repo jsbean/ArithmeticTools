@@ -15,7 +15,7 @@ extension SequenceType where Generator.Element: ArithmeticType {
      
      >`[1,2,4].sum -> 7`
     */
-    public var sum: Generator.Element { return reduce(0, combine: +) }
+    public var sum: Generator.Element { return reduce(Generator.Element.zero, combine: +) }
     
     /**
      Greatest common divisor of elements in Sequence.

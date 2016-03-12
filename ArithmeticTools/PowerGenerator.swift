@@ -53,7 +53,7 @@ internal class PowerGenerator<T: ArithmeticType>: GeneratorType {
             }
         }
         let result = power
-        power = power * 2
+        power = power * T.two
         if let max = max { return result <= max ? result : nil }
         return result
     }

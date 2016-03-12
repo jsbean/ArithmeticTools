@@ -19,7 +19,7 @@ import Foundation
  - returns: Greatest common divisor of a and b
  */
 public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
-    return b == 0 ? a : greatestCommonDivisor(b, T.mod(a,b))
+    return b == T.zero ? a : greatestCommonDivisor(b, T.mod(a,b))
 }
 
 

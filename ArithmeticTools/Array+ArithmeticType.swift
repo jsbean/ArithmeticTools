@@ -41,7 +41,7 @@ extension Array where Element: ArithmeticType {
             guard let (head, tail) = array.destructured else { return result }
             return accumulate(tail, result: result + [sum], sum: sum + head)
         }
-        return accumulate(self, result: [], sum: 0)
+        return accumulate(self, result: [], sum: Element.zero)
     }
     
     /**
@@ -56,7 +56,7 @@ extension Array where Element: ArithmeticType {
             guard let (head, tail) = array.destructured else { return result }
             return accumulate(tail, result: result + [(sum + head, head)], sum: sum + head)
         }
-        return accumulate(self, result: [], sum: 0)
+        return accumulate(self, result: [], sum: Element.zero)
     }
     
     /**
