@@ -23,7 +23,7 @@ public func closestPowerOfTwo<T: ArithmeticType>(to target: T) -> T? {
 
 
 /**
- - returns: Power-of-two value closest to and less than target alue
+ - returns: Power-of-two value closest to and less than target value
  */
 public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
     return closestPowerOfTwo(withCoefficient: 2, under: target)
