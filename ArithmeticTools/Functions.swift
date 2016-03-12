@@ -38,3 +38,12 @@ public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
 public func closer<T: ArithmeticType>(to target: T, a: T, b: T) -> T {
     return T.abs(a - target) <= T.abs(b - target) ? a : b
 }
+
+/**
+ - note: If both values are equal, they are returned in the order in which they were given
+ 
+ - returns: 2-tuple of two `Comparable` types, in order.
+ */
+public func ordered<T: Comparable>(a: T, _ b: T) -> (T,T) {
+    return a <= b ? (a,b) : (b,a)
+}
