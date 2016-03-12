@@ -14,7 +14,7 @@ import Foundation
  */
 public protocol ArithmeticType: Comparable {
     
-    // MARK: Type Properties
+    // MARK: - Type Properties
     
     /// Maximum value for conforming type
     static var max: Self { get }
@@ -26,7 +26,7 @@ public protocol ArithmeticType: Comparable {
     static var one: Self { get }
     static var two: Self { get }
     
-    // MARK: Type Methods
+    // MARK: - Type Methods
     
     /**
     Make a random value for conforming type
@@ -101,7 +101,7 @@ public protocol ArithmeticType: Comparable {
     */
     static func abs(value: Self) -> Self
     
-    // MARK: Instance Properties
+    // MARK: - Instance Properties
     
     /// If ArithmeticType value is integral.
     var isInteger: Bool { get }
