@@ -25,7 +25,8 @@ extension Array where Element: Equatable {
     */
     public func amount(of element: Element) -> Int {
         
-        func amount(of element: Element, inArray array: [Element], var accum: Int) -> Int {
+        func amount(of element: Element, inArray array: [Element], accum: Int) -> Int {
+            var accum = accum
             guard let (head, tail) = array.destructured else { return accum }
             if head == element { accum += 1 }
             return amount(of: element, inArray: tail, accum: accum)
@@ -44,17 +45,18 @@ extension Array where Element: Equatable {
     - returns: 2-tuple of extracted elements, and leftovers
     */
     public func extractAll(element: Element) -> ([Element], [Element]) {
-        
+
         func remove(element: Element,
             fromArray array: [Element],
-            var leftovers: [Element],
-            var extracted: [Element]
+            leftovers: [Element],
+            extracted: [Element]
         ) -> ([Element], [Element])
         {
             guard let (head, tail) = array.destructured else { return (extracted, leftovers) }
-            if head == element { extracted = extracted + head }
-            else { leftovers = leftovers + head }
-            return remove(element, fromArray: tail, leftovers: leftovers, extracted: extracted)
+            let (l,e) = head == element
+                ? (leftovers, extracted + head)
+                : (leftovers + head, extracted)
+            return remove(element, fromArray: tail, leftovers: l, extracted: e)
         }
         
         return remove(element, fromArray: self, leftovers: [], extracted: [])
@@ -103,14 +105,15 @@ extension Array where Element: Equatable {
     public func extractDuplicates() -> ([Element], [Element]) {
         
         func extractDuplicates(from array: [Element],
-            var duplicates: [Element],
-            var leftovers: [Element]
+            duplicates: [Element],
+            leftovers: [Element]
         ) -> ([Element], [Element])
         {
             guard let (head, tail) = array.destructured else { return (duplicates, leftovers) }
-            if leftovers.contains(head) { duplicates.append(head) }
-            else { leftovers.append(head) }
-            return extractDuplicates(from: tail, duplicates: duplicates, leftovers: leftovers)
+            let (d,l) = leftovers.contains(head)
+                ? (duplicates + head, leftovers)
+                : (duplicates, leftovers + head)
+            return extractDuplicates(from: tail, duplicates: d, leftovers: l)
         }
         
         return extractDuplicates(from: self, duplicates: [], leftovers: [])
@@ -123,10 +126,10 @@ extension Array where Element: Equatable {
      */
     public var unique: [Element] {
         
-        func extractUniqueValues(from array: [Element], var to result: [Element]) -> [Element]
+        func extractUniqueValues(from array: [Element], to result: [Element]) -> [Element]
         {
             guard let (head, tail) = array.destructured else { return result }
-            if !result.contains(head) { result.append(head) }
+            let result = result.contains(head) ? result : result + head
             return extractUniqueValues(from: tail, to: result)
         }
         

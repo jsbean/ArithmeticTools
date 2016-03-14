@@ -137,8 +137,8 @@ extension Int: ArithmeticType {
     }
     
     // default: [0, 2^32]
-    public static func random(min min: Int = 0, var max: Int = Int.max) -> Int {
-        max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max + 1
+    public static func random(min min: Int = 0, max: Int = Int.max) -> Int {
+        let max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max + 1
         let range = max - min
         return Int(arc4random_uniform(UInt32(range))) + min
     }

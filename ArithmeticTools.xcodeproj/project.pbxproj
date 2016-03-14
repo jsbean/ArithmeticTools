@@ -33,8 +33,6 @@
 		078142881C7CED15004B68D3 /* ArithmeticTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078142551C7CECD5004B68D3 /* ArithmeticTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781428A1C7CED35004B68D3 /* ArithmeticTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078142521C7CECD5004B68D3 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0781428C1C7CED3C004B68D3 /* ArithmeticTools.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		078142911C7CF0C9004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142901C7CF0C9004B68D3 /* ArrayTools.framework */; };
-		078142931C7CF0DB004B68D3 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142921C7CF0DB004B68D3 /* ArrayTools.framework */; };
 		078142A61C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */; };
 		078142A71C7CF3F1004B68D3 /* ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */; };
 		078142A81C7CF3F1004B68D3 /* Array+ArithmeticType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */; };
@@ -53,6 +51,8 @@
 		078142BA1C7CF494004B68D3 /* PrimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B11C7CF494004B68D3 /* PrimeTests.swift */; };
 		078142BB1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */; };
 		078142BC1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */; };
+		079D1FC11C9657C100A272B9 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D1FC01C9657C100A272B9 /* ArrayTools.framework */; };
+		079D1FC31C9657CF00A272B9 /* ArrayTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 079D1FC21C9657CF00A272B9 /* ArrayTools.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,8 +113,6 @@
 		078142631C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078142711C7CECE0004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		078142901C7CF0C9004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
-		078142921C7CF0DB004B68D3 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
 		078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticType.swift; sourceTree = "<group>"; };
 		078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+ArithmeticType.swift"; sourceTree = "<group>"; };
 		078142A41C7CF3F1004B68D3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
@@ -124,6 +122,8 @@
 		078142B01C7CF494004B68D3 /* OddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OddTests.swift; sourceTree = "<group>"; };
 		078142B11C7CF494004B68D3 /* PrimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeTests.swift; sourceTree = "<group>"; };
 		078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTypeTests.swift; sourceTree = "<group>"; };
+		079D1FC01C9657C100A272B9 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/iOS/ArrayTools.framework; sourceTree = "<group>"; };
+		079D1FC21C9657CF00A272B9 /* ArrayTools.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ArrayTools.framework; path = Carthage/Build/Mac/ArrayTools.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078142911C7CF0C9004B68D3 /* ArrayTools.framework in Frameworks */,
+				079D1FC11C9657C100A272B9 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +147,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				078142931C7CF0DB004B68D3 /* ArrayTools.framework in Frameworks */,
+				079D1FC31C9657CF00A272B9 /* ArrayTools.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,7 +247,7 @@
 		0781428E1C7CF095004B68D3 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				078142901C7CF0C9004B68D3 /* ArrayTools.framework */,
+				079D1FC01C9657C100A272B9 /* ArrayTools.framework */,
 			);
 			name = iOS;
 			sourceTree = "<group>";
@@ -255,7 +255,7 @@
 		0781428F1C7CF099004B68D3 /* Mac */ = {
 			isa = PBXGroup;
 			children = (
-				078142921C7CF0DB004B68D3 /* ArrayTools.framework */,
+				079D1FC21C9657CF00A272B9 /* ArrayTools.framework */,
 			);
 			name = Mac;
 			sourceTree = "<group>";
