@@ -34,7 +34,6 @@ extension Array where Element: ArithmeticType {
      Cumulative representation of elements in Array.
      
      >`[1,2,2].cumulative -> [0,1,3]`
-     
     */
     public var cumulative: [Element] {
         func accumulate(array: [Element], result: [Element], sum: Element) -> [Element] {
