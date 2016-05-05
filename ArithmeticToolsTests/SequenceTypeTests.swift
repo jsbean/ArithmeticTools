@@ -57,4 +57,10 @@ class SequenceTypeTests: XCTestCase {
         let closest = array.closest(to: 6)
         XCTAssertEqual(closest, 7)
     }
+    
+    func testCombinations() {
+        let array1 = [1,2,3]
+        let array2 = [4,5]
+        XCTAssertEqual(combinations(array1, array2).count, 6)
+    }
 }
