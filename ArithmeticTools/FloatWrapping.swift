@@ -9,7 +9,6 @@
 import Foundation
 
 public protocol FloatWrapping:
-    ArithmeticType,
     FloatLiteralConvertible,
     IntegerLiteralConvertible,
     Hashable,
