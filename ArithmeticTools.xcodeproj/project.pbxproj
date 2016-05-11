@@ -212,16 +212,14 @@
 		078142541C7CECD5004B68D3 /* ArithmeticTools */ = {
 			isa = PBXGroup;
 			children = (
-				078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */,
+				07F538341CE3AF11001294CC /* Power */,
 				075F16E51CE2570600545125 /* FloatWrapping.swift */,
+				07F5382E1CE3AEAC001294CC /* Comparison.swift */,
+				078142A21C7CF3F1004B68D3 /* ArithmeticType.swift */,
 				078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */,
 				078142A41C7CF3F1004B68D3 /* Functions.swift */,
 				078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */,
-				0719FA861C875584009EACB4 /* PowerGenerator.swift */,
-				074276C61C8768A100D50A30 /* PowerSequence.swift */,
-				074276CC1C877EE400D50A30 /* Power.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
-				07F5382E1CE3AEAC001294CC /* Comparison.swift */,
 			);
 			path = ArithmeticTools;
 			sourceTree = "<group>";
@@ -270,6 +268,16 @@
 				079D1FC21C9657CF00A272B9 /* ArrayTools.framework */,
 			);
 			name = Mac;
+			sourceTree = "<group>";
+		};
+		07F538341CE3AF11001294CC /* Power */ = {
+			isa = PBXGroup;
+			children = (
+				0719FA861C875584009EACB4 /* PowerGenerator.swift */,
+				074276C61C8768A100D50A30 /* PowerSequence.swift */,
+				074276CC1C877EE400D50A30 /* Power.swift */,
+			);
+			name = Power;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

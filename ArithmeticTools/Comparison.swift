@@ -13,3 +13,7 @@ public enum Comparison {
     case lessThan
     case greaterThan
 }
+
+public func compare<T: ArithmeticType>(a: T, _ b: T) -> Comparison {
+    return a < b ? .lessThan : a > b ? .greaterThan : .equal
+}
