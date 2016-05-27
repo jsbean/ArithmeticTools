@@ -8,58 +8,55 @@
 
 import Foundation
 
-public protocol FloatWrapping: FloatLiteralConvertible
-//    ,
-//    //IntegerLiteralConvertible,
-//    Hashable,
-//    Comparable
+public protocol FloatWrapping: FloatLiteralConvertible,
+    IntegerLiteralConvertible,
+    Hashable,
+    Comparable
 {
     associatedtype FloatLiteralType = Float
+    associatedtype IntegerLiteralType = Int
     init(floatLiteral: Float)
     var value: Float { get set }
-    
-    //associatedtype IntegerLiteralType = Int
-    //init(integerLiteral: Int)
-    //init(_ float: Float)
+    init(integerLiteral: Int)
+    init(_ float: Float)
 }
 
-//
-//extension FloatWrapping {
-//    
-//    public init(_ float: Float) {
-//        self.init(floatLiteral: float)
-//    }
-//}
+extension FloatWrapping {
+    
+    public init(_ float: Float) {
+        self.init(floatLiteral: float)
+    }
+}
 
-//// MARK: - Hashable
-//extension FloatWrapping {
-//    public var hashValue: Int { return value.hashValue }
-//}
-//
-//// MARK: - Comparable
-//public func == <T: FloatWrapping>(lhs: T, rhs: T) -> Bool {
-//    return lhs.value == rhs.value
-//}
-//
-//public func == <T: FloatWrapping>(lhs: T, rhs: Float) -> Bool {
-//    return lhs.value == rhs
-//}
-//
-//public func == <T: FloatWrapping>(lhs: Float, rhs: T) -> Bool {
-//    return lhs == rhs.value
-//}
-//
-//public func < <T: FloatWrapping>(lhs: T, rhs: T) -> Bool {
-//    return lhs.value < rhs.value
-//}
-//
-//public func < <T: FloatWrapping>(lhs: T, rhs: Float) -> Bool {
-//    return lhs.value < rhs
-//}
-//
-//public func < <T: FloatWrapping>(lhs: Float, rhs: T) -> Bool {
-//    return lhs < rhs.value
-//}
+// MARK: - Hashable
+extension FloatWrapping {
+    public var hashValue: Int { return value.hashValue }
+}
+
+// MARK: - Comparable
+public func == <T: FloatWrapping>(lhs: T, rhs: T) -> Bool {
+    return lhs.value == rhs.value
+}
+
+public func == <T: FloatWrapping>(lhs: T, rhs: Float) -> Bool {
+    return lhs.value == rhs
+}
+
+public func == <T: FloatWrapping>(lhs: Float, rhs: T) -> Bool {
+    return lhs == rhs.value
+}
+
+public func < <T: FloatWrapping>(lhs: T, rhs: T) -> Bool {
+    return lhs.value < rhs.value
+}
+
+public func < <T: FloatWrapping>(lhs: T, rhs: Float) -> Bool {
+    return lhs.value < rhs
+}
+
+public func < <T: FloatWrapping>(lhs: Float, rhs: T) -> Bool {
+    return lhs < rhs.value
+}
 
 /*
 // MARK: - ArithmeticType
