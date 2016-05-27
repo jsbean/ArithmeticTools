@@ -9,12 +9,13 @@
 import Foundation
 
 public protocol FloatWrapping:
-    FloatLiteralConvertible,
-    //IntegerLiteralConvertible,
-    Hashable,
-    Comparable
+    FloatLiteralConvertible
+//    ,
+//    //IntegerLiteralConvertible,
+//    Hashable,
+//    Comparable
 {
-    associatedtype FloatLiteralType = Float
+//    associatedtype FloatLiteralType = Float
     //associatedtype IntegerLiteralType = Int
     init(floatLiteral: Float)
     //init(integerLiteral: Int)
