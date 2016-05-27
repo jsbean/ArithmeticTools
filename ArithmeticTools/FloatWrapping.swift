@@ -19,10 +19,11 @@ public protocol FloatWrapping:
     init(floatLiteral: Float)
     init(integerLiteral: Int)
     init(_ float: Float)
-    var value: Float { get }
+    var value: Float { get set }
 }
 
 extension FloatWrapping {
+    
     public init(_ float: Float) {
         self.init(floatLiteral: float)
     }
