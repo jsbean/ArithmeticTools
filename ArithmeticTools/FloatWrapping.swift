@@ -10,14 +10,14 @@ import Foundation
 
 public protocol FloatWrapping:
     FloatLiteralConvertible,
-    IntegerLiteralConvertible,
+    //IntegerLiteralConvertible,
     Hashable,
     Comparable
 {
     associatedtype FloatLiteralType = Float
-    associatedtype IntegerLiteralType = Int
+    //associatedtype IntegerLiteralType = Int
     init(floatLiteral: Float)
-    init(integerLiteral: Int)
+    //init(integerLiteral: Int)
     //init(_ float: Float)
     var value: Float { get set }
 }
