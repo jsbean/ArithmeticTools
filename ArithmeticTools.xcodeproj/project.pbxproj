@@ -82,13 +82,13 @@
 /* Begin PBXCopyFilesBuildPhase section */
 		078142891C7CED30004B68D3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 8;
+			buildActionMask = 12;
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
 				0781428A1C7CED35004B68D3 /* ArithmeticTools.framework in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0781428B1C7CED38004B68D3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -330,6 +330,7 @@
 				078142591C7CECD5004B68D3 /* Frameworks */,
 				0781425A1C7CECD5004B68D3 /* Resources */,
 				078142891C7CED30004B68D3 /* CopyFiles */,
+				07D8FCEB1D32791B00F98854 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -349,7 +350,6 @@
 				0781426D1C7CECE0004B68D3 /* Frameworks */,
 				0781426E1C7CECE0004B68D3 /* Headers */,
 				0781426F1C7CECE0004B68D3 /* Resources */,
-				078142951C7CF118004B68D3 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -368,6 +368,7 @@
 				078142771C7CECE0004B68D3 /* Frameworks */,
 				078142781C7CECE0004B68D3 /* Resources */,
 				0781428B1C7CED38004B68D3 /* CopyFiles */,
+				07D8FCEC1D32799F00F98854 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -455,7 +456,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		078142951C7CF118004B68D3 /* ShellScript */ = {
+		07D8FCEB1D32791B00F98854 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/ArrayTools.framework",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		07D8FCEC1D32799F00F98854 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
