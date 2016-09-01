@@ -9,16 +9,16 @@
 import Foundation
 
 /// Power-of-two Sequence
-internal class PowerSequence<T: ArithmeticType>: SequenceType {
+internal class PowerSequence<T: ArithmeticType>: Sequence {
 
-    private let doOvershoot: Bool
-    private let coefficient: T
-    private let max: T
+    fileprivate let doOvershoot: Bool
+    fileprivate let coefficient: T
+    fileprivate let max: T
     
     // MARK: - Associated Types
     
     /// PowerGenerator generates ArithmeticType values.
-    internal typealias Generator = PowerGenerator<T>
+    internal typealias Iterator = PowerGenerator<T>
     
     // MARK: - Initializers
     
@@ -44,7 +44,7 @@ internal class PowerSequence<T: ArithmeticType>: SequenceType {
     
     - returns: PowerGenerator
     */
-    internal func generate() -> Generator {
+    internal func makeIterator() -> Iterator {
         return PowerGenerator(coefficient: coefficient, max: max, doOvershoot: doOvershoot)
     }
 }
