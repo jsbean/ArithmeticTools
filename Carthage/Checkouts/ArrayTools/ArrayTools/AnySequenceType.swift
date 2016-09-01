@@ -6,8 +6,6 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 /**
  Type erasing protocol that allows the `SequenceType` implementation to be left to the 
  individual `struct`.
@@ -23,23 +21,27 @@ import Foundation
  In the `init` method of the conforming `struct`, set the value of this private `var` with the
  given `sequence.
  */
-public protocol AnySequenceType: SequenceType, ArrayLiteralConvertible {
+public protocol AnySequenceType: Sequence, ExpressibleByArrayLiteral {
     
     // MARK: Associated Types
     
     /// The contained type
     associatedtype Element
     
+    // MARK: - Instance Properties
+    
     /// `AnySequence` wrapper that provides shade for the domain specific implementation.
     var sequence: AnySequence<Element> { get }
+    
+    // MARK: - Initializers
     
     /**
      Create an `AnySequenceType` with a `Sequence` of any type.
      
-     In the `init` method of the conforming `struct`, set the value of this private `var` with
-     the given `sequence.
+     In the `init` method of the conforming `struct`, set the value of this private variable
+     with the given `sequence`.
      */
-    init<S: SequenceType where S.Generator.Element == Element>(_ sequence: S)
+    init<S: Sequence>(_ sequence: S) where S.Iterator.Element == Element
 }
 
 extension AnySequenceType {
@@ -49,15 +51,15 @@ extension AnySequenceType {
     /**
      Returns a generator over the elements of this sequence.
      */
-    public func generate() -> AnyGenerator<Element> {
-        let generator = sequence.generate()
-        return AnyGenerator { return generator.next() }
+    public func generate() -> AnyIterator<Element> {
+        let generator = sequence.makeIterator()
+        return AnyIterator { return generator.next() }
     }
 }
 
 /**
  - returns: `true` if all elements in both sequnces are equivalent. Otherwise, `false`.
  */
-public func == <T: AnySequenceType where T.Element: Equatable>(lhs: T, rhs: T) -> Bool {
+public func == <T: AnySequenceType>(lhs: T, rhs: T) -> Bool where T.Element: Equatable {
     return lhs.sequence == rhs.sequence
 }

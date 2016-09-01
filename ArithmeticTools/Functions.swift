@@ -19,9 +19,9 @@ import Foundation
  - returns: Greatest common divisor of a and b
  */
 public func greatestCommonDivisor<T: ArithmeticType>(_ a: T, _ b: T) -> T {
-    return b == T.zero ? a : greatestCommonDivisor(b, T.mod(b,a))
+    let result = T.mod(a,b)
+    return result == T.zero ? b : greatestCommonDivisor(b, result)
 }
-
 
 /**
  Get the closer of two values to a target value.

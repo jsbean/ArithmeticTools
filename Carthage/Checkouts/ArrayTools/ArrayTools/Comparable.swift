@@ -6,28 +6,26 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 // Modified from: https://airspeedvelocity.net/2016/01/10/writing-a-generic-stable-sort/
 
-extension RangeReplaceableCollectionType where
-    Index: RandomAccessIndexType,
-    SubSequence.Generator.Element == Generator.Element,
-    Index.Distance == Index.Stride
+extension RangeReplaceableCollection where
+    Index == Int,
+    IndexDistance == Int,
+    SubSequence.Iterator.Element == Iterator.Element
 {
     public func stableSort(
-        isOrderedBefore: (Generator.Element, Generator.Element) -> Bool
-    ) -> [Generator.Element]
+        _ isOrderedBefore: @escaping (Iterator.Element, Iterator.Element) -> Bool
+    ) -> [Iterator.Element]
     {
         var result = self // make copy of self to return
         let count = result.count
         
-        var aux: [Generator.Element] = []
+        var aux: [Iterator.Element] = []
         aux.reserveCapacity(numericCast(count))
         
-        func merge(lo: Index, _ mid: Index, _ hi: Index) {
+        func merge(_ lo: Index, _ mid: Index, _ hi: Index) {
             
-            aux.removeAll(keepCapacity: true)
+            aux.removeAll(keepingCapacity: true)
         
             var i = lo
             var j = mid
@@ -43,18 +41,24 @@ extension RangeReplaceableCollectionType where
                 }
             }
             
-            aux.appendContentsOf(result[i ..< mid])
-            aux.appendContentsOf(result[j ..< hi])
-            result.replaceRange(lo ..< hi, with: aux)
+            aux.append(contentsOf: result[i ..< mid])
+            aux.append(contentsOf: result[j ..< hi])
+            result.replaceSubrange(lo ..< hi, with: aux)
         }
         
-        var sz: Index.Distance = 1
+        var sz: Int = 1
         while sz < count {
-            for lo in result.startIndex.stride(to: result.endIndex - sz, by: sz * 2) {
-                merge(lo, lo + sz, lo.advancedBy(sz * 2, limit: result.endIndex))
+            for lo in stride(from: result.startIndex, to: result.endIndex - sz, by: sz * 2) {
+                merge(lo, lo + sz, (lo + (sz * 2)).limited(notToExceed: count))
             }
             sz *= 2
         }
         return Array(result)
+    }
+}
+
+extension Int {
+    func limited(notToExceed maximum: Int) -> Int {
+        return self >= maximum ? maximum : self
     }
 }

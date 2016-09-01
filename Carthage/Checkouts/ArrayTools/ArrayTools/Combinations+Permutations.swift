@@ -9,7 +9,7 @@
 /**
  - returns: All combinations of elements of two arrays.
  */
-public func combinations<T, U>(array1: [T], _ array2: [U]) -> [(T, U)] {
+public func combinations<T, U>(_ array1: [T], _ array2: [U]) -> [(T, U)] {
     return array1.reduce([]) { accum, t in accum + array2.map { u in (t,u) } }
 }
 

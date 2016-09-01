@@ -6,8 +6,6 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 extension Array {
     
     // MARK: - Replace Elements
@@ -18,11 +16,12 @@ extension Array {
     - parameter index:      Index of element to be replaced
     - parameter newElement: New element to replace element at index.
     */
-    public mutating func replaceElement(at index: Int, withElement newElement: Element) throws
+    public mutating func replaceElement(at index: Int, withElement newElement: Element)
+        throws
     {
-        guard index > 0 && index < self.count else { throw ArrayError.RemovalError }
-        removeAtIndex(index)
-        insert(newElement, atIndex: index)
+        guard index > 0 && index < self.count else { throw ArrayError.removalError }
+        self.remove(at: index)
+        insert(newElement, at: index)
     }
     
     /**
@@ -31,7 +30,7 @@ extension Array {
     - parameter newElement: New element to replace last element.
     */
     public mutating func replaceLast(with element: Element) throws {
-        guard self.count > 0 else { throw ArrayError.RemovalError }
+        guard self.count > 0 else { throw ArrayError.removalError }
         removeLast()
         append(element)
     }
@@ -43,6 +42,6 @@ extension Array {
     */
     public mutating func replaceFirst(with element: Element) throws {
         try removeFirst()
-        insert(element, atIndex: 0)
+        insert(element, at: 0)
     }
 }

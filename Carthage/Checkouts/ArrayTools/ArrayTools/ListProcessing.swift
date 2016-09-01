@@ -6,8 +6,6 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 extension ArraySlice {
     
     /// First `Element` of a list.
@@ -27,7 +25,7 @@ extension ArraySlice {
      -  note: From Chris Eidhof: http://chris.eidhof.nl/posts/swift-tricks.html
      */
     public var destructured: (Element, ArraySlice<Element>)? {
-        guard let head = head, tail = tail else { return nil }
+        guard let head = head, let tail = tail else { return nil }
         return (head, tail)
     }
 }
@@ -53,7 +51,7 @@ extension Array {
      -  note: From Chris Eidhof: http://chris.eidhof.nl/posts/swift-tricks.html
      */
     public var destructured: (Element, Array<Element>)? {
-        guard let head = head, tail = tail else { return nil }
+        guard let head = head, let tail = tail else { return nil }
         return (head, tail)
     }
 }
