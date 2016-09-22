@@ -13,6 +13,7 @@ import Foundation
  generic use.
  
  - TODO: Conform to `IntegerLiteralConvertible` / `FloatLiteralConvertible` ?
+ - TODO: Implement `limited(by: Self) -> Self`
  */
 public protocol ArithmeticType: Comparable {
     
@@ -38,7 +39,7 @@ public protocol ArithmeticType: Comparable {
     
     - returns: Random value in specified range
     */
-    static func random(min min: Self, max: Self) -> Self
+    static func random(min: Self, max: Self, resolution: Self) -> Self
 
     // MARK: - Arithmetic Binary Operators
     
@@ -90,7 +91,7 @@ public protocol ArithmeticType: Comparable {
      
      - returns: Remainder of dividend and modulus
      */
-    static func mod (dividend: Self, _ modulus: Self) -> Self
+    static func mod (_ dividend: Self, _ modulus: Self) -> Self
     
     // MARK: - Arithmetic Unary Operators
     
@@ -101,7 +102,7 @@ public protocol ArithmeticType: Comparable {
     
     - returns: Absolute value of value
     */
-    static func abs(value: Self) -> Self
+    static func abs(_ value: Self) -> Self
     
     // MARK: - Instance Properties
     
@@ -124,7 +125,7 @@ public protocol ArithmeticType: Comparable {
     
     func isDivisible(by value: Self) -> Bool
     
-    func format(f: String) -> String
+    func format(_ f: String) -> String
 }
 
 extension Int: ArithmeticType {
@@ -133,19 +134,27 @@ extension Int: ArithmeticType {
     public static var one: Int { return 1 }
     public static var two: Int { return 2 }
     
-    public static func mod(dividend: Int, _ modulus: Int) -> Int {
+    public static func mod(_ dividend: Int, _ modulus: Int) -> Int {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    // default: [0, 2^32]
-    public static func random(min min: Int = 0, max: Int = Int.max) -> Int {
-        let max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max + 1
+    /// - returns: random value
+    ///
+    /// - warning: `resolution` not implemented!
+    public static func random(
+        min: Int = Int.min,
+        max: Int = Int.max,
+        resolution: Int = Int.one
+    ) -> Int
+    {
+        let max = max >= Int(UInt32.max / 2) ? Int(UInt32.max / 2) : max - 1
+        let min = min <= Int(UInt32.min / 2) ? Int(UInt32.min / 2) : min + 1
         let range = max - min
         return Int(arc4random_uniform(UInt32(range))) + min
     }
     
-    public static func abs(value: Int) -> Int {
+    public static func abs(_ value: Int) -> Int {
         return value < 0 ? -value : value
     }
     
@@ -168,7 +177,9 @@ extension Int: ArithmeticType {
     
     public func isDivisible(by value: Int) -> Bool { return self % value == 0 }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Int8: ArithmeticType {
@@ -177,16 +188,21 @@ extension Int8: ArithmeticType {
     public static var one: Int8 { return 1 }
     public static var two: Int8 { return 2 }
     
-    public static func mod(dividend: Int8, _ modulus: Int8) -> Int8 {
+    public static func mod(_ dividend: Int8, _ modulus: Int8) -> Int8 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Int8 = Int8.min, max: Int8 = Int8.max) -> Int8 {
-        return 0
+    public static func random(
+        min: Int8 = Int8.min,
+        max: Int8 = Int8.max,
+        resolution: Int8 = 1
+    ) -> Int8
+    {
+        return Int8(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: Int8) -> Int8 {
+    public static func abs(_ value: Int8) -> Int8 {
         return value < 0 ? -value : value
     }
     
@@ -200,7 +216,9 @@ extension Int8: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension UInt8: ArithmeticType {
@@ -209,16 +227,21 @@ extension UInt8: ArithmeticType {
     public static var one: UInt8 { return 1 }
     public static var two: UInt8 { return 2 }
     
-    public static func mod(dividend: UInt8, _ modulus: UInt8) -> UInt8 {
+    public static func mod(_ dividend: UInt8, _ modulus: UInt8) -> UInt8 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: UInt8 = UInt8.min, max: UInt8 = UInt8.max) -> UInt8 {
-        return 0
+    public static func random(
+        min: UInt8 = UInt8.min,
+        max: UInt8 = UInt8.max,
+        resolution: UInt8 = 1
+    ) -> UInt8
+    {
+        return UInt8(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: UInt8) -> UInt8 {
+    public static func abs(_ value: UInt8) -> UInt8 {
         return value
     }
     
@@ -232,7 +255,9 @@ extension UInt8: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Int16: ArithmeticType {
@@ -241,16 +266,21 @@ extension Int16: ArithmeticType {
     public static var one: Int16 { return 1 }
     public static var two: Int16 { return 2 }
     
-    public static func mod(dividend: Int16, _ modulus: Int16) -> Int16 {
+    public static func mod(_ dividend: Int16, _ modulus: Int16) -> Int16 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Int16 = Int16.min, max: Int16 = Int16.max) -> Int16 {
-        return 0
+    public static func random(
+        min: Int16 = Int16.min,
+        max: Int16 = Int16.max,
+        resolution: Int16 = 1
+    ) -> Int16
+    {
+        return Int16(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: Int16) -> Int16 {
+    public static func abs(_ value: Int16) -> Int16 {
         return value < 0 ? -value : value
     }
     
@@ -264,7 +294,9 @@ extension Int16: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension UInt16: ArithmeticType {
@@ -273,17 +305,21 @@ extension UInt16: ArithmeticType {
     public static var one: UInt16 { return 1 }
     public static var two: UInt16 { return 2 }
     
-    public static func mod(dividend: UInt16, _ modulus: UInt16) -> UInt16 {
+    public static func mod(_ dividend: UInt16, _ modulus: UInt16) -> UInt16 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: UInt16 = UInt16.min, max: UInt16 = UInt16.max) -> UInt16
+    public static func random(
+        min: UInt16 = UInt16.min,
+        max: UInt16 = UInt16.max,
+        resolution: UInt16 = 1
+    ) -> UInt16
     {
-        return 0
+        return UInt16(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: UInt16) -> UInt16 {
+    public static func abs(_ value: UInt16) -> UInt16 {
         return value
     }
     
@@ -297,7 +333,9 @@ extension UInt16: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Int32: ArithmeticType {
@@ -306,16 +344,21 @@ extension Int32: ArithmeticType {
     public static var one: Int32 { return 1 }
     public static var two: Int32 { return 2 }
     
-    public static func mod(dividend: Int32, _ modulus: Int32) -> Int32 {
+    public static func mod(_ dividend: Int32, _ modulus: Int32) -> Int32 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Int32 = Int32.min, max: Int32 = Int32.max) -> Int32 {
-        return 0
+    public static func random(
+        min: Int32 = Int32.min,
+        max: Int32 = Int32.max,
+        resolution: Int32 = 1
+    ) -> Int32
+    {
+        return Int32(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: Int32) -> Int32 {
+    public static func abs(_ value: Int32) -> Int32 {
         return value < 0 ? -value : value
     }
     
@@ -329,7 +372,9 @@ extension Int32: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 
@@ -339,17 +384,21 @@ extension UInt32: ArithmeticType {
     public static var one: UInt32 { return 1 }
     public static var two: UInt32 { return 2 }
     
-    public static func mod(dividend: UInt32, _ modulus: UInt32) -> UInt32 {
+    public static func mod(_ dividend: UInt32, _ modulus: UInt32) -> UInt32 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: UInt32 = UInt32.min, max: UInt32 = UInt32.max) -> UInt32
+    public static func random(
+        min: UInt32 = UInt32.min,
+        max: UInt32 = UInt32.max,
+        resolution: UInt32 = 1
+    ) -> UInt32
     {
-        return 0
+        return UInt32(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
 
-    public static func abs(value: UInt32) -> UInt32 {
+    public static func abs(_ value: UInt32) -> UInt32 {
         return value
     }
     
@@ -363,7 +412,9 @@ extension UInt32: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Int64: ArithmeticType {
@@ -372,16 +423,21 @@ extension Int64: ArithmeticType {
     public static var one: Int64 { return 1 }
     public static var two: Int64 { return 2 }
     
-    public static func mod(dividend: Int64, _ modulus: Int64) -> Int64 {
+    public static func mod(_ dividend: Int64, _ modulus: Int64) -> Int64 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Int64 = Int64.min, max: Int64 = Int64.max) -> Int64 {
-        return 0
+    public static func random(
+        min: Int64 = Int64.min,
+        max: Int64 = Int64.max,
+        resolution: Int64 = 1
+    ) -> Int64
+    {
+        return Int64(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: Int64) -> Int64 {
+    public static func abs(_ value: Int64) -> Int64 {
         return value < 0 ? -value : value
     }
     
@@ -395,7 +451,9 @@ extension Int64: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension UInt64: ArithmeticType {
@@ -404,17 +462,21 @@ extension UInt64: ArithmeticType {
     public static var one: UInt64 { return 1 }
     public static var two: UInt64 { return 2 }
     
-    public static func mod(dividend: UInt64, _ modulus: UInt64) -> UInt64 {
+    public static func mod(_ dividend: UInt64, _ modulus: UInt64) -> UInt64 {
         let result = dividend % modulus
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: UInt64 = UInt64.min, max: UInt64 = UInt64.max) -> UInt64
+    public static func random(
+        min: UInt64 = UInt64.min,
+        max: UInt64 = UInt64.max,
+        resolution: UInt64 = 1
+    ) -> UInt64
     {
-        return 0
+        return UInt64(Int.random(min: Int(min), max: Int(max), resolution: Int(resolution)))
     }
     
-    public static func abs(value: UInt64) -> UInt64 {
+    public static func abs(_ value: UInt64) -> UInt64 {
         return value
     }
     
@@ -428,7 +490,9 @@ extension UInt64: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Float: ArithmeticType {
@@ -440,25 +504,25 @@ extension Float: ArithmeticType {
     public static var max: Float { return FLT_MAX }
     public static var min: Float { return FLT_MIN }
     
-    public static func mod(dividend: Float, _ modulus: Float) -> Float {
-        let result = dividend % modulus
+    public static func mod(_ dividend: Float, _ modulus: Float) -> Float {
+        let result = dividend.truncatingRemainder(dividingBy: modulus)
         return result < 0 ? result + modulus : result
     }
     
-    public static func abs(value: Float) -> Float {
+    public static func abs(_ value: Float) -> Float {
         return value < 0 ? -value : value
     }
     
-    public static func random(min min: Float = 0.0, max: Float = 1.0) -> Float {
+    public static func random(min: Float = 0.0, max: Float = 1.0) -> Float {
         let range = max - min
         return ((Float(arc4random())) / Float(UINT32_MAX) * range) + min
     }
     
-    public static func random(min min: Float = 0.0, max: Float = 1.0, resolution: Float) -> Float {
-        return round(random(min: min, max: max) * resolution) / resolution
+    public static func random(min: Float = 0.0, max: Float = 1.0, resolution: Float = 1.0) -> Float {
+        return (random(min: min, max: max) * resolution).rounded() / resolution
     }
     
-    public var isInteger: Bool { return self % 1 == 0 }
+    public var isInteger: Bool { return self.truncatingRemainder(dividingBy: 1) == 0 }
     public var isPrime: Bool { return isInteger ? Int(self).isPrime : false }
     public var isEven: Bool { return isInteger ? Int(self).isEven : false }
     public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
@@ -469,7 +533,9 @@ extension Float: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }
 
 extension Double: ArithmeticType {
@@ -481,21 +547,25 @@ extension Double: ArithmeticType {
     public static var max: Double { return DBL_MAX }
     public static var min: Double { return DBL_MIN }
     
-    public static func mod(dividend: Double, _ modulus: Double) -> Double {
-        let result = dividend % modulus
+    public static func mod(_ dividend: Double, _ modulus: Double) -> Double {
+        let result = dividend.truncatingRemainder(dividingBy: modulus)
         return result < 0 ? result + modulus : result
     }
     
-    public static func random(min min: Double = Double.min, max: Double = Double.max) -> Double
+    public static func random(
+        min: Double = Double.min,
+        max: Double = Double.max,
+        resolution: Double = 1.0
+    ) -> Double
     {
-        return 0
+        return (random(min: min, max: max) * resolution).rounded() / resolution
     }
     
-    public static func abs(value: Double) -> Double {
+    public static func abs(_ value: Double) -> Double {
         return value < 0 ? -value : value
     }
 
-    public var isInteger: Bool { return self % 1 == 0 }
+    public var isInteger: Bool { return self.truncatingRemainder(dividingBy: 1) == 0 }
     public var isPrime: Bool { return isInteger ? Int(self).isPrime : false }
     public var isEven: Bool { return isInteger ? Int(self).isEven : false }
     public var isOdd: Bool { return isInteger ? Int(self).isOdd : false }
@@ -506,5 +576,7 @@ extension Double: ArithmeticType {
         return Int(self).isDivisible(by: Int(value))
     }
     
-    public func format(f: String) -> String { return String(format(f), self) }
+    public func format(_ f: String) -> String {
+        return String(format: f, self)
+    }
 }

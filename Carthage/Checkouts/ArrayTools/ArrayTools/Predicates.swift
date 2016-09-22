@@ -6,9 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
-extension SequenceType {
+extension Sequence {
     
     // MARK: - Predicates
 
@@ -21,6 +19,7 @@ extension SequenceType {
      - returns: The elements containing the value
      
      **Example:**
+     
      ```
      struct S: Equatable { let value: Int }
      let array = [S(value: 1), S(value: 3), S(value: 2), S(value: 3)]
@@ -37,29 +36,72 @@ extension SequenceType {
      ```
      */
     public func extremeElements<T: Comparable>(
-        compare: (T, T) -> Bool,
-        valueToCompare extractValue: (Generator.Element) -> T) -> [Generator.Element]
+        _ compare: (T, T) -> Bool,
+        valueToCompare extractValue: (Iterator.Element) -> T) -> [Iterator.Element]
     {
-        let sorted = self.sort { compare(extractValue($0), extractValue($1)) }
+        let sorted = self.sorted { compare(extractValue($0), extractValue($1)) }
         guard let first = sorted.first else { return [] }
         let most = extractValue(first)
         return sorted.filter { extractValue($0) == most }
+    }
+    
+    /**
+     - returns: The greatest value held by an element held herein, if there are more than 0
+     elements. Otherwise, `nil`.
+     */
+    public func greatest<T: Comparable>(valueToCompare extractValue: (Iterator.Element) -> T)
+        -> T?
+    {
+        return extremity(>, valueToCompare: extractValue)
+    }
+    
+    /**
+     - returns: The least value held by an element held herein, if there are more than 0
+     elements. Otherwise, `nil`.
+     */
+    public func least<T: Comparable>(valueToCompare extractValue: (Iterator.Element) -> T)
+        -> T?
+    {
+        return extremity(<, valueToCompare: extractValue)
+    }
+    
+    /**
+     - returns: The most extreme value held by an element held herein, if there are more than 0
+     elements. Otherwise, `nil`.
+     */
+    public func extremity<T: Comparable>(
+        _ compare: (T, T) -> Bool,
+        valueToCompare extractValue: (Iterator.Element) -> T
+    ) -> T?
+    {
+        guard let first = sorted (by: { compare(extractValue($0), extractValue($1)) }).first else {
+            return nil
+        }
+        
+        return extractValue(first)
     }
 
     /**
      - returns: `true` if all elements satisfy the given `predicate`. Otherwise, `false`.
      */
-    public func allSatisfy(@noescape predicate: Generator.Element -> Bool) -> Bool {
-        for element in self { if !predicate(element) { return false } }
+    public func allSatisfy(_ predicate: (Iterator.Element) -> Bool) -> Bool {
+        for element in self {
+            if !predicate(element) {
+                return false
+            }
+        }
         return true
     }
     
     /**
      - returns: `true` if any elements satisfy the given `predicate`. Otherwise, `false`.
      */
-    public func anySatisfy(@noescape predicate: Generator.Element -> Bool) -> Bool {
-        for element in self { if predicate(element) { return true } }
+    public func anySatisfy(_ predicate: (Iterator.Element) -> Bool) -> Bool {
+        for element in self {
+            if predicate(element) {
+                return true
+            }
+        }
         return false
     }
 }
-

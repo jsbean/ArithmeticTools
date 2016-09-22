@@ -6,13 +6,11 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 /**
  Errors thrown when trying to do bad things to an `Array`
  */
-public enum ArrayError: ErrorType {
+public enum ArrayError: Error {
     
     /// Error thrown when trying to remove an `Element` that is not there.
-    case RemovalError
+    case removalError
 }

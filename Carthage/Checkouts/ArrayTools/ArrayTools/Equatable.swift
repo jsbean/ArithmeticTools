@@ -6,20 +6,57 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+extension Sequence where Iterator.Element: Equatable {
+    
+    /**
+     - returns:
+     `true` if there are more than one elements contained herein, and if all elements are
+     logically equivalent.
+     `false` if there are more than one elements contained herein, and not all elements are
+     logically equivalent.
+     `nil` if there are less than two elements contained herein.
+     */
+    public var isHomogeneous: Bool? {
+        var firstValue: Iterator.Element?
+        var moreThanOneElement: Bool = false
+        for (e, el) in self.enumerated() {
+            switch e {
+            case 0: firstValue = el
+            default:
+                if el != firstValue { return false }
+                else { moreThanOneElement = true }
+            }
+        }
+        return moreThanOneElement ? true : nil
+    }
+    
+    /**
+    - returns:
+    `true` if there are more than one elements contained herein, and if all elements are
+     logically equivalent.
+    `false` if there are more than one elements contained herein, and not all elements are
+     logically equivalent.
+    `nil` if there are less than two elements contained herein.
+    */
+    public var isHeterogeneous: Bool? {
+        var firstValue: Iterator.Element?
+        var moreThanOneElement: Bool = false
+        for (e, el) in self.enumerated() {
+            switch e {
+            case 0: firstValue = el
+            default:
+                if el == firstValue { return false }
+                else { moreThanOneElement = true }
+            }
+        }
+        return moreThanOneElement ? true : nil
+    }
+}
 
+// FIXME: Generalize to `Collection` or further.
 extension Array where Element: Equatable {
     
     // MARK: - Element: Equatable
-    
-    /// `true` if all `Elements` are logically equivalent. Otherwise `false`.
-    public var isHomogeneous: Bool { return filter({ $0 == first }).count == self.count }
-    
-    /**
-     `true` if there are two or more `Elemments`, and they are not all logically equivalent.
-     Otherwise `false`.
-    */
-    public var isHeterogeneous: Bool { return self.count < 2 ? false : !isHomogeneous }
     
     /**
      `[1,2,2,2,3,4,2].amountOf(2) -> 4`
@@ -47,9 +84,9 @@ extension Array where Element: Equatable {
 
     - returns: 2-tuple of extracted elements, and leftovers
     */
-    public func extractAll(element: Element) -> ([Element], [Element]) {
+    public func extractAll(_ element: Element) -> ([Element], [Element]) {
 
-        func remove(element: Element,
+        func remove(_ element: Element,
             fromArray array: [Element],
             leftovers: [Element],
             extracted: [Element]
@@ -74,7 +111,7 @@ extension Array where Element: Equatable {
     */
     public func sort(withOrderOfContentsIn array: [Element]) -> [Element] {
         
-        func appendMatchesOf(element: Element,
+        func appendMatchesOf(_ element: Element,
             from array: [Element],
             to result: [Element]
         ) -> ([Element],[Element])
@@ -83,7 +120,7 @@ extension Array where Element: Equatable {
             return (result + matches, leftovers)
         }
         
-        func sort(array: [Element],
+        func sort(_ array: [Element],
             withOrderOfContentsIn reference: [Element],
             into result: [Element]
         ) -> [Element]
@@ -144,7 +181,7 @@ extension Array where Element: Equatable {
     - returns: Index of first instance of value, if present. Otherwise, `nil`.
     */
     public func index(of value: Element) -> Int? {
-        for (index, el) in self.enumerate() { if el == value { return index } }
+        for (index, el) in self.enumerated() { if el == value { return index } }
         return nil
     }
     
@@ -155,19 +192,35 @@ extension Array where Element: Equatable {
      
      - throws: `ArrayError.RemovalError` if given element not in `Array`.
      */
-    public mutating func replace(element: Element, with newElement: Element) throws {
-        guard let index = indexOf(element) else { throw ArrayError.RemovalError }
-        removeAtIndex(index)
-        insert(element, atIndex: index)
+    public mutating func replace(_ element: Element, with newElement: Element) throws {
+        guard let index = self.index(of: element) else { throw ArrayError.removalError }
+        self.remove(at: index)
+        insert(element, at: index)
     }
 }
+
 
 /**
  - returns: `true` if all elements in both sequnces are equivalent. Otherwise, `false`.
  */
-public func == <T: SequenceType where T.Generator.Element: Equatable>(lhs: T, rhs: T) -> Bool {
+public func == <T: Sequence>(lhs: T, rhs: T) -> Bool where T.Iterator.Element: Equatable {
     for pair in zip(lhs,rhs).lazy {
         if pair.0 != pair.1 { return false }
+    }
+    return true
+}
+
+// FIXME: In Swift 2.x, the above worked recursively (e.g., [[Int]] == [[Int]])
+public func == <T: Sequence>(lhs: T, rhs: T) -> Bool where
+    T.Iterator.Element: Sequence,
+    T.Iterator.Element.Iterator.Element: Equatable
+{
+    for pair0 in zip(lhs,rhs).lazy {
+        for pair1 in zip(pair0.0, pair0.1).lazy {
+            if pair1.0 != pair1.1 {
+                return false
+            }
+        }
     }
     return true
 }

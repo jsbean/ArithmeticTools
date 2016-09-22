@@ -18,10 +18,10 @@ import Foundation
  
  - returns: Greatest common divisor of a and b
  */
-public func greatestCommonDivisor<T: ArithmeticType>(a: T, _ b: T) -> T {
-    return b == T.zero ? a : greatestCommonDivisor(b, T.mod(a,b))
+public func greatestCommonDivisor<T: ArithmeticType>(_ a: T, _ b: T) -> T {
+    let result = T.mod(a,b)
+    return result == T.zero ? b : greatestCommonDivisor(b, result)
 }
-
 
 /**
  Get the closer of two values to a target value.
@@ -44,10 +44,10 @@ public func closer<T: ArithmeticType>(to target: T, a: T, b: T) -> T {
  
  - returns: 2-tuple of two `Comparable` types, in order.
  */
-public func ordered<T: Comparable>(a: T, _ b: T) -> (T,T) {
+public func ordered<T: Comparable>(_ a: T, _ b: T) -> (T,T) {
     return a <= b ? (a,b) : (b,a)
 }
 
-public func mean<T: ArithmeticType>(a: T, _ b: T) -> T {
+public func mean<T: ArithmeticType>(_ a: T, _ b: T) -> T {
     return (a + b) / T.two
 }

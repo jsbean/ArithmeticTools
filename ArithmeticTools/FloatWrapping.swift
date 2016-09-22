@@ -8,8 +8,8 @@
 
 import Foundation
 
-public protocol FloatWrapping: FloatLiteralConvertible,
-    IntegerLiteralConvertible,
+public protocol FloatWrapping: ExpressibleByFloatLiteral,
+    ExpressibleByIntegerLiteral,
     Hashable,
     Comparable
 {

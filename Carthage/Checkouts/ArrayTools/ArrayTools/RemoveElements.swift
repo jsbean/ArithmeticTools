@@ -6,8 +6,6 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 extension Array {
 
     // MARK: - Remove Elements
@@ -20,8 +18,8 @@ extension Array {
     >`[].removeFirst throws ArrayError.RemovalError`
     */
     public mutating func removeFirst() throws {
-        guard count > 0 else { throw ArrayError.RemovalError }
-        self.removeAtIndex(0)
+        guard count > 0 else { throw ArrayError.removalError }
+        self.remove(at: 0)
     }
     
     /**
@@ -33,9 +31,9 @@ extension Array {
 
     - parameter amount: Amount of elements to remove from beginning of Array
     */
-    public mutating func removeFirst(amount amount: Int) throws {
-        guard count >= amount else { throw ArrayError.RemovalError }
-        for _ in 0..<amount { self.removeAtIndex(0) }
+    public mutating func removeFirst(amount: Int) throws {
+        guard count >= amount else { throw ArrayError.removalError }
+        for _ in 0..<amount { self.remove(at: 0) }
     }
     
     /**
@@ -47,8 +45,8 @@ extension Array {
 
     - parameter amount: Amount of elements to remove from end of Array
     */
-    public mutating func removeLast(amount amount: Int) throws {
-        guard count >= amount else { throw ArrayError.RemovalError }
+    public mutating func removeLast(amount: Int) throws {
+        guard count >= amount else { throw ArrayError.removalError }
         for _ in 0..<amount { self.removeLast() }
     }
 }

@@ -8,22 +8,22 @@
 
 import Foundation
 
-extension SequenceType where Generator.Element: ArithmeticType {
+extension Sequence where Iterator.Element: ArithmeticType {
     
     /**
      Sum of elements in Sequence.
      
      >`[1,2,4].sum -> 7`
     */
-    public var sum: Generator.Element { return reduce(Generator.Element.zero, combine: +) }
+    public var sum: Iterator.Element { return reduce(Iterator.Element.zero, +) }
     
     /**
      Greatest common divisor of elements in Sequence.
      
      >`[8,12].gcd -> 4`
     */
-    public var gcd: Generator.Element? {
-        guard let min = self.minElement() else { return nil }
-        return self.map { greatestCommonDivisor(min, $0) }.minElement()
+    public var gcd: Iterator.Element? {
+        guard let min = self.min() else { return nil }
+        return self.map { greatestCommonDivisor($0, min) }.min()
     }
 }

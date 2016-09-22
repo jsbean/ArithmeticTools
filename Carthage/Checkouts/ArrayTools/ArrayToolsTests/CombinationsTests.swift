@@ -29,18 +29,18 @@ class CombinationsTests: XCTestCase {
     
     func testSubsetsDouble() {
         let array = [1,2]
-        XCTAssertEqual([[1],[2]], array.subsets(withCardinality: 1)!)
+        XCTAssert([[1],[2]] == array.subsets(withCardinality: 1)!)
     }
     
     func testSubsetsTriple() {
         let array = [1,2,3]
-        XCTAssertEqual([[1,2],[1,3],[2,3]], array.subsets(withCardinality: 2)!)
+        XCTAssert([[1,2],[1,3],[2,3]] == array.subsets(withCardinality: 2)!)
     }
     
     func testSubsetsQuadruple() {
         let array = [1,2,3,4]
-        XCTAssertEqual(
-            [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]],
+        XCTAssert(
+            [[1,2],[1,3],[1,4],[2,3],[2,4],[3,4]] ==
             array.subsets(withCardinality: 2)!
         )
     }

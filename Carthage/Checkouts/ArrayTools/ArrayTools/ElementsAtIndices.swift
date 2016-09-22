@@ -6,8 +6,6 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
 extension Array {
 
     // MARK: - Elements At Indices
@@ -33,7 +31,7 @@ extension Array {
         return self[self.count - 2] as Element
     }
     
-    public func last(amount amount: Int) -> [Element]? {
+    public func last(amount: Int) -> [Element]? {
         guard count >= amount else { return nil }
         return Array(self[(self.count - amount)..<self.count])
     }

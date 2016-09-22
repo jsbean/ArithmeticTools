@@ -36,7 +36,7 @@ extension Array where Element: ArithmeticType {
      >`[1,2,2].cumulative -> [0,1,3]`
     */
     public var cumulative: [Element] {
-        func accumulate(array: [Element], result: [Element], sum: Element) -> [Element] {
+        func accumulate(_ array: [Element], result: [Element], sum: Element) -> [Element] {
             guard let (head, tail) = array.destructured else { return result }
             return accumulate(tail, result: result + [sum], sum: sum + head)
         }
@@ -49,7 +49,7 @@ extension Array where Element: ArithmeticType {
      >`[1,2,2].cumulativeWithValue -> [(0,1),(1,2),(3,2)]`
     */
     public var cumulativeWithValue: [(Element, Element)] {
-        func accumulate(array: [Element], result: [(Element, Element)], sum: Element)
+        func accumulate(_ array: [Element], result: [(Element, Element)], sum: Element)
             -> [(Element, Element)]
         {
             guard let (head, tail) = array.destructured else { return result }

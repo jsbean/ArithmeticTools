@@ -53,7 +53,7 @@ class RandomTests: XCTestCase {
             let range = Float.random(min: 1, max: 10000)
             let resolution: Float = 4
             let r = Float.random(min: min, max: (min + range), resolution: resolution)
-            XCTAssertEqual(r % (1 / resolution), 0)
+            XCTAssertEqual(r.truncatingRemainder(dividingBy: (1 / resolution)), 0)
         }
     }
 }
