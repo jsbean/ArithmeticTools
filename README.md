@@ -1,6 +1,7 @@
 # ArithmeticTools
 
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage) [![Build Status](https://travis-ci.org/dn-m/ArithmeticTools.svg)](https://travis-ci.org/dn-m/ArithmeticTools)
+[![GitHub version](https://badge.fury.io/gh/dn-m%2Farithmetictools.svg)](https://badge.fury.io/gh/dn-m%2Farithmetictools)
 
 Basic arithmetic types and operations. For iOS and OSX platforms.
 
