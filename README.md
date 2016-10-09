@@ -1,6 +1,7 @@
 # ArithmeticTools
 
-[![Build Status](https://travis-ci.org/dn-m/ArithmeticTools.svg)](https://travis-ci.org/dn-m/ArithmeticTools)
+[![Build Status](https://travis-ci.org/dn-m/ArithmeticTools.svg)](https://travis-ci.org/dn-m/ArithmeticTools) [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![GitHub version](https://badge.fury.io/gh/dn-m%2Farithmetictools.svg)](https://badge.fury.io/gh/dn-m%2Farithmetictools)
 
 Basic arithmetic types and operations. For iOS and OSX platforms.
 
@@ -18,69 +19,6 @@ Integrate **ArithmeticTools** into your OSX or iOS project with [Carthage](https
 
 ***
 
-## Usage
+### Documentation
 
-### ArithmeticType
-
-The `protocol` **`ArithmeticType`** unifies [`IntegerLiteralConvertible`](http://swiftdoc.org/v2.1/protocol/IntegerLiteralConvertible/hierarchy/) types:
-
-| IntegerType | FloatingPointType |
-| ------------|-------------------|
-|`Int`        | `Float`           |
-|`In8`        | `Double`          |
-|`UInt8`      |                   |
-|`Int16`      |                   |
-| `UInt16`    |                   |
-|`Int32`      |                   |
-|`UInt32`     |                   |
-|`Int64`      |                   |
-|`UInt64`     |                   |
-
-#### Type Variables
-| Name | Signature |
--------|-----------|
-| **`zero`**| `zero: Bool` |
-| **`one`**| `one: Bool` |
-| **`min`**| `min: Self` |
-| **`max`**| `max: Self` |
-
-#### Type Methods
-| Name | Signature |
--------|-----------|
-| **`random`**| `random(min min: Self = ..., max: Self = ...) -> ` |
-
-#### Instance Variables
-| Name | Signature |
--------|-----------|
-|**`isEven`**| `isEven: Bool`|
-|**`isOdd`**| `isOdd: Bool` |
-|**`isPrime`**| `isPrime: Bool`|
-|**`format`**| `format(f: String) -> String` |
-
-### SequenceType Extensions
-
-#### Instance Variables
-| Name | Signature |
--------|-----------|
-|**`sum`**| `sum: Generator.Element`|
-|**`gcd`**| `gcd: Generator.Element?` |
-
-### Array Extensions
-
-#### Instance Variables
-| Name | Signature |
--------|-----------|
-|**`mean`**|`mean: Float`|  
-|**`cumulative`**|`cumulative: [Element]`|
-|**`cumulativeWithValue`**|`cumulativeWithValue: [(Element, Element)]`|
-
-### Free functions
-
-| Name | Signature |
--------|-----------|
-|**`greatestCommonDivisor`**|`greatestCommonDivisor((a: T, _ b: T) -> T`|
-
-```Swift
-greatestCommonDivisor(4,12) // 4
-greatestCommonDivisor(6.0, 9.0) // 3.0
-```
+See the [documentation](http://dn-m.github.io/ArithmeticTools/).
