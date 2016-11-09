@@ -48,6 +48,7 @@ public func ordered<T: Comparable>(_ a: T, _ b: T) -> (T,T) {
     return a <= b ? (a,b) : (b,a)
 }
 
+// FIXME: Add doc comment
 public func mean<T: ArithmeticType>(_ a: T, _ b: T) -> T {
     return (a + b) / T.two
 }
