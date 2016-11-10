@@ -9,7 +9,7 @@
 import Foundation
 
 /// - returns: All given values risen to the power of two.
-public func squared<A: ArithmeticType>(_ values: [A]) -> [A] {
+public func squared <A: ArithmeticType> (_ values: [A]) -> [A] {
     return values.map { $0 * $0 }
 }
 
