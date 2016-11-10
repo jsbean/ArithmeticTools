@@ -33,10 +33,10 @@ func linearRegression <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> (Float) -> (
     
     guard !(xs.isEmpty || ys.isEmpty) else { return { _ in 0 } }
     
-    let s = slope(xs,ys)
-    let intercept = ys.mean! - (s * xs.mean!)
+    let m = slope(xs,ys)
+    let intercept = ys.mean! - (m * xs.mean!)
     
-    return { x in x * s + intercept }
+    return { x in m * x + intercept }
 }
 
 /// - returns: Slope of the linear regression.
