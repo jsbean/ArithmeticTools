@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import ArithmeticTools
+import ArithmeticTools
 
 class LinearRegressionTests: XCTestCase {
 

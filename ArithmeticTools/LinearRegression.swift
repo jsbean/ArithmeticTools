@@ -19,7 +19,7 @@ public func * <A: ArithmeticType> (lhs: [A], rhs: [A]) -> [A] {
 }
 
 /// - returns: Slope of linear regression of given x-values and y-values.
-func slope <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> Float {
+public func slope <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> Float {
     let sum1 = (xs * ys).mean! - (xs.mean! * ys.mean!)
     let sum2 = squared(xs).mean! - pow(xs.mean!, 2)
     return sum1 / sum2
@@ -29,7 +29,7 @@ func slope <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> Float {
 ///     regression.
 ///
 /// - note: Modified from: [Ray Wenderlich Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Linear%20Regression)
-func linearRegression <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> (Float) -> (Float) {
+public func linearRegression <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> (Float) -> (Float) {
     
     guard !(xs.isEmpty || ys.isEmpty) else { return { _ in 0 } }
     
@@ -40,11 +40,11 @@ func linearRegression <A: ArithmeticType> (_ xs: [A], _ ys: [A]) -> (Float) -> (
 }
 
 /// - returns: Slope of the linear regression.
-func slope <A: ArithmeticType> (_ dictionary: [A: A]) -> Float {
+public func slope <A: ArithmeticType> (_ dictionary: [A: A]) -> Float {
     return slope(Array(dictionary.keys), Array(dictionary.values))
 }
 
 /// - returns: Function that will calculate the y-value for the given x-value on the regression.
-func linearRegression <A: ArithmeticType> (_ dictionary: [A: A]) -> (Float) -> Float {
+public func linearRegression <A: ArithmeticType> (_ dictionary: [A: A]) -> (Float) -> Float {
     return linearRegression(Array(dictionary.keys), Array(dictionary.values))
 }
