@@ -26,6 +26,10 @@
 		074276CE1C877EE400D50A30 /* Power.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CC1C877EE400D50A30 /* Power.swift */; };
 		074276D01C877EF700D50A30 /* PowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CF1C877EF700D50A30 /* PowerTests.swift */; };
 		074276D11C877EF700D50A30 /* PowerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276CF1C877EF700D50A30 /* PowerTests.swift */; };
+		07502CA91DD2A2A20095AB27 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07502CA81DD2A2A20095AB27 /* LinearRegression.swift */; };
+		07502CAA1DD2A2A20095AB27 /* LinearRegression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07502CA81DD2A2A20095AB27 /* LinearRegression.swift */; };
+		07502CAC1DD2A90E0095AB27 /* LinearRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */; };
+		07502CAD1DD2A90E0095AB27 /* LinearRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */; };
 		075F16E61CE2570600545125 /* FloatWrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F16E51CE2570600545125 /* FloatWrapping.swift */; };
 		075F16E71CE2570600545125 /* FloatWrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F16E51CE2570600545125 /* FloatWrapping.swift */; };
 		07652E101C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
@@ -113,6 +117,8 @@
 		074276C91C8775B800D50A30 /* PowerSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSequenceTests.swift; sourceTree = "<group>"; };
 		074276CC1C877EE400D50A30 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
 		074276CF1C877EF700D50A30 /* PowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerTests.swift; sourceTree = "<group>"; };
+		07502CA81DD2A2A20095AB27 /* LinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
+		07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegressionTests.swift; sourceTree = "<group>"; };
 		075F16E51CE2570600545125 /* FloatWrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatWrapping.swift; sourceTree = "<group>"; };
 		07652E0F1C8788B300359A03 /* CloserToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloserToTests.swift; sourceTree = "<group>"; };
 		078142521C7CECD5004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -223,6 +229,7 @@
 				078142A31C7CF3F1004B68D3 /* Array+ArithmeticType.swift */,
 				078142A41C7CF3F1004B68D3 /* Functions.swift */,
 				078142A51C7CF3F1004B68D3 /* SequenceType+ArithmeticType.swift */,
+				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticTools;
@@ -244,6 +251,7 @@
 				074276CF1C877EF700D50A30 /* PowerTests.swift */,
 				071D19C41C94BEB100543F77 /* OrderedTests.swift */,
 				07F538311CE3AEC6001294CC /* ComparisonTests.swift */,
+				07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */,
 				074276C51C8767FD00D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticToolsTests;
@@ -504,6 +512,7 @@
 				074276CD1C877EE400D50A30 /* Power.swift in Sources */,
 				07F5382F1CE3AEAC001294CC /* Comparison.swift in Sources */,
 				0719FA871C875584009EACB4 /* PowerGenerator.swift in Sources */,
+				07502CA91DD2A2A20095AB27 /* LinearRegression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -524,6 +533,7 @@
 				071D19C51C94BEB100543F77 /* OrderedTests.swift in Sources */,
 				07652E101C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142B91C7CF494004B68D3 /* PrimeTests.swift in Sources */,
+				07502CAC1DD2A90E0095AB27 /* LinearRegressionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,6 +550,7 @@
 				074276CE1C877EE400D50A30 /* Power.swift in Sources */,
 				07F538301CE3AEAC001294CC /* Comparison.swift in Sources */,
 				0719FA881C875584009EACB4 /* PowerGenerator.swift in Sources */,
+				07502CAA1DD2A2A20095AB27 /* LinearRegression.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +571,7 @@
 				071D19C61C94BEB100543F77 /* OrderedTests.swift in Sources */,
 				07652E111C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142BA1C7CF494004B68D3 /* PrimeTests.swift in Sources */,
+				07502CAD1DD2A90E0095AB27 /* LinearRegressionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

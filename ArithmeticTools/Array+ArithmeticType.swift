@@ -9,6 +9,7 @@
 import Foundation
 import ArrayTools
 
+// Move this up to extension of `BidirectionalCollection`.
 extension Array where Element: ArithmeticType {
     
     /// Average of elements in Array.
@@ -64,6 +65,8 @@ extension Array where Element: ArithmeticType {
      - parameter target: Value to check for closest component
      
      - returns: Value closest to target is !self.isEmpty. Otherwise nil.
+     
+     - TODO: Consider moving this up to an extension of `Sequence`.
      */
     public func closest(to target: Element) -> Element? {
         guard !self.isEmpty else { return nil }
