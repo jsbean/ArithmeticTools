@@ -8,16 +8,15 @@
 
 import Foundation
 
-public protocol FloatWrapping: ExpressibleByFloatLiteral,
+public protocol FloatWrapping:
+    ExpressibleByFloatLiteral,
     ExpressibleByIntegerLiteral,
     Hashable,
     Comparable
 {
-    associatedtype FloatLiteralType = Float
-    associatedtype IntegerLiteralType = Int
     init(floatLiteral: Float)
-    var value: Float { get set }
     init(integerLiteral: Int)
+    var value: Float { get set }
     init(_ float: Float)
 }
 

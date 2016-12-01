@@ -98,18 +98,4 @@ class LinearRegressionTests: XCTestCase {
         
         XCTAssertEqual(linearRegression(values)(2.5), expected)
     }
-    
-    func testLinearRegressionInsideHarder() {
-        
-        
-    }
-    
-    func testDictionarySlopeInts() {
-        
-        let dict: [Int: Int] = [0:0,2:1,4:2]
-        
-        let expected: Float = 0.5
-        
-        XCTAssertEqual(slope(dict), expected)
-    }
 }

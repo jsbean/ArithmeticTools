@@ -18,16 +18,4 @@ class PrimeTests: XCTestCase {
     func testIntIsPrimeFalse() {
         XCTAssertFalse(9.isPrime)
     }
-    
-    func testFloatIsPrimeTrue() {
-        XCTAssertTrue(7.0.isPrime)
-    }
-    
-    func testFloatIsPrimeFalse() {
-        XCTAssertFalse(9.0.isPrime)
-    }
-    
-    func testFloatIsPrimeDecimalFalse() {
-        XCTAssertFalse(9.2.isPrime)
-    }
 }
