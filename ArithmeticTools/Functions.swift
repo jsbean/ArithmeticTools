@@ -8,19 +8,12 @@
 
 import Foundation
 
-/**
- Get the greatest common divisor of two values.
- 
- >`greatestCommonDivisor(12,16) -> 4`
- 
- - parameter a: ArithmeticType value
- - parameter b: ArithmeticType value
- 
+/*
  - returns: Greatest common divisor of a and b
  */
-public func greatestCommonDivisor<T: ArithmeticType>(_ a: T, _ b: T) -> T {
-    let result = T.mod(a,b)
-    return result == T.zero ? b : greatestCommonDivisor(b, result)
+public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
+    let result = a % b
+    return result == 0 ? b : gcd(b, result)
 }
 
 /**
@@ -35,8 +28,8 @@ public func greatestCommonDivisor<T: ArithmeticType>(_ a: T, _ b: T) -> T {
 
  - returns: Value closer to target value
  */
-public func closer<T: ArithmeticType>(to target: T, a: T, b: T) -> T {
-    return T.abs(a - target) <= T.abs(b - target) ? a : b
+public func closer<T: SignedNumber>(to target: T, a: T, b: T) -> T {
+    return abs(a - target) <= abs(b - target) ? a : b
 }
 
 /**
@@ -48,7 +41,7 @@ public func ordered<T: Comparable>(_ a: T, _ b: T) -> (T,T) {
     return a <= b ? (a,b) : (b,a)
 }
 
-// FIXME: Add doc comment
-public func mean<T: ArithmeticType>(_ a: T, _ b: T) -> T {
-    return (a + b) / T.two
+/// - returns: The average to the two given values.
+public func mean <F: FloatingPoint> (_ a: F, _ b: F) -> F {
+    return (a + b) / 2
 }

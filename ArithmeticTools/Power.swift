@@ -17,16 +17,16 @@ import Foundation
  
  - returns: Power-of-two value closest to target value
  */
-public func closestPowerOfTwo<T: ArithmeticType>(to target: T) -> T? {
-    return closestPowerOfTwo(withCoefficient: T.two, to: target)
+public func closestPowerOfTwo(to target: Int) -> Int? {
+    return closestPowerOfTwo(withCoefficient: 2, to: target)
 }
 
 
 /**
  - returns: Power-of-two value closest to and less than target value
  */
-public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
-    return closestPowerOfTwo(withCoefficient: T.two, under: target)
+public func closestPowerOfTwo(under target: Int) -> Int? {
+    return closestPowerOfTwo(withCoefficient: 2, under: target)
 }
 
 /**
@@ -41,25 +41,35 @@ public func closestPowerOfTwo<T: ArithmeticType>(under target: T) -> T? {
  
  - returns: Power-of-two value (with coefficient) closest to target value
  */
-public func closestPowerOfTwo<T: ArithmeticType>(withCoefficient coefficient: T,
-    to target: T
-) -> T?
-{
+public func closestPowerOfTwo(withCoefficient coefficient: Int, to target: Int) -> Int? {
+    
     let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: true))
-    guard !pseq.isEmpty else { return nil }
-    guard let lastPair = pseq.last(amount: 2) else { return pseq.first! }
+    
+    guard !pseq.isEmpty else {
+        return nil
+    }
+    
+    guard let lastPair = pseq.last(amount: 2) else {
+        return pseq.first!
+    }
+    
     return closer(to: target, a: lastPair[0], b: lastPair[1])
 }
 
 /**
  - returns: Power-of-two (with coefficient) closest to and less than target value
  */
-public func closestPowerOfTwo<T: ArithmeticType>(withCoefficient coefficient: T,
-    under target: T
-) -> T?
-{
+public func closestPowerOfTwo(withCoefficient coefficient: Int, under target: Int) -> Int? {
+    
     let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: false))
-    guard !pseq.isEmpty else { return nil }
-    guard let lastPair = pseq.last(amount: 2) else { return pseq.first! }
+    
+    guard !pseq.isEmpty else {
+        return nil
+    }
+    
+    guard let lastPair = pseq.last(amount: 2) else {
+        return pseq.first!
+    }
+    
     return closer(to: target, a: lastPair[0], b: lastPair[1])
 }
