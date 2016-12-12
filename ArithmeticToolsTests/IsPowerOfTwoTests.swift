@@ -31,6 +31,10 @@ class PrimeTests: XCTestCase {
         XCTAssertFalse(-17.isPowerOfTwo)
         XCTAssertFalse(-999.isPowerOfTwo)
         XCTAssertFalse(-1028.isPowerOfTwo)
+        XCTAssertFalse((-3).isPowerOfTwo)
+        XCTAssertFalse((-17).isPowerOfTwo)
+        XCTAssertFalse((-999).isPowerOfTwo)
+        XCTAssertFalse((-1028).isPowerOfTwo)
     }
     
     func testIntIsPowerOfTwoZero() {

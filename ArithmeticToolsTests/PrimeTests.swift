@@ -32,9 +32,9 @@ class PrimeTests: XCTestCase {
     }
     
     func testIntIsPrimeNegativeIsFalse() {
-        XCTAssertFalse(-1.isPrime)
-        XCTAssertFalse(-3.isPrime)
-        XCTAssertFalse(-9.isPrime)
+        XCTAssertFalse((-1).isPrime)
+        XCTAssertFalse((-3).isPrime)
+        XCTAssertFalse((-9).isPrime)
     }
     
     func testIntIsPrime2isTrue() {
