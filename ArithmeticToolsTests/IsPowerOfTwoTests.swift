@@ -9,7 +9,7 @@
 import XCTest
 @testable import ArithmeticTools
 
-class PrimeTests: XCTestCase {
+class IsPowerOfTwoTests: XCTestCase {
     
     func testIntIsPowerOfTwoTrue() {
         XCTAssertTrue(1.isPowerOfTwo)
