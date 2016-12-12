@@ -16,6 +16,7 @@ class IsPowerOfTwoTests: XCTestCase {
         XCTAssertTrue(2.isPowerOfTwo)
         XCTAssertTrue(4.isPowerOfTwo)
         XCTAssertTrue(1024.isPowerOfTwo)
+        XCTAssertTrue(4294967296.isPowerOfTwo)
     }
     
     func testIntIsPowerOfTwoFalse() {
@@ -27,6 +28,7 @@ class IsPowerOfTwoTests: XCTestCase {
         XCTAssertFalse((-17).isPowerOfTwo)
         XCTAssertFalse((-999).isPowerOfTwo)
         XCTAssertFalse((-1028).isPowerOfTwo)
+        XCTAssertFalse((Int64.min).isPowerOfTwo)
     }
     
     func testIntIsPowerOfTwoZero() {
