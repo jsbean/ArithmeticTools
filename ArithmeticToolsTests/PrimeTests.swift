@@ -23,11 +23,11 @@ class PrimeTests: XCTestCase {
         XCTAssertFalse(10000.isPrime)
     }
     
-    func testIntIsPrime1isFalse() {
+    func testIntIsPrime1IsFalse() {
         XCTAssertFalse(1.isPrime)
     }
     
-    func testIntIsPrime0isFalse() {
+    func testIntIsPrime0IsFalse() {
         XCTAssertFalse(0.isPrime)
     }
     
@@ -37,11 +37,11 @@ class PrimeTests: XCTestCase {
         XCTAssertFalse((-9).isPrime)
     }
     
-    func testIntIsPrime2isTrue() {
+    func testIntIsPrime2IsTrue() {
         XCTAssertTrue(2.isPrime)
     }
     
-    func testIntIsPrime3isTrue() {
+    func testIntIsPrime3IsTrue() {
         XCTAssertTrue(3.isPrime)
     }
 }
