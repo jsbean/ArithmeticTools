@@ -46,6 +46,6 @@ extension Integer {
     
     /// - returns: `true` if this value is a power of two. Otherwise, `false`.
     public var isPowerOfTwo: Bool {
-        return self != 0 && (self & (self - 1) == 0)
+        return self > 0 && (self & (self - 1) == 0)
     }
 }
