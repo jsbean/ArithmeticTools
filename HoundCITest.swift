@@ -10,8 +10,8 @@ import Foundation
 
 class HoundCITest {
     func testFunc() {
-        let testVar: [Int] = [3,4,5];
-        print(testVar);
+        let testVar: [Int] = [3,4,5]
+        print(testVar)
         
     }
     
