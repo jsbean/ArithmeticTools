@@ -73,7 +73,6 @@
 		07F538301CE3AEAC001294CC /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5382E1CE3AEAC001294CC /* Comparison.swift */; };
 		07F538321CE3AEC6001294CC /* ComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F538311CE3AEC6001294CC /* ComparisonTests.swift */; };
 		07F538331CE3AEC6001294CC /* ComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F538311CE3AEC6001294CC /* ComparisonTests.swift */; };
-		907177051E00A26200B4949B /* HoundCITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 907177041E00A26200B4949B /* HoundCITest.swift */; };
 		907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -155,7 +154,6 @@
 		07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CumulativeTests.swift; sourceTree = "<group>"; };
 		07F5382E1CE3AEAC001294CC /* Comparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
 		07F538311CE3AEC6001294CC /* ComparisonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonTests.swift; sourceTree = "<group>"; };
-		907177041E00A26200B4949B /* HoundCITest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoundCITest.swift; sourceTree = "<group>"; };
 		9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsPowerOfTwoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -216,7 +214,6 @@
 		078142481C7CECD5004B68D3 = {
 			isa = PBXGroup;
 			children = (
-				907177041E00A26200B4949B /* HoundCITest.swift */,
 				078142551C7CECD5004B68D3 /* ArithmeticTools.h */,
 				078142541C7CECD5004B68D3 /* ArithmeticTools */,
 				078142601C7CECD5004B68D3 /* ArithmeticToolsTests */,
@@ -532,7 +529,6 @@
 				075F16E61CE2570600545125 /* FloatWrapping.swift in Sources */,
 				078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA471DF0C4A00071B801 /* StringFormatting.swift in Sources */,
-				907177051E00A26200B4949B /* HoundCITest.swift in Sources */,
 				07C9DA4A1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
 				074276CD1C877EE400D50A30 /* Power.swift in Sources */,
 				07F5382F1CE3AEAC001294CC /* Comparison.swift in Sources */,
