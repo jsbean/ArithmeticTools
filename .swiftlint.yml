@@ -1,0 +1,9 @@
+disabled_rules:
+  - comma
+included:
+excluded:
+  - Carthage
+  - Pods
+
+trailing_whitespace:
+  ignores_empty_lines: true
