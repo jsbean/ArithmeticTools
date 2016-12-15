@@ -16,9 +16,11 @@ class IsPowerOfTwoTests: XCTestCase {
         XCTAssertTrue(2.isPowerOfTwo)
         XCTAssertTrue(4.isPowerOfTwo)
         XCTAssertTrue(1024.isPowerOfTwo)
-        
+    }
+    
+    func testIntIsPowerOfTwo64Bit() {
         #if (arch(x86_64) || arch(arm64))
-        XCTAssertTrue(4294967296.isPowerOfTwo)
+            XCTAssertTrue(4294967296.isPowerOfTwo)
         #endif
     }
     
