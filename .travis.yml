@@ -4,9 +4,12 @@ env:
   matrix:
     - DESTINATION="platform=iOS Simulator,OS=10.0,name=iPad Pro (12.9 inch)"
 
-before_script: carthage update
+before_script:
+  - carthage update
+  - ./.scripts/keychain.sh
 
-script: xcodebuild test -project ArithmeticTools.xcodeproj -scheme ArithmeticTools -destination "${DESTINATION}" TOOLCHAINS=swift
+script: xcodebuild test -project ArithmeticTools.xcodeproj -scheme ArithmeticTools -destination "${DESTINATION}" CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO TOOLCHAINS=swift
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+  
