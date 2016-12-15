@@ -1,24 +1,19 @@
 language: objective-c
 osx_image: xcode8
-env:
-  matrix:
-    - DESTINATION="platform=iOS Simulator,OS=9.3,name=iPad 2"
-    - DESTINATION="platform=iOS Simulator,OS=10.0,name=iPad Pro (12.9 inch)"
 
 before_script: carthage update
 
 script: 
-  
-  - travis_retry xcodebuild test 
-    -project ArithmeticTools.xcodeproj 
-    -scheme ArithmeticTools 
-    -destination "${DESTINATION}" 
-    TOOLCHAINS=swift
 
-  - travis_retry xcodebuild test 
-    -project ArithmeticTools.xcodeproj 
-    -scheme ArithmeticToolsMac 
-    TOOLCHAINS=swift
+- travis_retry xcodebuild 
+  -project ArithmeticTools.xcodeproj
+  -scheme ArithmeticTools
+  TOOLCHAINS=swift
+
+- travis_retry xcodebuild 
+  -project ArithmeticTools.xcodeproj
+  -scheme ArithmeticToolsMac
+  TOOLCHAINS=swift  
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
