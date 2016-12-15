@@ -7,7 +7,18 @@ env:
 
 before_script: carthage update
 
-script: travis_retry xcodebuild test -project ArithmeticTools.xcodeproj -scheme ArithmeticTools -destination "${DESTINATION}" TOOLCHAINS=swift
+script: 
+  
+  - travis_retry xcodebuild test 
+    -project ArithmeticTools.xcodeproj 
+    -scheme ArithmeticTools 
+    -destination "${DESTINATION}" 
+    TOOLCHAINS=swift
+
+  - travis_retry xcodebuild test 
+    -project ArithmeticTools.xcodeproj 
+    -scheme ArithmeticToolsMac 
+    TOOLCHAINS=swift
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
