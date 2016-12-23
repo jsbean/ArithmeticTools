@@ -49,7 +49,8 @@ public func closestPowerOfTwo(withCoefficient coefficient: Int, to target: Int) 
         return nil
     }
     
-    guard let lastPair = pseq.last(amount: 2) else {
+    let lastPair = pseq.last(amount: 2)
+    guard !lastPair.isEmpty else {
         return pseq.first!
     }
     
@@ -67,7 +68,8 @@ public func closestPowerOfTwo(withCoefficient coefficient: Int, under target: In
         return nil
     }
     
-    guard let lastPair = pseq.last(amount: 2) else {
+    let lastPair = pseq.last(amount: 2)
+    guard !lastPair.isEmpty else {
         return pseq.first!
     }
     
