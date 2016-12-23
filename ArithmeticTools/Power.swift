@@ -21,7 +21,6 @@ public func closestPowerOfTwo(to target: Int) -> Int? {
     return closestPowerOfTwo(withCoefficient: 2, to: target)
 }
 
-
 /**
  - returns: Power-of-two value closest to and less than target value
  */
@@ -45,7 +44,6 @@ public func closestPowerOfTwo(withCoefficient coefficient: Int, to target: Int) 
     let sequence = PowerSequence(coefficient: coefficient, max: target, doOvershoot: true)
     return closer(to: sequence, target: target)
 }
-
 
 /// - returns: Power-of-two (with coefficient) closest to and less than target value
 public func closestPowerOfTwo(withCoefficient coefficient: Int, under target: Int) -> Int? {
