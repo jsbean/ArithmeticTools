@@ -7,7 +7,7 @@
 //
 
 import Foundation
-import ArrayTools
+import Collections
 
 extension SignedNumber {
     
