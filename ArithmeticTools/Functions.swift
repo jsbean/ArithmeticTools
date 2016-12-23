@@ -37,7 +37,7 @@ public func closer <T: SignedNumber> (to target: T, a: T, b: T) -> T {
  
  - returns: 2-tuple of two `Comparable` types, in order.
  */
-public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T,T) {
+public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T, T) {
     return a <= b ? (a,b) : (b,a)
 }
 
