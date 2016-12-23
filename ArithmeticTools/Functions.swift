@@ -28,7 +28,7 @@ public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
 
  - returns: Value closer to target value
  */
-public func closer<T: SignedNumber>(to target: T, a: T, b: T) -> T {
+public func closer <T: SignedNumber> (to target: T, a: T, b: T) -> T {
     return abs(a - target) <= abs(b - target) ? a : b
 }
 
@@ -37,7 +37,7 @@ public func closer<T: SignedNumber>(to target: T, a: T, b: T) -> T {
  
  - returns: 2-tuple of two `Comparable` types, in order.
  */
-public func ordered<T: Comparable>(_ a: T, _ b: T) -> (T,T) {
+public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T, T) {
     return a <= b ? (a,b) : (b,a)
 }
 

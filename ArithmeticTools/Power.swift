@@ -21,7 +21,6 @@ public func closestPowerOfTwo(to target: Int) -> Int? {
     return closestPowerOfTwo(withCoefficient: 2, to: target)
 }
 
-
 /**
  - returns: Power-of-two value closest to and less than target value
  */
@@ -42,33 +41,28 @@ public func closestPowerOfTwo(under target: Int) -> Int? {
  - returns: Power-of-two value (with coefficient) closest to target value
  */
 public func closestPowerOfTwo(withCoefficient coefficient: Int, to target: Int) -> Int? {
-    
-    let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: true))
-    
-    guard !pseq.isEmpty else {
-        return nil
-    }
-    
-    guard let lastPair = pseq.last(amount: 2) else {
-        return pseq.first!
-    }
-    
-    return closer(to: target, a: lastPair[0], b: lastPair[1])
+    let sequence = PowerSequence(coefficient: coefficient, max: target, doOvershoot: true)
+    return closer(to: sequence, target: target)
 }
 
-/**
- - returns: Power-of-two (with coefficient) closest to and less than target value
- */
+/// - returns: Power-of-two (with coefficient) closest to and less than target value
 public func closestPowerOfTwo(withCoefficient coefficient: Int, under target: Int) -> Int? {
+    let sequence = PowerSequence(coefficient: coefficient, max: target, doOvershoot: false)
+    return closer(to: sequence, target: target)
+}
+
+private func closer(to sequence: PowerSequence<Int>, target: Int) -> Int? {
     
-    let pseq = Array(PowerSequence(coefficient: coefficient, max: target, doOvershoot: false))
-    
-    guard !pseq.isEmpty else {
+    let sequence = Array(sequence)
+
+    guard !sequence.isEmpty else {
         return nil
     }
     
-    guard let lastPair = pseq.last(amount: 2) else {
-        return pseq.first!
+    let lastPair = sequence.last(amount: 2)
+    
+    guard !lastPair.isEmpty else {
+        return sequence[0]
     }
     
     return closer(to: target, a: lastPair[0], b: lastPair[1])
