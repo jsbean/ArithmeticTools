@@ -9,7 +9,7 @@ env:
     - DESTINATION="platform=OS X" 
       SCHEME="ArithmeticToolsMac"
 
-before_script: carthage update
+before_script: if [ -f ./Cartfile ]; then carthage update; fi;
 
 script: travis_retry xcodebuild test 
   -project ArithmeticTools.xcodeproj
@@ -19,3 +19,4 @@ script: travis_retry xcodebuild test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
