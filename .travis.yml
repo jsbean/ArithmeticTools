@@ -2,16 +2,16 @@ language: objective-c
 osx_image: xcode8
 env:
   matrix:
-    - DESTINATION="platform=iOS Simulator,OS=9.3,name=iPad 2" 
+    - DESTINATION="platform=iOS Simulator,OS=9.3,name=iPad 2"
       SCHEME="ArithmeticTools"
     - DESTINATION="platform=iOS Simulator,OS=10.0,name=iPad Pro (12.9 inch)"
       SCHEME="ArithmeticTools"
-    - DESTINATION="platform=OS X" 
+    - DESTINATION="platform=OS X"
       SCHEME="ArithmeticToolsMac"
 
 before_script: if [ -f ./Cartfile ]; then carthage update; fi;
 
-script: travis_retry xcodebuild test 
+script: travis_retry xcodebuild test
   -project ArithmeticTools.xcodeproj
   -scheme "${SCHEME}"
   -destination "${DESTINATION}"
@@ -19,4 +19,3 @@ script: travis_retry xcodebuild test
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-
