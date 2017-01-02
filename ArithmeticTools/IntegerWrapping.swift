@@ -13,15 +13,31 @@ public protocol IntegerWrapping: ExpressibleByIntegerLiteral, Hashable, Comparab
     init(integerLiteral: Int)
 }
 
-
-// MARK: - Hashable
 extension IntegerWrapping {
-    public var hashValue: Int { return value.hashValue }
+    
+    // MARK: - `Equatable`
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.value == rhs.value
+    }
 }
 
-// MARK: - Comparable
-public func == <T: IntegerWrapping>(lhs: T, rhs: T) -> Bool {
-    return lhs.value == rhs.value
+extension IntegerWrapping {
+    
+    // MARK: - `Comparable`
+    
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        return lhs.value < rhs.value
+    }
+}
+
+extension IntegerWrapping {
+    
+    // MARK: - `Hashable`
+    
+    public var hashValue: Int {
+        return value.hashValue
+    }
 }
 
 public func == <T: IntegerWrapping>(lhs: T, rhs: Int) -> Bool {
@@ -30,10 +46,6 @@ public func == <T: IntegerWrapping>(lhs: T, rhs: Int) -> Bool {
 
 public func == <T: IntegerWrapping>(lhs: Int, rhs: T) -> Bool {
     return lhs == rhs.value
-}
-
-public func < <T: IntegerWrapping>(lhs: T, rhs: T) -> Bool {
-    return lhs.value < rhs.value
 }
 
 public func < <T: IntegerWrapping>(lhs: T, rhs: Int) -> Bool {
