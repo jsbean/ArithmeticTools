@@ -7,26 +7,66 @@
 //
 
 public protocol Rational:
-    ExpressibleByIntegerLiteral,
-    ExpressibleByFloatLiteral,
     Comparable,
-    Hashable,
-    CustomStringConvertible
+    Hashable
 {
-    var numerator: Int { get }
-    var denominator: Int { get }
+    // MARK: - Instance Properties
+    
+    /// Float value.
     var floatValue: Float { get }
-    var inverse: Self { get }
+    
+    /// Inverse of self, if `numerator != 0`. Otherwise, `nil`.
+    var inverse: Self? { get }
+    
+    /// Reduced form of `self`.
     var reduced: Self { get }
     
+    /// Numerator.
+    var numerator: Int { get }
+    
+    /// Denominator.
+    var denominator: Int { get }
+    
+    // MARK: - Initializers
+    
+    /// Create a `Rational` value with a given `numerator` and `denominator`.
     init(_ numerator: Int, _ denominator: Int)
 }
 
 extension Rational {
     
-    static func == (lhs: Self, rhs: Self) -> Bool {
+    /// Float value.
+    public var floatValue: Float {
+        return Float(numerator) / Float(denominator)
+    }
+}
+
+extension Rational {
+    
+    // MARK: - `Comparable`
+    
+    public static func < (lhs: Self, rhs: Self) -> Bool {
+        fatalError()
+    }
+}
+
+extension Rational {
+    
+    // MARK: - `Comparable`
+    
+    public static func == (lhs: Self, rhs: Self) -> Bool {
         fatalError("Not yet implemented")
     }
 }
+
+extension Rational {
+    
+    // MARK: - `Hashable`
+    
+    public var hashValue: Int {
+        return numerator.hashValue ^ denominator.hashValue
+    }
+}
+
 
 // +(=) / -(=) / *(=) / \/(=)

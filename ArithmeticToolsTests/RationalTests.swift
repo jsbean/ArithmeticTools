@@ -11,5 +11,29 @@ import ArithmeticTools
 
 class RationalTests: XCTestCase {
 
+    struct R: Rational {
+        
+        var numerator: Int
+        var denominator: Int
+        var floatValue: Float { fatalError() }
+        var inverse: R { fatalError() }
+        var reduced: R { fatalError() }
+        
+        init(_ numerator: Int, _ denominator: Int) {
+            
+            guard denominator != 0 else {
+                fatalError("Cannot have Rational with denominator of 0")
+            }
+            
+            self.numerator = numerator
+            self.denominator = denominator
+        }
+    }
+    
+    func testInit() {
+        _ = R(1,1)
+    }
+    
     
 }
+
