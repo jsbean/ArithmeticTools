@@ -80,4 +80,3 @@ class RationalTests: XCTestCase {
         XCTAssertNotEqual(a.hashValue, b.hashValue)
     }
 }
-
