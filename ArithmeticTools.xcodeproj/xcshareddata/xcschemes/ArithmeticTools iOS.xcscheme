@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "078142511C7CECD5004B68D3"
                BuildableName = "ArithmeticTools.framework"
-               BlueprintName = "ArithmeticTools"
+               BlueprintName = "ArithmeticTools iOS"
                ReferencedContainer = "container:ArithmeticTools.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -34,8 +34,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "0781425B1C7CECD5004B68D3"
-               BuildableName = "ArithmeticToolsTests.xctest"
-               BlueprintName = "ArithmeticToolsTests"
+               BuildableName = "ArithmeticTools iOS Tests.xctest"
+               BlueprintName = "ArithmeticTools iOS Tests"
                ReferencedContainer = "container:ArithmeticTools.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142511C7CECD5004B68D3"
             BuildableName = "ArithmeticTools.framework"
-            BlueprintName = "ArithmeticTools"
+            BlueprintName = "ArithmeticTools iOS"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -67,7 +67,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142511C7CECD5004B68D3"
             BuildableName = "ArithmeticTools.framework"
-            BlueprintName = "ArithmeticTools"
+            BlueprintName = "ArithmeticTools iOS"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -85,7 +85,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "078142511C7CECD5004B68D3"
             BuildableName = "ArithmeticTools.framework"
-            BlueprintName = "ArithmeticTools"
+            BlueprintName = "ArithmeticTools iOS"
             ReferencedContainer = "container:ArithmeticTools.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
