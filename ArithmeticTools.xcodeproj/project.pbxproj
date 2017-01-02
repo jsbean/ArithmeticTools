@@ -35,6 +35,10 @@
 		07652E111C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
 		07690BE21E0D913C0095F1D5 /* MeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690BE11E0D913C0095F1D5 /* MeanTests.swift */; };
 		07690BE31E0D913C0095F1D5 /* MeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690BE11E0D913C0095F1D5 /* MeanTests.swift */; };
+		077554651E1B012700CF4A8A /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077554641E1B012700CF4A8A /* Rational.swift */; };
+		077554661E1B012700CF4A8A /* Rational.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077554641E1B012700CF4A8A /* Rational.swift */; };
+		077554681E1B013400CF4A8A /* RationalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077554671E1B013400CF4A8A /* RationalTests.swift */; };
+		077554691E1B013400CF4A8A /* RationalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 077554671E1B013400CF4A8A /* RationalTests.swift */; };
 		078142561C7CECD5004B68D3 /* ArithmeticTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 078142551C7CECD5004B68D3 /* ArithmeticTools.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0781425D1C7CECD5004B68D3 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142521C7CECD5004B68D3 /* ArithmeticTools.framework */; };
 		0781427B1C7CECE0004B68D3 /* ArithmeticTools.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */; };
@@ -131,6 +135,8 @@
 		075F16E51CE2570600545125 /* FloatWrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatWrapping.swift; sourceTree = "<group>"; };
 		07652E0F1C8788B300359A03 /* CloserToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloserToTests.swift; sourceTree = "<group>"; };
 		07690BE11E0D913C0095F1D5 /* MeanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeanTests.swift; sourceTree = "<group>"; };
+		077554641E1B012700CF4A8A /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
+		077554671E1B013400CF4A8A /* RationalTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RationalTests.swift; sourceTree = "<group>"; };
 		078142521C7CECD5004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142551C7CECD5004B68D3 /* ArithmeticTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ArithmeticTools.h; path = ArithmeticTools/ArithmeticTools.h; sourceTree = "<group>"; };
 		078142571C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -245,6 +251,7 @@
 				078142A41C7CF3F1004B68D3 /* Functions.swift */,
 				078142A51C7CF3F1004B68D3 /* SequenceExtensions.swift */,
 				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
+				077554641E1B012700CF4A8A /* Rational.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticTools;
@@ -272,6 +279,7 @@
 				07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */,
 				07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */,
 				074276C51C8767FD00D50A30 /* Supporting Files */,
+				077554671E1B013400CF4A8A /* RationalTests.swift */,
 			);
 			path = ArithmeticToolsTests;
 			sourceTree = "<group>";
@@ -527,6 +535,7 @@
 				078142AC1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07C9DA441DF0BF130071B801 /* RandomProducing.swift in Sources */,
 				075F16E61CE2570600545125 /* FloatWrapping.swift in Sources */,
+				077554651E1B012700CF4A8A /* Rational.swift in Sources */,
 				078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA471DF0C4A00071B801 /* StringFormatting.swift in Sources */,
 				07C9DA4A1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
@@ -549,6 +558,7 @@
 				078142BB1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */,
 				078142B51C7CF494004B68D3 /* GreatestCommonDivisorTests.swift in Sources */,
 				074276CA1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */,
+				077554681E1B013400CF4A8A /* RationalTests.swift in Sources */,
 				078142B31C7CF494004B68D3 /* EvenTests.swift in Sources */,
 				07C9DA411DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */,
 				078142B71C7CF494004B68D3 /* OddTests.swift in Sources */,
@@ -571,6 +581,7 @@
 				078142AD1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07C9DA451DF0BF130071B801 /* RandomProducing.swift in Sources */,
 				075F16E71CE2570600545125 /* FloatWrapping.swift in Sources */,
+				077554661E1B012700CF4A8A /* Rational.swift in Sources */,
 				078142AB1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA481DF0C4A00071B801 /* StringFormatting.swift in Sources */,
 				07C9DA4B1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
@@ -590,6 +601,7 @@
 				07C9DA4E1DF0C66F0071B801 /* CumulativeTests.swift in Sources */,
 				07F538331CE3AEC6001294CC /* ComparisonTests.swift in Sources */,
 				07690BE31E0D913C0095F1D5 /* MeanTests.swift in Sources */,
+				077554691E1B013400CF4A8A /* RationalTests.swift in Sources */,
 				074276D11C877EF700D50A30 /* PowerTests.swift in Sources */,
 				078142BC1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */,
 				078142B61C7CF494004B68D3 /* GreatestCommonDivisorTests.swift in Sources */,
