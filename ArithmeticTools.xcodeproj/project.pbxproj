@@ -134,10 +134,10 @@
 		078142521C7CECD5004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142551C7CECD5004B68D3 /* ArithmeticTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = ArithmeticTools.h; path = ArithmeticTools/ArithmeticTools.h; sourceTree = "<group>"; };
 		078142571C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0781425C1C7CECD5004B68D3 /* ArithmeticToolsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticToolsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0781425C1C7CECD5004B68D3 /* ArithmeticTools iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArithmeticTools iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142631C7CECD5004B68D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		078142711C7CECE0004B68D3 /* ArithmeticTools.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ArithmeticTools.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ArithmeticToolsMacTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		0781427A1C7CECE0004B68D3 /* ArithmeticTools macOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ArithmeticTools macOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		078142A31C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BidirectionalCollectionExtensions.swift; sourceTree = "<group>"; };
 		078142A41C7CF3F1004B68D3 /* Functions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 		078142A51C7CF3F1004B68D3 /* SequenceExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceExtensions.swift; sourceTree = "<group>"; };
@@ -225,9 +225,9 @@
 			isa = PBXGroup;
 			children = (
 				078142521C7CECD5004B68D3 /* ArithmeticTools.framework */,
-				0781425C1C7CECD5004B68D3 /* ArithmeticToolsTests.xctest */,
+				0781425C1C7CECD5004B68D3 /* ArithmeticTools iOS Tests.xctest */,
 				078142711C7CECE0004B68D3 /* ArithmeticTools.framework */,
-				0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */,
+				0781427A1C7CECE0004B68D3 /* ArithmeticTools macOS Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -333,9 +333,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		078142511C7CECD5004B68D3 /* ArithmeticTools */ = {
+		078142511C7CECD5004B68D3 /* ArithmeticTools iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078142661C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools" */;
+			buildConfigurationList = 078142661C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools iOS" */;
 			buildPhases = (
 				0781424D1C7CECD5004B68D3 /* Sources */,
 				0781424E1C7CECD5004B68D3 /* Frameworks */,
@@ -346,14 +346,14 @@
 			);
 			dependencies = (
 			);
-			name = ArithmeticTools;
+			name = "ArithmeticTools iOS";
 			productName = ArithmeticTools;
 			productReference = 078142521C7CECD5004B68D3 /* ArithmeticTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		0781425B1C7CECD5004B68D3 /* ArithmeticToolsTests */ = {
+		0781425B1C7CECD5004B68D3 /* ArithmeticTools iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078142691C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsTests" */;
+			buildConfigurationList = 078142691C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools iOS Tests" */;
 			buildPhases = (
 				078142581C7CECD5004B68D3 /* Sources */,
 				078142591C7CECD5004B68D3 /* Frameworks */,
@@ -366,14 +366,14 @@
 			dependencies = (
 				0781425F1C7CECD5004B68D3 /* PBXTargetDependency */,
 			);
-			name = ArithmeticToolsTests;
+			name = "ArithmeticTools iOS Tests";
 			productName = ArithmeticToolsTests;
-			productReference = 0781425C1C7CECD5004B68D3 /* ArithmeticToolsTests.xctest */;
+			productReference = 0781425C1C7CECD5004B68D3 /* ArithmeticTools iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		078142701C7CECE0004B68D3 /* ArithmeticToolsMac */ = {
+		078142701C7CECE0004B68D3 /* ArithmeticTools macOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078142821C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMac" */;
+			buildConfigurationList = 078142821C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools macOS" */;
 			buildPhases = (
 				0781426C1C7CECE0004B68D3 /* Sources */,
 				0781426D1C7CECE0004B68D3 /* Frameworks */,
@@ -384,14 +384,14 @@
 			);
 			dependencies = (
 			);
-			name = ArithmeticToolsMac;
+			name = "ArithmeticTools macOS";
 			productName = ArithmeticToolsMac;
 			productReference = 078142711C7CECE0004B68D3 /* ArithmeticTools.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		078142791C7CECE0004B68D3 /* ArithmeticToolsMacTests */ = {
+		078142791C7CECE0004B68D3 /* ArithmeticTools macOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 078142851C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMacTests" */;
+			buildConfigurationList = 078142851C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools macOS Tests" */;
 			buildPhases = (
 				078142761C7CECE0004B68D3 /* Sources */,
 				078142771C7CECE0004B68D3 /* Frameworks */,
@@ -404,9 +404,9 @@
 			dependencies = (
 				0781427D1C7CECE0004B68D3 /* PBXTargetDependency */,
 			);
-			name = ArithmeticToolsMacTests;
+			name = "ArithmeticTools macOS Tests";
 			productName = ArithmeticToolsMacTests;
-			productReference = 0781427A1C7CECE0004B68D3 /* ArithmeticToolsMacTests.xctest */;
+			productReference = 0781427A1C7CECE0004B68D3 /* ArithmeticTools macOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -447,10 +447,10 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				078142511C7CECD5004B68D3 /* ArithmeticTools */,
-				0781425B1C7CECD5004B68D3 /* ArithmeticToolsTests */,
-				078142701C7CECE0004B68D3 /* ArithmeticToolsMac */,
-				078142791C7CECE0004B68D3 /* ArithmeticToolsMacTests */,
+				078142511C7CECD5004B68D3 /* ArithmeticTools iOS */,
+				0781425B1C7CECD5004B68D3 /* ArithmeticTools iOS Tests */,
+				078142701C7CECE0004B68D3 /* ArithmeticTools macOS */,
+				078142791C7CECE0004B68D3 /* ArithmeticTools macOS Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -610,12 +610,12 @@
 /* Begin PBXTargetDependency section */
 		0781425F1C7CECD5004B68D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 078142511C7CECD5004B68D3 /* ArithmeticTools */;
+			target = 078142511C7CECD5004B68D3 /* ArithmeticTools iOS */;
 			targetProxy = 0781425E1C7CECD5004B68D3 /* PBXContainerItemProxy */;
 		};
 		0781427D1C7CECE0004B68D3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 078142701C7CECE0004B68D3 /* ArithmeticToolsMac */;
+			target = 078142701C7CECE0004B68D3 /* ArithmeticTools macOS */;
 			targetProxy = 0781427C1C7CECE0004B68D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -733,7 +733,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticTools;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ArithmeticTools;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
@@ -758,7 +758,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticTools;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ArithmeticTools;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 			};
@@ -769,10 +769,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -787,10 +784,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -857,10 +851,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -879,10 +870,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -905,7 +893,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		078142661C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools" */ = {
+		078142661C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078142671C7CECD5004B68D3 /* Debug */,
@@ -914,7 +902,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		078142691C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsTests" */ = {
+		078142691C7CECD5004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0781426A1C7CECD5004B68D3 /* Debug */,
@@ -923,7 +911,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		078142821C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMac" */ = {
+		078142821C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078142831C7CECE0004B68D3 /* Debug */,
@@ -932,7 +920,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		078142851C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticToolsMacTests" */ = {
+		078142851C7CECE0004B68D3 /* Build configuration list for PBXNativeTarget "ArithmeticTools macOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				078142861C7CECE0004B68D3 /* Debug */,
