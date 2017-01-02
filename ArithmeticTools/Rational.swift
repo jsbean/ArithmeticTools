@@ -43,19 +43,48 @@ extension Rational {
 
 extension Rational {
     
+    public var inverse: Self? {
+        
+        guard numerator != 0 else {
+            return nil
+        }
+        
+        return Self(denominator, numerator)
+    }
+}
+
+extension Rational {
+    
+    /// Reduced version of `self`.
+    public var reduced: Self {
+        let common = gcd(abs(numerator), abs(denominator))
+        let sign = denominator > 0 ? 1 : -1
+        return Self((sign * numerator) / common, (sign * denominator) / common)
+    }
+}
+
+
+extension Rational {
+    
     // MARK: - `Comparable`
     
     public static func < (lhs: Self, rhs: Self) -> Bool {
-        fatalError()
+        let (lhs, rhs) = reduced(lhs, rhs)
+        return lhs.numerator < rhs.numerator
     }
 }
 
 extension Rational {
     
     // MARK: - `Comparable`
+
+    public static func reduced <R: Rational> (_ a: R, _ b: R) -> (R, R) {
+        return (a.reduced, b.reduced)
+    }
     
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        fatalError("Not yet implemented")
+        let (lhs, rhs) = reduced(lhs, rhs)
+        return lhs.numerator == rhs.numerator
     }
 }
 

@@ -8,9 +8,7 @@
 
 import Foundation
 
-/*
- - returns: Greatest common divisor of a and b
- */
+/// - returns: Greatest common divisor of a and b
 public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
     let result = a % b
     return result == 0 ? b : gcd(b, result)

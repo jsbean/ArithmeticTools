@@ -15,10 +15,7 @@ class RationalTests: XCTestCase {
         
         var numerator: Int
         var denominator: Int
-        var floatValue: Float { fatalError() }
-        var inverse: R { fatalError() }
-        var reduced: R { fatalError() }
-        
+
         init(_ numerator: Int, _ denominator: Int) {
             
             guard denominator != 0 else {
@@ -34,6 +31,41 @@ class RationalTests: XCTestCase {
         _ = R(1,1)
     }
     
+    func testFloatValueOne() {
+        let r = R(1,1)
+        XCTAssertEqual(r.floatValue, 1)
+    }
     
+    func testFloatValueDecimal() {
+        let r = R(1,3)
+        XCTAssertEqual(r.floatValue, 1/3)
+    }
+    
+    func testFloatValueNegative() {
+        let r = R(-1,5)
+        XCTAssertEqual(r.floatValue, -(1/5))
+    }
+    
+    func testInverseNil() {
+        let r = R(0,1)
+        XCTAssertNil(r.inverse)
+    }
+    
+    func testInverse() {
+        let r = R(1,13)
+        XCTAssertEqual(r.inverse!, R(13,1))
+    }
+    
+    func testInverseNegative() {
+        let r = R(1,-13)
+        XCTAssertEqual(r.inverse!, R(-13,1))
+    }
+    
+    func testComparable() {
+        let a = R(1,2)
+        let b = R(2,3)
+        XCTAssert(a < b)
+        XCTAssert(b > a)
+    }
 }
 
