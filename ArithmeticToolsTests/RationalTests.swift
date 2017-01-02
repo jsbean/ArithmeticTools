@@ -67,5 +67,17 @@ class RationalTests: XCTestCase {
         XCTAssert(a < b)
         XCTAssert(b > a)
     }
+    
+    func testHashValueEqual() {
+        let a = R(1,2)
+        let b = R(3,6)
+        XCTAssertEqual(a.hashValue, b.hashValue)
+    }
+    
+    func testHashValueNotEqual() {
+        let a = R(1,13)
+        let b = R(11,10948)
+        XCTAssertNotEqual(a.hashValue, b.hashValue)
+    }
 }
 

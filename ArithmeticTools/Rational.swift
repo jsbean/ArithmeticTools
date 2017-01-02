@@ -93,7 +93,7 @@ extension Rational {
     // MARK: - `Hashable`
     
     public var hashValue: Int {
-        return numerator.hashValue ^ denominator.hashValue
+        return floatValue.hashValue
     }
 }
 
