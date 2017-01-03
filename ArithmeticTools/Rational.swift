@@ -8,7 +8,8 @@
 
 public protocol Rational:
     Comparable,
-    Hashable
+    Hashable,
+    CustomStringConvertible
 {
     // MARK: - Instance Properties
     
@@ -94,6 +95,15 @@ extension Rational {
     
     public var hashValue: Int {
         return floatValue.hashValue
+    }
+}
+
+extension Rational {
+    
+    // MARK: - `CustomStringConvertible`
+    
+    public var description: String {
+        return "\(numerator)/\(denominator)"
     }
 }
 
