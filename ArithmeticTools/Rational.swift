@@ -22,6 +22,9 @@ public protocol Rational:
     /// Reduced form of `self`.
     var reduced: Self { get }
     
+    // Whether or not `self` is in its most-reduced form.
+    var isReduced: Bool { get }
+    
     /// Numerator.
     var numerator: Int { get }
     
@@ -36,6 +39,14 @@ public protocol Rational:
 
 extension Rational {
     
+    /// - returns: `true` if `self` is equivalent to its most-reduced form.
+    public var isReduced: Bool {
+        return self == self.reduced
+    }
+}
+
+extension Rational {
+    
     /// Float value.
     public var floatValue: Float {
         return Float(numerator) / Float(denominator)
@@ -44,6 +55,7 @@ extension Rational {
 
 extension Rational {
     
+    /// Inverts `denominator` and `numerator` values.
     public var inverse: Self? {
         
         guard numerator != 0 else {
@@ -64,7 +76,6 @@ extension Rational {
     }
 }
 
-
 extension Rational {
     
     // MARK: - `Comparable`
@@ -77,12 +88,14 @@ extension Rational {
 
 extension Rational {
     
-    // MARK: - `Comparable`
-
+    // MARK: - `Equatable`
+    
+    /// - returns: Pair of `Rational` values, each in their most-reduced form.
     public static func reduced <R: Rational> (_ a: R, _ b: R) -> (R, R) {
         return (a.reduced, b.reduced)
     }
     
+    /// - returns: `true` if both values are equivalent in their most-reduced form.
     public static func == (lhs: Self, rhs: Self) -> Bool {
         let (lhs, rhs) = reduced(lhs, rhs)
         return lhs.numerator == rhs.numerator
@@ -102,10 +115,10 @@ extension Rational {
     
     // MARK: - `CustomStringConvertible`
     
+    /// Printed description.
     public var description: String {
         return "\(numerator)/\(denominator)"
     }
 }
 
-
-// +(=) / -(=) / *(=) / \/(=)
+// TODO: Arithmetic (+(=) / -(=) / *(=) / \/(=))
