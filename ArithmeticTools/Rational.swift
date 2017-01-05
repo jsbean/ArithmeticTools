@@ -6,6 +6,7 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
+/// Model of ratio.
 public protocol Rational:
     Comparable,
     Hashable,
