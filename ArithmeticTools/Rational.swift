@@ -81,6 +81,8 @@ extension Rational {
     
     // MARK: - `Comparable`
     
+    /// - returns: `true` if the left `Rational` is less than the right `Rational`. Otherwise, 
+    /// `false`.
     public static func < (lhs: Self, rhs: Self) -> Bool {
         let (lhs, rhs) = reduced(lhs, rhs)
         return lhs.numerator < rhs.numerator
@@ -107,6 +109,7 @@ extension Rational {
     
     // MARK: - `Hashable`
     
+    /// Hash value.
     public var hashValue: Int {
         return floatValue.hashValue
     }
