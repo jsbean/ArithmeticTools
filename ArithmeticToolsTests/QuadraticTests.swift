@@ -12,7 +12,8 @@ import ArithmeticTools
 class QuadraticTests: XCTestCase {
 
     func testIsEmpty() {
-        XCTAssert(quadratic(2,1,3).isEmpty)
+        let result: Set<Float> = quadratic(2,1,3)
+        XCTAssert(result.isEmpty)
     }
     
     func testQuadratic() {
