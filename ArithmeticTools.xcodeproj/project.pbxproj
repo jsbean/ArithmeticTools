@@ -63,6 +63,8 @@
 		078142BA1C7CF494004B68D3 /* PrimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B11C7CF494004B68D3 /* PrimeTests.swift */; };
 		078142BB1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */; };
 		078142BC1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */; };
+		0799D96F1E21777A00516ADF /* QuadraticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799D96E1E21777A00516ADF /* QuadraticTests.swift */; };
+		0799D9701E21777A00516ADF /* QuadraticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799D96E1E21777A00516ADF /* QuadraticTests.swift */; };
 		07C9DA411DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */; };
 		07C9DA421DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */; };
 		07C9DA441DF0BF130071B801 /* RandomProducing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9DA431DF0BF130071B801 /* RandomProducing.swift */; };
@@ -155,6 +157,7 @@
 		078142B01C7CF494004B68D3 /* OddTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OddTests.swift; sourceTree = "<group>"; };
 		078142B11C7CF494004B68D3 /* PrimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeTests.swift; sourceTree = "<group>"; };
 		078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTypeTests.swift; sourceTree = "<group>"; };
+		0799D96E1E21777A00516ADF /* QuadraticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticTests.swift; sourceTree = "<group>"; };
 		07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumberFormattingTests.swift; sourceTree = "<group>"; };
 		07C9DA431DF0BF130071B801 /* RandomProducing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomProducing.swift; sourceTree = "<group>"; };
 		07C9DA461DF0C4A00071B801 /* StringFormatting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringFormatting.swift; sourceTree = "<group>"; };
@@ -282,8 +285,9 @@
 				07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */,
 				07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */,
 				07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */,
-				074276C51C8767FD00D50A30 /* Supporting Files */,
 				077554671E1B013400CF4A8A /* RationalTests.swift */,
+				0799D96E1E21777A00516ADF /* QuadraticTests.swift */,
+				074276C51C8767FD00D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticToolsTests;
 			sourceTree = "<group>";
@@ -559,6 +563,7 @@
 				071F3C721C8227F300F6BD28 /* RandomTests.swift in Sources */,
 				07C9DA4D1DF0C66F0071B801 /* CumulativeTests.swift in Sources */,
 				07F538321CE3AEC6001294CC /* ComparisonTests.swift in Sources */,
+				0799D96F1E21777A00516ADF /* QuadraticTests.swift in Sources */,
 				074276D01C877EF700D50A30 /* PowerTests.swift in Sources */,
 				078142BB1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */,
 				078142B51C7CF494004B68D3 /* GreatestCommonDivisorTests.swift in Sources */,
@@ -613,6 +618,7 @@
 				078142B61C7CF494004B68D3 /* GreatestCommonDivisorTests.swift in Sources */,
 				074276CB1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */,
 				078142B41C7CF494004B68D3 /* EvenTests.swift in Sources */,
+				0799D9701E21777A00516ADF /* QuadraticTests.swift in Sources */,
 				07C9DA421DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */,
 				078142B81C7CF494004B68D3 /* OddTests.swift in Sources */,
 				073A93491C8E6C5D003DAF9C /* IsDivisibleTests.swift in Sources */,
