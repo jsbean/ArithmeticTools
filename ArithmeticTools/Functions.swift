@@ -6,6 +6,24 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
+import Foundation
+
+/// - returns: Two possible answers, if `discriminant > 0`. Returns an empty set if the
+///     discriminant is empty, and the solution would therefore be complex.
+///
+/// - TODO: Provide better documentation.
+public func quadratic (_ a: Float, _ b: Float, _ c: Float) -> Set<Float> {
+    
+    let discriminant = pow(b,2) - 4 * a * c
+    
+    guard discriminant > 0 else {
+        return Set()
+    }
+    
+    return Set(
+        [1,-1].map { sign in (-b + sign * sqrt(discriminant)) / (2 * a) }
+    )
+}
 
 
 /// - returns: Greatest common divisor of a and b
