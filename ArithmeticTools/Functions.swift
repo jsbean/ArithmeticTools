@@ -61,4 +61,3 @@ public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T, T) {
 public func mean <F: FloatingPoint> (_ a: F, _ b: F) -> F {
     return (a + b) / 2
 }
-
