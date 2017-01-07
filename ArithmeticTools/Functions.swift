@@ -6,7 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+
 
 /// - returns: Greatest common divisor of a and b
 public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
@@ -43,3 +43,4 @@ public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T, T) {
 public func mean <F: FloatingPoint> (_ a: F, _ b: F) -> F {
     return (a + b) / 2
 }
+

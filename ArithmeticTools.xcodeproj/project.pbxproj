@@ -282,8 +282,8 @@
 				07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */,
 				07C9DA401DF0B8C80071B801 /* NumberFormattingTests.swift */,
 				07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */,
-				074276C51C8767FD00D50A30 /* Supporting Files */,
 				077554671E1B013400CF4A8A /* RationalTests.swift */,
+				074276C51C8767FD00D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticToolsTests;
 			sourceTree = "<group>";
