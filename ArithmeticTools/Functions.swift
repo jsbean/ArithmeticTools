@@ -8,10 +8,7 @@
 
 import Foundation
 
-/// - returns: Two possible answers, if `discriminant > 0`. Returns an empty set if the
-///     discriminant is empty, and the solution would therefore be complex.
-///
-/// - TODO: Provide better documentation.
+/// - returns: A `Set` of either 0, 1, or 2 x-intercepts for the given coefficients.
 public func quadratic (_ a: Float, _ b: Float, _ c: Float) -> Set<Float> {
     
     let discriminant = pow(b,2) - 4 * a * c
