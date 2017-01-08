@@ -11,7 +11,15 @@ import ArithmeticTools
 
 class ModuloTests: XCTestCase {
 
-    func testMod() {
+    func testModInteger() {
         XCTAssertEqual(mod(-1, 3), 2)
+    }
+    
+    func testModFloatingPoint() {
+        XCTAssertEqual(mod(15.5, 12), 3.5)
+    }
+    
+    func testModFloatingPointNegative() {
+        XCTAssertEqual(mod(-15.5, 12), 8.5)
     }
 }
