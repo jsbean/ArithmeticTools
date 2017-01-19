@@ -36,13 +36,32 @@ public protocol Rational:
     
     /// Create a `Rational` value with a given `numerator` and `denominator`.
     init(_ numerator: Int, _ denominator: Int)
+    
+    /// Representation `Rational` value with a given `numerator`, if possible. Otherwise,
+    /// `nil`.
+    func with(numerator: Int) -> Self?
+    
+    /// Representation `Rational` value with a given `denominator`, if possible. Otherwise,
+    /// `nil`.
+    func with(denominator: Int) -> Self?
+}
+
+extension Rational {
+    
+    public func with(numerator: Int) -> Self? {
+        return nil
+    }
+    
+    public func with(denominator: Int) -> Self? {
+        return nil
+    }
 }
 
 extension Rational {
     
     /// - returns: `true` if `self` is equivalent to its most-reduced form.
     public var isReduced: Bool {
-        return self == self.reduced
+        return self == reduced
     }
 }
 
