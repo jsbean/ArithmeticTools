@@ -37,17 +37,19 @@ public protocol Rational:
     /// Create a `Rational` value with a given `numerator` and `denominator`.
     init(_ numerator: Int, _ denominator: Int)
     
-    /// Representation `Rational` value with a given `numerator`, if possible. Otherwise,
-    /// `nil`.
+    /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
+    /// Otherwise, `nil`.
     func with(numerator: Int) -> Self?
     
-    /// Representation `Rational` value with a given `denominator`, if possible. Otherwise,
-    /// `nil`.
+    /// - returns: Representation of a `Rational` value with a given `denominator`, if
+    /// possible. Otherwise, `nil`.
     func with(denominator: Int) -> Self?
 }
 
 extension Rational {
     
+    /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
+    /// Otherwise, `nil`.
     public func with(numerator newNumerator: Int) -> Self? {
         
         guard newNumerator != numerator else {
@@ -64,6 +66,8 @@ extension Rational {
         return Self(newNumerator, Int(newDenominator))
     }
     
+    /// - returns: Representation of a `Rational` value with a given `denominator`, if
+    /// possible. Otherwise, `nil`.
     public func with(denominator newDenominator: Int) -> Self? {
         
         guard newDenominator != denominator else {
