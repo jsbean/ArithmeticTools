@@ -36,13 +36,60 @@ public protocol Rational:
     
     /// Create a `Rational` value with a given `numerator` and `denominator`.
     init(_ numerator: Int, _ denominator: Int)
+    
+    /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
+    /// Otherwise, `nil`.
+    func with(numerator: Int) -> Self?
+    
+    /// - returns: Representation of a `Rational` value with a given `denominator`, if
+    /// possible. Otherwise, `nil`.
+    func with(denominator: Int) -> Self?
+}
+
+extension Rational {
+    
+    /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
+    /// Otherwise, `nil`.
+    public func with(numerator newNumerator: Int) -> Self? {
+        
+        guard newNumerator != numerator else {
+            return self
+        }
+        
+        let quotient = Float(newNumerator) / Float(numerator)
+        let newDenominator = Float(denominator) * quotient
+        
+        guard newDenominator.truncatingRemainder(dividingBy: 1) == 0 else {
+            return nil
+        }
+        
+        return Self(newNumerator, Int(newDenominator))
+    }
+    
+    /// - returns: Representation of a `Rational` value with a given `denominator`, if
+    /// possible. Otherwise, `nil`.
+    public func with(denominator newDenominator: Int) -> Self? {
+        
+        guard newDenominator != denominator else {
+            return self
+        }
+        
+        let quotient = Float(newDenominator) / Float(denominator)
+        let newNumerator = Float(numerator) * quotient
+        
+        guard newNumerator.truncatingRemainder(dividingBy: 1) == 0 else {
+            return nil
+        }
+
+        return Self(Int(newNumerator), newDenominator)
+    }
 }
 
 extension Rational {
     
     /// - returns: `true` if `self` is equivalent to its most-reduced form.
     public var isReduced: Bool {
-        return self == self.reduced
+        return self == reduced
     }
 }
 
