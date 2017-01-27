@@ -30,6 +30,8 @@ after_success:
 - git clone https://${GH_TOKEN}@github.com/dn-m/dn-m.github.io.git -b nuke
 - jazzy
 - cd dn-m.github.io
+- git remote rm origin
+- git remote add origin https://jsbean:${GH_TOKEN}@github.com/dn-m.dn-m/github.io.git
 - build/frontpage.rb
 - git pull origin nuke
 - git add .
