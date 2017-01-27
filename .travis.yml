@@ -25,9 +25,10 @@ after_success:
 - git config --global user.name "jsbean"
 - git config --global user.email "jbean46@gmail.com"
 - gem install jazzy
-- git clone https://${GH_TOKEN}@github.com/dn-m/dn-m.github.io.git -b nuke
+- git clone https://${GH_TOKEN}@github.com/dn-m/dn-m.github.io.git -B nuke
 - jazzy
 - cd dn-m.github.io
+- git pull origin nuke
 - git add .
-- git commit -m "Update docs"
+- git commit -m "Update docs - ArithmeticTools"
 - git push origin nuke
