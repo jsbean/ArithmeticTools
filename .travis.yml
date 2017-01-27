@@ -24,10 +24,13 @@ after_success:
 - bash <(curl -s https://codecov.io/bash)
 - git config --global user.name "jsbean"
 - git config --global user.email "jbean46@gmail.com"
+- git config credential.helper "store --file=.git/credentials"
+- echo "https://${GH_TOKEN}:@github.com" > .git/credentials
 - gem install jazzy
 - git clone https://${GH_TOKEN}@github.com/dn-m/dn-m.github.io.git -b nuke
 - jazzy
 - cd dn-m.github.io
+- build/frontpage.rb
 - git pull origin nuke
 - git add .
 - git commit -m "Update docs - ArithmeticTools"
