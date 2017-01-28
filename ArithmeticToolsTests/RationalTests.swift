@@ -61,11 +61,25 @@ class RationalTests: XCTestCase {
         XCTAssertEqual(r.inverse!, R(-13,1))
     }
     
-    func testComparable() {
+    func testComparableSameDenominator() {
         let a = R(1,2)
         let b = R(2,3)
         XCTAssert(a < b)
         XCTAssert(b > a)
+    }
+    
+    func testComparableSameNumerator() {
+        let a = R(2,5)
+        let b = R(2,17)
+        XCTAssert(b < a)
+        XCTAssert(a > b)
+    }
+    
+    func testComparableHarder() {
+        let a = R(13,19)
+        let b = R(7,21)
+        XCTAssert(b < a)
+        XCTAssert(a > b)
     }
     
     func testHashValueEqual() {
