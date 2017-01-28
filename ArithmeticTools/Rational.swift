@@ -131,9 +131,7 @@ extension Rational {
     /// - returns: `true` if the left `Rational` is less than the right `Rational`. Otherwise, 
     /// `false`.
     public static func < (lhs: Self, rhs: Self) -> Bool {
-        let commonDenominator = lcm(lhs.denominator, rhs.denominator)
-        let lhs = lhs.with(denominator: commonDenominator)!
-        let rhs = rhs.with(denominator: commonDenominator)!
+        let (lhs, rhs) = normalized(lhs, rhs)
         return lhs.numerator < rhs.numerator
     }
 }
@@ -147,9 +145,17 @@ extension Rational {
         return (a.reduced, b.reduced)
     }
     
+    /// - returns: Pair of `Rational` values, with common denominators.
+    public static func normalized <R: Rational> (_ a: R, _ b: R) -> (R, R) {
+        let commonDenominator = lcm(a.denominator, b.denominator)
+        let a = a.with(denominator: commonDenominator)!
+        let b = b.with(denominator: commonDenominator)!
+        return (a,b)
+    }
+    
     /// - returns: `true` if both values are equivalent in their most-reduced form.
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        let (lhs, rhs) = reduced(lhs, rhs)
+        let (lhs, rhs) = normalized(lhs, rhs)
         return lhs.numerator == rhs.numerator
     }
 }
