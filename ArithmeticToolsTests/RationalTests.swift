@@ -31,6 +31,18 @@ class RationalTests: XCTestCase {
         _ = R(1,1)
     }
     
+    func testEqualsSame() {
+        let a = R(1,2)
+        let b = R(1,2)
+        XCTAssertEqual(a,b)
+    }
+    
+    func testEqualsNotSimplified() {
+        let a = R(3,16)
+        let b = R(9,48)
+        XCTAssertEqual(a,b)
+    }
+    
     func testFloatValueOne() {
         let r = R(1,1)
         XCTAssertEqual(r.floatValue, 1)
