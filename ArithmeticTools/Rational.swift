@@ -147,9 +147,18 @@ extension Rational {
         return (a.reduced, b.reduced)
     }
     
+//    public static func normalized <R: Rational> (_ a: R, _ b: R) -> (R, R) {
+//        let commonDenominator = lcm(b.denominator, b.denominator)
+//        let a = a.with(denominator: commonDenominator)!
+//        let b = b.with(denominator: commonDenominator)!
+//        return (a,b)
+//    }
+    
     /// - returns: `true` if both values are equivalent in their most-reduced form.
     public static func == (lhs: Self, rhs: Self) -> Bool {
-        let (lhs, rhs) = reduced(lhs, rhs)
+        let commonDenominator = lcm(lhs.denominator, rhs.denominator)
+        let lhs = lhs.with(denominator: commonDenominator)!
+        let rhs = rhs.with(denominator: commonDenominator)!
         return lhs.numerator == rhs.numerator
     }
 }

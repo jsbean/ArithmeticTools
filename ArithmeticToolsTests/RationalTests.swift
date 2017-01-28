@@ -43,6 +43,12 @@ class RationalTests: XCTestCase {
         XCTAssertEqual(a,b)
     }
     
+    func testNotEqual() {
+        let a = R(1,16)
+        let b = R(2,16)
+        XCTAssertNotEqual(a,b)
+    }
+    
     func testFloatValueOne() {
         let r = R(1,1)
         XCTAssertEqual(r.floatValue, 1)
