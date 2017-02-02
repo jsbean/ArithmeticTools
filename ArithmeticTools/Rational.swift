@@ -39,10 +39,14 @@ public protocol Rational:
     
     /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
     /// Otherwise, `nil`.
+    ///
+    /// > Preserves the arithmetic value of the original `Rational` value.
     func respelling(numerator: Int) -> Self?
     
     /// - returns: Representation of a `Rational` value with a given `denominator`, if
     /// possible. Otherwise, `nil`.
+    ///
+    /// > Preserves the arithmetic value of the original `Rational` value.
     func respelling(denominator: Int) -> Self?
     
     /// - returns: A new `Rational` value with the given `numerator`, which is no longer
