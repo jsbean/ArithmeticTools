@@ -6,6 +6,8 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
+import Collections
+
 /// Model of ratio.
 public protocol Rational:
     Comparable,
@@ -208,11 +210,6 @@ extension Rational {
     public var description: String {
         return "\(numerator)/\(denominator)"
     }
-}
-
-/// - TODO: Mode down to `Collections`.
-private func map <T, U> (_ a: T, _ b: T, _ f: (T) -> U) -> (U, U) {
-    return (f(a), f(b))
 }
 
 // TODO: Arithmetic (+(=) / -(=) / *(=) / \/(=))
