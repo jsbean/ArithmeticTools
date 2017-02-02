@@ -39,18 +39,26 @@ public protocol Rational:
     
     /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
     /// Otherwise, `nil`.
-    func with(numerator: Int) -> Self?
+    func respelling(numerator: Int) -> Self?
     
     /// - returns: Representation of a `Rational` value with a given `denominator`, if
     /// possible. Otherwise, `nil`.
-    func with(denominator: Int) -> Self?
+    func respelling(denominator: Int) -> Self?
+    
+    /// - returns: A new `Rational` value with the given `numerator`, which is no longer
+    /// guaranteed to provide the same arithmetic value as before.
+    func mutating(numerator: Int) -> Self
+    
+    /// - returns: A new `Rational` value with the given `denominator`, which is no longer
+    /// guaranteed to provide the same arithmetic value as before.
+    func mutating(denominator: Int) -> Self
 }
 
 extension Rational {
     
     /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
     /// Otherwise, `nil`.
-    public func with(numerator newNumerator: Int) -> Self? {
+    public func respelling(numerator newNumerator: Int) -> Self? {
         
         guard newNumerator != numerator else {
             return self
@@ -68,7 +76,7 @@ extension Rational {
     
     /// - returns: Representation of a `Rational` value with a given `denominator`, if
     /// possible. Otherwise, `nil`.
-    public func with(denominator newDenominator: Int) -> Self? {
+    public func respelling(denominator newDenominator: Int) -> Self? {
         
         guard newDenominator != denominator else {
             return self
@@ -82,6 +90,26 @@ extension Rational {
         }
 
         return Self(Int(newNumerator), newDenominator)
+    }
+}
+
+extension Rational {
+    
+    /// - returns: A new `Rational` value with the given `numerator`, which is no longer
+    /// guaranteed to provide the same arithmetic value as before.
+    public func mutating(numerator newNumerator: Int) -> Self {
+        return Self(newNumerator, denominator)
+    }
+    
+    /// - returns: A new `Rational` value with the given `denominator`, which is no longer
+    /// guaranteed to provide the same arithmetic value as before.
+    public func mutating(denominator newDenominator: Int) -> Self {
+        
+        guard newDenominator != 0 else {
+            fatalError("Cannot create a Rational type with a denominator of 0")
+        }
+        
+        return Self(numerator, newDenominator)
     }
 }
 
@@ -126,7 +154,7 @@ extension Rational {
 
 extension Rational {
     
-    // MARK: - `Comparable`
+    // MARK: - Comparable
     
     /// - returns: `true` if the left `Rational` is less than the right `Rational`. Otherwise, 
     /// `false`.
@@ -138,7 +166,7 @@ extension Rational {
 
 extension Rational {
     
-    // MARK: - `Equatable`
+    // MARK: - Equatable
     
     /// - returns: Pair of `Rational` values, each in their most-reduced form.
     public static func reduced <R: Rational> (_ a: R, _ b: R) -> (R, R) {
@@ -148,9 +176,7 @@ extension Rational {
     /// - returns: Pair of `Rational` values, with common denominators.
     public static func normalized <R: Rational> (_ a: R, _ b: R) -> (R, R) {
         let commonDenominator = lcm(a.denominator, b.denominator)
-        let a = a.with(denominator: commonDenominator)!
-        let b = b.with(denominator: commonDenominator)!
-        return (a,b)
+        return map(a,b) { $0.respelling(denominator: commonDenominator)! }
     }
     
     /// - returns: `true` if both values are equivalent in their most-reduced form.
@@ -162,7 +188,7 @@ extension Rational {
 
 extension Rational {
     
-    // MARK: - `Hashable`
+    // MARK: - Hashable
     
     /// Hash value.
     public var hashValue: Int {
@@ -172,12 +198,17 @@ extension Rational {
 
 extension Rational {
     
-    // MARK: - `CustomStringConvertible`
+    // MARK: - CustomStringConvertible
     
     /// Printed description.
     public var description: String {
         return "\(numerator)/\(denominator)"
     }
+}
+
+/// - TODO: Mode down to `Collections`.
+private func map <T, U> (_ a: T, _ b: T, _ f: (T) -> U) -> (U, U) {
+    return (f(a), f(b))
 }
 
 // TODO: Arithmetic (+(=) / -(=) / *(=) / \/(=))

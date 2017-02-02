@@ -114,53 +114,53 @@ class RationalTests: XCTestCase {
     
     func testRespellWithNumeratorEqualToSelfValid() {
         let original = R(1,13)
-        let new = original.with(numerator: 1)!
+        let new = original.respelling(numerator: 1)!
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 13)
     }
     
     func testRespellWithNumeratorGreaterThanValid() {
         let original = R(1,13)
-        let new = original.with(numerator: 3)!
+        let new = original.respelling(numerator: 3)!
         XCTAssertEqual(new.numerator, 3)
         XCTAssertEqual(new.denominator, 39)
     }
     
     func testRespellWithNumeratorLessThanValid() {
         let original = R(5,15)
-        let new = original.with(numerator: 1)!
+        let new = original.respelling(numerator: 1)!
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 3)
     }
     
     func testRespellWithDenominatorEqualToSelfValid() {
         let original = R(1,13)
-        let new = original.with(denominator: 13)!
+        let new = original.respelling(denominator: 13)!
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 13)
     }
     
     func testRespellWithDenominatorLessThanValid() {
         let original = R(5,10)
-        let new = original.with(denominator: 6)!
+        let new = original.respelling(denominator: 6)!
         XCTAssertEqual(new.numerator, 3)
         XCTAssertEqual(new.denominator, 6)
     }
     
     func testRespellWithDenominatorGreaterThanValid() {
         let original = R(3,12)
-        let new = original.with(denominator: 48)!
+        let new = original.respelling(denominator: 48)!
         XCTAssertEqual(new.numerator, 12)
         XCTAssertEqual(new.denominator, 48)
     }
     
     func testRespellWithDenominatorLessThanNil() {
         let original = R(3,7)
-        XCTAssertNil(original.with(denominator: 6))
+        XCTAssertNil(original.respelling(denominator: 6))
     }
     
     func testRespellWithDenominatorGreaterThanNil() {
         let original = R(3,7)
-        XCTAssertNil(original.with(denominator: 8))
+        XCTAssertNil(original.respelling(denominator: 8))
     }
 }
