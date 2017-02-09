@@ -33,6 +33,17 @@ class InvertibleOptionSetTests: XCTestCase {
         
         let a = InvertibleSet.a
         let d = InvertibleSet.d
+        
         XCTAssertEqual(a.inverse, d)
+        XCTAssertEqual(d.inverse, a)
+    }
+    
+    func testBInverseOfC() {
+        
+        let b = InvertibleSet.b
+        let c = InvertibleSet.c
+        
+        XCTAssertEqual(b.inverse, c)
+        XCTAssertEqual(c.inverse, b)
     }
 }

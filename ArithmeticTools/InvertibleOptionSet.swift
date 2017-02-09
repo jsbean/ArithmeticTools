@@ -23,6 +23,8 @@ extension InvertibleOptionSet where RawValue == Int {
     
     /// Inverse of the current option.
     public var inverse: Self {
-        return Self(rawValue: 1 << (optionsCount - 1) - countTrailingZeros(rawValue))!
+        let ordinal = countTrailingZeros(rawValue)
+        let inverseOrdinal = (optionsCount - 1) - ordinal
+        return Self(rawValue: 1 << inverseOrdinal)!
     }
 }
