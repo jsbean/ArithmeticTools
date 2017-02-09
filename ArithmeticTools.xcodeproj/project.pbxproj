@@ -85,6 +85,8 @@
 		07C9DA4E1DF0C66F0071B801 /* CumulativeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */; };
 		07D91CDD1E4CE607006DBA11 /* InvertibleOptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D91CDC1E4CE607006DBA11 /* InvertibleOptionSet.swift */; };
 		07D91CDE1E4CE607006DBA11 /* InvertibleOptionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D91CDC1E4CE607006DBA11 /* InvertibleOptionSet.swift */; };
+		07D91CE01E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */; };
+		07D91CE11E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */; };
 		07F5382F1CE3AEAC001294CC /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5382E1CE3AEAC001294CC /* Comparison.swift */; };
 		07F538301CE3AEAC001294CC /* Comparison.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F5382E1CE3AEAC001294CC /* Comparison.swift */; };
 		07F538321CE3AEC6001294CC /* ComparisonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F538311CE3AEC6001294CC /* ComparisonTests.swift */; };
@@ -178,6 +180,7 @@
 		07C9DA491DF0C4D60071B801 /* IntegerExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntegerExtensions.swift; sourceTree = "<group>"; };
 		07C9DA4C1DF0C66F0071B801 /* CumulativeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CumulativeTests.swift; sourceTree = "<group>"; };
 		07D91CDC1E4CE607006DBA11 /* InvertibleOptionSet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertibleOptionSet.swift; sourceTree = "<group>"; };
+		07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InvertibleOptionSetTests.swift; sourceTree = "<group>"; };
 		07F5382E1CE3AEAC001294CC /* Comparison.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comparison.swift; sourceTree = "<group>"; };
 		07F538311CE3AEC6001294CC /* ComparisonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonTests.swift; sourceTree = "<group>"; };
 		1DA73FEF407912A83BEC1554 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/Mac/Collections.framework; sourceTree = "<group>"; };
@@ -308,6 +311,7 @@
 				0799D96E1E21777A00516ADF /* QuadraticTests.swift */,
 				07C563B11E22B88700E73FB2 /* BitwiseOperationsTests.swift */,
 				074276C51C8767FD00D50A30 /* Supporting Files */,
+				07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */,
 			);
 			path = ArithmeticToolsTests;
 			sourceTree = "<group>";
@@ -594,6 +598,7 @@
 				078142B31C7CF494004B68D3 /* EvenTests.swift in Sources */,
 				07C563B21E22B88700E73FB2 /* BitwiseOperationsTests.swift in Sources */,
 				07C9DA411DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */,
+				07D91CE01E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */,
 				078142B71C7CF494004B68D3 /* OddTests.swift in Sources */,
 				07C563761E226DE100E73FB2 /* ModuloTests.swift in Sources */,
 				907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */,
@@ -650,6 +655,7 @@
 				0799D9701E21777A00516ADF /* QuadraticTests.swift in Sources */,
 				073EC7281E3D2D3C00B63692 /* LowestCommonMultipleTests.swift in Sources */,
 				07C9DA421DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */,
+				07D91CE11E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */,
 				078142B81C7CF494004B68D3 /* OddTests.swift in Sources */,
 				073A93491C8E6C5D003DAF9C /* IsDivisibleTests.swift in Sources */,
 				071D19C61C94BEB100543F77 /* OrderedTests.swift in Sources */,
