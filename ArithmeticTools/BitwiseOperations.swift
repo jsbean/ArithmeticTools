@@ -61,7 +61,7 @@ public func countLeadingZeros(_ n: Int) -> Int {
 			return index
 		}
         
-		mask = mask >>> 1
+        mask >>= 1
 	}
 
 	return intBitCount
