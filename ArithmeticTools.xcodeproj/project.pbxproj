@@ -268,7 +268,6 @@
 				07C9DA431DF0BF130071B801 /* RandomProducing.swift */,
 				078142A31C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift */,
 				078142A41C7CF3F1004B68D3 /* Functions.swift */,
-				07C563751E226DE100E73FB2 /* ModuloTests.swift */,
 				07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */,
 				078142A51C7CF3F1004B68D3 /* SequenceExtensions.swift */,
 				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
@@ -281,6 +280,7 @@
 		078142601C7CECD5004B68D3 /* ArithmeticToolsTests */ = {
 			isa = PBXGroup;
 			children = (
+				07C563751E226DE100E73FB2 /* ModuloTests.swift */,
 				078142AE1C7CF494004B68D3 /* EvenTests.swift */,
 				07690BE11E0D913C0095F1D5 /* MeanTests.swift */,
 				071F3C711C8227F300F6BD28 /* RandomTests.swift */,
