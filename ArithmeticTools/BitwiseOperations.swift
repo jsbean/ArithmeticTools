@@ -27,20 +27,46 @@ public func invert(powerOfTwo: Int, within max: Int) -> Int {
     return max - unrolled
 }
 
-fileprivate let intBitCount = MemoryLayout<Int>.size * 8
+private let intBitCount = MemoryLayout<Int>.size * 8
 
 /// Count Trailing Zeros (ctz) counts the number of zero bits succeeding the least
 /// significant one bit. For example, the ctz of 0x00000F00 is 8, and the ctz of
 /// 0x80000000 is 31. This also counts the exponent of the `2` factor in the prime
 /// factorization of a positive number.
-public func ctz(_ n: Int) -> Int {
-	var mask : Int = 1
+///
+/// - warning: Crashes if given a negative number.
+public func countTailingZeros(_ n: Int) -> Int {
+
+	var mask: Int = 1
 
 	for index in 0...intBitCount {
-		if(mask & n > 0) {
-			return index;
+		
+        if mask & n > 0 {
+			return index
 		}
+        
 		mask <<= 1
+	}
+
+	return intBitCount
+}
+
+/// Count Leading Zeros (clz) counts the number of zero bits preceding the most
+/// significant one bit. For example, the clz of 0x00F00000 is 8, and the clz of
+/// 0x00000001 is 31.
+///
+/// - warning: Crashes if given a negative number.
+public func countLeadingZeros(_ n: Int) -> Int {
+    
+	var mask: Int = 1 << (intBitCount - 1)
+
+	for index in 0...intBitCount {
+		
+        if mask & n > 0 {
+			return index
+		}
+        
+		mask = mask >>> 1
 	}
 
 	return intBitCount
@@ -48,22 +74,6 @@ public func ctz(_ n: Int) -> Int {
 
 infix operator >>> : BitwiseShiftPrecedence
 
-func >>> (lhs: Int, rhs: Int) -> Int {
-	return Int(bitPattern: UInt(bitPattern: lhs) >> UInt(rhs))
-}
-
-/// Count Leading Zeros (clz) counts the number of zero bits preceding the most
-/// significant one bit. For example, the clz of 0x00F00000 is 8, and the clz of
-/// 0x00000001 is 31.
-public func clz(_ n: Int) -> Int {
-	var mask: Int = 1 << (intBitCount - 1)
-
-	for index in 0...intBitCount {
-		if(mask & n > 0) {
-			return index;
-		}
-		mask = mask >>> 1
-	}
-
-	return intBitCount
+public func >>> (lhs: Int, rhs: Int) -> Int {
+    return Int(bitPattern: UInt(bitPattern: lhs) >> UInt(rhs))
 }
