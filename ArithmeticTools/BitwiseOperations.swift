@@ -37,7 +37,7 @@ private let intBitCount = MemoryLayout<Int>.size * 8
 /// - warning: Crashes if given a negative number.
 public func countTailingZeros(_ n: Int) -> Int {
 
-	var mask: Int = 1
+	var mask = 1
 
 	for index in 0...intBitCount {
 		
@@ -58,7 +58,7 @@ public func countTailingZeros(_ n: Int) -> Int {
 /// - warning: Crashes if given a negative number.
 public func countLeadingZeros(_ n: Int) -> Int {
     
-	var mask: Int = 1 << (intBitCount - 1)
+	var mask = 1 << (intBitCount - 1)
 
 	for index in 0...intBitCount {
 		
