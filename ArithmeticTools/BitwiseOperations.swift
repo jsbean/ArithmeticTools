@@ -26,13 +26,12 @@ public func invert(powerOfTwo: Int, within max: Int) -> Int {
     return max - unrolled
 }
 
-internal let intBitCount = MemoryLayout<Int>.size * 8
+private let intBitCount = MemoryLayout<Int>.size * 8
 
 /// Count Trailing Zeros (ctz) counts the number of zero bits succeeding the least
 /// significant one bit. For example, the ctz of 0x00000F00 is 8, and the ctz of
 /// 0x80000000 is 31. This also counts the exponent of the `2` factor in the prime
 /// factorization of a positive number.
-
 public func countTrailingZeros(_ n: Int) -> Int {
 
 	var mask = 1
