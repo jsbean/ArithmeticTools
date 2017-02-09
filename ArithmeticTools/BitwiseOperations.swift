@@ -26,3 +26,4 @@ public func invert(powerOfTwo: Int, within max: Int) -> Int {
     let unrolled = log2(powerOfTwo: powerOfTwo)
     return max - unrolled
 }
+
