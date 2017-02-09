@@ -6,16 +6,20 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
+/// Interface for types which have an inverse.
+public protocol Invertible {
+    
+    /// Inverse of `self`.
+    var inverse: Self { get }
+}
+
 /// Interface for `OptionSet` types which are symmetrically defined.
 ///
 /// - invariant: The options are defined with `rawValue` values of 
 /// `(1 << 0) ... (1 << optionsCount - 1)`.
-public protocol InvertibleOptionSet: OptionSet {
+public protocol InvertibleOptionSet: OptionSet, Invertible {
     
-    /// Inverse of the current option.
-    var inverse: Self { get }
-    
-    /// Amount of options in `self`.
+        /// Amount of options in `self`.
     var optionsCount: Int { get }
 }
 

@@ -310,8 +310,8 @@
 				077554671E1B013400CF4A8A /* RationalTests.swift */,
 				0799D96E1E21777A00516ADF /* QuadraticTests.swift */,
 				07C563B11E22B88700E73FB2 /* BitwiseOperationsTests.swift */,
-				074276C51C8767FD00D50A30 /* Supporting Files */,
 				07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */,
+				074276C51C8767FD00D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticToolsTests;
 			sourceTree = "<group>";
