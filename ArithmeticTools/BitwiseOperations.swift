@@ -72,9 +72,3 @@ infix operator >>> : BitwiseShiftPrecedence
 public func >>> (lhs: Int, rhs: Int) -> Int {
     return Int(bitPattern: UInt(bitPattern: lhs) >> UInt(rhs))
 }
-
-infix operator >>= : BitwiseShiftPrecedence
-
-public func >>= (lhs: inout Int, rhs: Int) {
-    lhs = lhs >>> rhs
-}
