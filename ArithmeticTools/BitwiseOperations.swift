@@ -61,7 +61,7 @@ public func countLeadingZeros(_ n: Int) -> Int {
 			return index
 		}
         
-        mask >>= 1
+        mask >>>= 1
 	}
 
 	return intBitCount
@@ -69,6 +69,14 @@ public func countLeadingZeros(_ n: Int) -> Int {
 
 infix operator >>> : BitwiseShiftPrecedence
 
+/// Logical right shift.
 public func >>> (lhs: Int, rhs: Int) -> Int {
     return Int(bitPattern: UInt(bitPattern: lhs) >> UInt(rhs))
+}
+
+infix operator >>>= : BitwiseShiftPrecedence
+
+/// Logical right shift assignment.
+public func >>>= (lhs: inout Int, rhs: Int) {
+    lhs = lhs >>> rhs
 }
