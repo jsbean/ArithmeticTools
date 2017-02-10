@@ -6,8 +6,6 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
-import Foundation
-
 /// Implementation of
 /// [Allen's Interval Algebra](https://en.wikipedia.org/wiki/Allen%27s_interval_algebra).
 ///
@@ -27,9 +25,7 @@ import Foundation
 /// [Allen](https://en.wikipedia.org/wiki/James_F._Allen), refined by
 /// [Krokhin et al.](http://www.ics.uci.edu/~alspaugh/cls/shr/allen.html#Allen1983-mkti).
 ///
-/// - TODO: Nest this within `Interval` when nesting inside generic values allowed
-/// (Swift 3.1 / 4)
-public struct IntervalRelationship: InvertibleOptionSet {
+public struct IntervalRelation: InvertibleOptionSet {
     
     // MARK: - Cases
     
@@ -38,56 +34,56 @@ public struct IntervalRelationship: InvertibleOptionSet {
     ///     x: |---|
     ///     y:       |---|
     ///
-    public static var precedes = IntervalRelationship(rawValue: 1 << 0)
+    public static var precedes = IntervalRelation(rawValue: 1 << 0)
     
     /// `x` _meets_ `y`
     ///
     ///     x: |----|
     ///     y:      |----|
     ///
-    public static var meets = IntervalRelationship(rawValue: 1 << 1)
+    public static var meets = IntervalRelation(rawValue: 1 << 1)
     
     /// `x` _overlaps_ `y`
     ///
     ///     x: |------|
     ///     y:    |------|
     ///
-    public static var overlaps = IntervalRelationship(rawValue: 1 << 2)
+    public static var overlaps = IntervalRelation(rawValue: 1 << 2)
     
     /// `x` _is finished by_ `y`
     ///
     ///     x: |---------|
     ///     y:      |----|
     ///
-    public static var finishedBy = IntervalRelationship(rawValue: 1 << 3)
+    public static var finishedBy = IntervalRelation(rawValue: 1 << 3)
     
     /// `x` _contains_ `y`
     ///
     ///     x: |----------|
     ///     y:    |----|
     ///
-    public static var contains = IntervalRelationship(rawValue: 1 << 4)
+    public static var contains = IntervalRelation(rawValue: 1 << 4)
     
     /// `x` _starts_ `y`
     ///
     ///     x: |-----|
     ///     y: |----------|
     ///
-    public static var starts = IntervalRelationship(rawValue: 1 << 5)
+    public static var starts = IntervalRelation(rawValue: 1 << 5)
     
     /// `x` _equals_ `y`
     ///
     ///     x: |----------|
     ///     y: |----------|
     ///
-    public static var equals = IntervalRelationship(rawValue: 1 << 6)
+    public static var equals = IntervalRelation(rawValue: 1 << 6)
     
     /// `x` _is started by_ `y`
     ///
     ///     x: |----------|
     ///     y: |-----|
     ///
-    public static var startedBy = IntervalRelationship(rawValue: 1 << 7)
+    public static var startedBy = IntervalRelation(rawValue: 1 << 7)
     
     /// `x` _is contained by_ `y`
     ///
@@ -95,35 +91,35 @@ public struct IntervalRelationship: InvertibleOptionSet {
     ///     x:    |----|
     ///     y: |----------|
     ///
-    public static var containedBy = IntervalRelationship(rawValue: 1 << 8)
+    public static var containedBy = IntervalRelation(rawValue: 1 << 8)
     
     /// `x` _finishes_ `y`
     ///
     ///     x:      |-----|
     ///     y: |----------|
     ///
-    public static var finishes = IntervalRelationship(rawValue: 1 << 9)
+    public static var finishes = IntervalRelation(rawValue: 1 << 9)
     
     /// `x` _is overlapped by_ `y`
     ///
     ///     x:    |------|
     ///     y: |------|
     ///
-    public static var overlappedBy = IntervalRelationship(rawValue: 1 << 10)
+    public static var overlappedBy = IntervalRelation(rawValue: 1 << 10)
     
     /// `x` _is met by_ `y`
     ///
     ///     x:      |----|
     ///     y: |----|
     ///
-    public static var metBy = IntervalRelationship(rawValue: 1 << 11)
+    public static var metBy = IntervalRelation(rawValue: 1 << 11)
     
     /// `x` _is preceded by_ `y`
     ///
     ///     x:       |---|
     ///     y: |---|
     ///
-    public static var precededBy = IntervalRelationship(rawValue: 1 << 12)
+    public static var precededBy = IntervalRelation(rawValue: 1 << 12)
     
     // MARK - Instance Properties
     
@@ -143,7 +139,7 @@ public struct IntervalRelationship: InvertibleOptionSet {
     }
 }
 
-extension IntervalRelationship: CustomStringConvertible {
+extension IntervalRelation: CustomStringConvertible {
     
     // MARK: - CustomStringConvertible
     
@@ -179,5 +175,67 @@ extension IntervalRelationship: CustomStringConvertible {
         default:
             return "\(rawValue)"
         }
+    }
+}
+
+/// Interface retroactively unifying `ClosedRange` and `CountableClosedRange`, which are, for
+/// some reason, not unified by a common super-protocol.
+public protocol ClosedRangeProtocol {
+    
+    /// Type of bounds.
+    associatedtype Bound: Comparable
+    
+    /// Lower bound.
+    var lowerBound: Bound { get }
+    
+    /// Upper bound.
+    var upperBound: Bound { get }
+}
+
+/// Retroactively model `ClosedRange` as conforming to `ClosedRangeProtocol`.
+extension ClosedRange: ClosedRangeProtocol { }
+
+/// Retroactively model `CountableClosedRange` as conforming to `ClosedRangeProtocol`.
+extension CountableClosedRange: ClosedRangeProtocol { }
+
+extension ClosedRangeProtocol {
+    
+    /// - returns: `IntervalRelationship` between this `ClosedRangeProtocol`-conform type and
+    /// another.
+    public func relation(with range: Self) -> IntervalRelation {
+        
+        if upperBound < range.lowerBound {
+            return .precedes
+        } else if upperBound == range.lowerBound {
+            return .meets
+        } else if lowerBound < range.lowerBound && range.openContains(upperBound) {
+            return .overlaps
+        } else if upperBound == range.upperBound && openContains(range.lowerBound) {
+            return .finishedBy
+        } else if openContains(range.lowerBound) && openContains(range.upperBound) {
+            return .contains
+        } else if lowerBound == range.lowerBound && range.openContains(upperBound) {
+            return .starts
+        } else if lowerBound == range.lowerBound && openContains(range.upperBound) {
+            return .startedBy
+        } else if range.openContains(lowerBound) && range.openContains(upperBound) {
+            return .containedBy
+        } else if upperBound == range.upperBound && range.openContains(lowerBound) {
+            return .finishes
+        } else if upperBound > range.upperBound && range.openContains(lowerBound) {
+            return .overlappedBy
+        } else if lowerBound == range.upperBound {
+            return .metBy
+        } else if lowerBound > range.upperBound {
+            return .precededBy
+        }
+        
+        return .equals
+    }
+    
+    /// - returns: `true` if the given `value` is greater than the `lowerBound` and
+    /// `upperBound`. Otherwise, `false`.
+    private func openContains(_ value: Bound) -> Bool {
+        return value > lowerBound && value < upperBound
     }
 }
