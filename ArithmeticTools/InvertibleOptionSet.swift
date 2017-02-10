@@ -17,9 +17,11 @@ public protocol Invertible {
 ///
 /// - invariant: The options are defined with `rawValue` values of 
 /// `(1 << 0) ... (1 << optionsCount - 1)`.
+///
+/// - TODO: Infer `optionsCount` from memory rather than making it user-specified.
 public protocol InvertibleOptionSet: OptionSet, Invertible {
     
-        /// Amount of options in `self`.
+    /// Amount of options in `self`.
     var optionsCount: Int { get }
 }
 

@@ -8,16 +8,16 @@
 
 
 extension Sequence where Iterator.Element: Integer {
-    
+
+    /// Sum of the elements in `self`.
     public var sum: Iterator.Element {
         return reduce(0, +)
     }
     
-    /**
-     Greatest common divisor of elements in Sequence.
-     
-     >`[8,12].gcd -> 4`
-     */
+    /// Greatest common divisor of elements in Sequence.
+    ///
+    ///     `[8,12].gcd -> 4`
+    ///
     public var gcd: Iterator.Element? {
         
         guard let min = self.min() else {
@@ -30,6 +30,7 @@ extension Sequence where Iterator.Element: Integer {
 
 extension Sequence where Iterator.Element: FloatingPoint {
     
+    /// Sum of the elements in `self`.
     public var sum: Iterator.Element {
         return reduce(0, +)
     }
