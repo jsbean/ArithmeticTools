@@ -1,5 +1,5 @@
 //
-//  IntervalRelationship.swift
+//  IntervalRelation.swift
 //  ArithmeticTools
 //
 //  Created by James Bean on 2/10/17.

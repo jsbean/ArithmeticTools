@@ -1,5 +1,5 @@
 //
-//  IntervalRelationshipTests.swift
+//  IntervalRelationTests.swift
 //  ArithmeticTools
 //
 //  Created by James Bean on 2/10/17.
@@ -9,7 +9,7 @@
 import XCTest
 import ArithmeticTools
 
-class IntervalRelationshipTests: XCTestCase {
+class IntervalRelationTests: XCTestCase {
     
     func testPrecedes() {
         
