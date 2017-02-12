@@ -33,6 +33,16 @@ public struct Fraction: Rational {
     }
 }
 
+/// - returns: Product of any two `Rational`-conforming types as a `Fraction`.
+public func * <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
+    return Fraction(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator)
+}
+
+/// - returns: Quotient of any two `Rational`-conforming types as a `Fraction`.
+public func / <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
+    return lhs * rhs.reciprocal
+}
+
 /// Model of ratio.
 public protocol Rational:
     Monoid,
@@ -151,7 +161,7 @@ extension Rational {
     /// - returns: Sum of both `Rational` values.
     public static func + (lhs: Self, rhs: Self) -> Self {
         let (a,b) = normalized(lhs, rhs)
-        return Self(a.numerator + b.numerator, a.denominator).reduced
+        return Self(a.numerator + b.numerator, a.denominator)
     }
     
     /// Assigns the sum of both `Rational` values to the left-hand-side variable.
@@ -162,7 +172,7 @@ extension Rational {
     /// - returns: Difference of both `Rational` values.
     public static func - (lhs: Self, rhs: Self) -> Self {
         let (a,b) = normalized(lhs, rhs)
-        return Self(a.numerator - b.numerator, a.denominator).reduced
+        return Self(a.numerator - b.numerator, a.denominator)
     }
     
     /// Assigns the differnce of both `Rational` values to the left-hand-side variable.
@@ -172,7 +182,7 @@ extension Rational {
     
     /// - returns: Product of both `Rational` values.
     public static func * (lhs: Self, rhs: Self) -> Self {
-        return Self(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator).reduced
+        return Self(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator)
     }
     
     /// Assigns product of both `Rational` values to the left-hand-side variable.
