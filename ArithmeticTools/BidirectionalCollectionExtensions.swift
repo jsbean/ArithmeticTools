@@ -11,25 +11,21 @@ import Collections
 
 extension SignedNumber {
     
-    // FIXME: This should not be necessary! For some reason, only `-` is valid for 
-    //        `SignedNumber`.
+    /// - returns: Sum of two `SignedNumber` values.
     public static func + (lhs: Self, rhs: Self) -> Self {
         return lhs - -rhs
     }
 }
 
-extension BidirectionalCollection where Iterator.Element: SignedNumber {
+extension Collection where Iterator.Element: Monoid {
     
-    public typealias N = Iterator.Element
+    typealias M = Iterator.Element
     
-    /**
-     Cumulative representation of elements in Array.
-     
-     >`[1,2,2].cumulative -> [0,1,3]`
-     */
-    public var cumulative: [N] {
+    /// - returns: An array of the values contained herein accumulating the running sum to the
+    /// right, start with `.unit`.
+    public var accumulatingRight: [Iterator.Element] {
         
-        func accumulate(_ array: [N], result: [N], sum: N) -> [N] {
+        func accumulate(_ array: [M], result: [M], sum: M) -> [M] {
             
             guard let (head, tail) = array.destructured else {
                 return result
@@ -38,17 +34,15 @@ extension BidirectionalCollection where Iterator.Element: SignedNumber {
             return accumulate(tail, result: result + [sum], sum: sum + head)
         }
         
-        return accumulate(Array(self), result: [], sum: 0)
+        return accumulate(Array(self), result: [], sum: .unit)
     }
     
-    /**
-     Returns (position, value).
-     
-     >`[1,2,2].cumulativeWithValue -> [(0,1),(1,2),(3,2)]`
-     */
-    public var cumulativeWithValue: [(N, N)] {
-        return Array(zip(cumulative, self))
+    public var accumulatingLeft: [Iterator.Element] {
+        return reversed().accumulatingRight.reversed()
     }
+}
+
+extension BidirectionalCollection where Iterator.Element: SignedNumber {
     
     /**
      Get the closest value in Array to target value.
@@ -57,7 +51,7 @@ extension BidirectionalCollection where Iterator.Element: SignedNumber {
      
      - returns: Value closest to target is !self.isEmpty. Otherwise nil.
      */
-    public func closest(to target: N) -> N? {
+    public func closest(to target: Iterator.Element) -> Iterator.Element? {
         
         guard !self.isEmpty else {
             return nil
@@ -83,7 +77,7 @@ extension BidirectionalCollection where Iterator.Element: FloatingPoint, IndexDi
     
     
     /// - returns: Average of all values contained herein, if there are more than 0 elements.
-    ///            Otherwise, `nil`.
+    /// Otherwise, `nil`.
     public var mean: F? {
         
         guard !isEmpty else {
