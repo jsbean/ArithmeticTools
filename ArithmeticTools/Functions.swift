@@ -38,17 +38,6 @@ public func quadratic (_ a: Double, _ b: Double, _ c: Double) -> Set<Double> {
     )
 }
 
-/// - returns: Greatest common divisor of `a` and `b`.
-public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
-    let result = a % b
-    return result == 0 ? b : gcd(b, result)
-}
-
-/// - returns: Least common multiple of `a` and `b`.
-public func lcm <I: Integer> (_ a: I, _ b: I) -> I {
-    return (a / gcd(a,b)) * b
-}
-
 /**
  Get the closer of two values to a target value.
  

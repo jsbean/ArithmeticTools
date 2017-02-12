@@ -71,6 +71,8 @@
 		07A8B5C31E50F5A100260DE3 /* CategoryTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */; };
 		07A8B5C41E50FD6300260DE3 /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D664028AC29575BD5C05D506 /* Collections.framework */; };
 		07A8B5C51E50FD6900260DE3 /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D664028AC29575BD5C05D506 /* Collections.framework */; };
+		07A8B5C71E51056F00260DE3 /* GCDDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B5C61E51056F00260DE3 /* GCDDomain.swift */; };
+		07A8B5C81E51056F00260DE3 /* GCDDomain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B5C61E51056F00260DE3 /* GCDDomain.swift */; };
 		07C563761E226DE100E73FB2 /* ModuloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563751E226DE100E73FB2 /* ModuloTests.swift */; };
 		07C563771E226DE100E73FB2 /* ModuloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563751E226DE100E73FB2 /* ModuloTests.swift */; };
 		07C563AF1E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */; };
@@ -180,6 +182,7 @@
 		078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTypeTests.swift; sourceTree = "<group>"; };
 		0799D96E1E21777A00516ADF /* QuadraticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticTests.swift; sourceTree = "<group>"; };
 		07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTheory.swift; sourceTree = "<group>"; };
+		07A8B5C61E51056F00260DE3 /* GCDDomain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GCDDomain.swift; sourceTree = "<group>"; };
 		07C563751E226DE100E73FB2 /* ModuloTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuloTests.swift; path = ArithmeticToolsTests/ModuloTests.swift; sourceTree = SOURCE_ROOT; };
 		07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitwiseOperations.swift; sourceTree = "<group>"; };
 		07C563B11E22B88700E73FB2 /* BitwiseOperationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitwiseOperationsTests.swift; sourceTree = "<group>"; };
@@ -287,6 +290,7 @@
 				07C9DA431DF0BF130071B801 /* RandomProducing.swift */,
 				078142A31C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift */,
 				078142A41C7CF3F1004B68D3 /* Functions.swift */,
+				07A8B5C61E51056F00260DE3 /* GCDDomain.swift */,
 				07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */,
 				07D91CDC1E4CE607006DBA11 /* InvertibleOptionSet.swift */,
 				078142A51C7CF3F1004B68D3 /* SequenceExtensions.swift */,
@@ -581,6 +585,7 @@
 				0775546E1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
 				078142A81C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C71C8768A100D50A30 /* PowerSequence.swift in Sources */,
+				07A8B5C71E51056F00260DE3 /* GCDDomain.swift in Sources */,
 				078142AC1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07FD1C891E4E310100EB38EA /* IntervalRelation.swift in Sources */,
 				07C563AF1E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */,
@@ -638,6 +643,7 @@
 				0775546F1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
 				078142A91C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C81C8768A100D50A30 /* PowerSequence.swift in Sources */,
+				07A8B5C81E51056F00260DE3 /* GCDDomain.swift in Sources */,
 				078142AD1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */,
 				07C563B01E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */,
