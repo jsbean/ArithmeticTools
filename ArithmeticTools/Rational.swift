@@ -33,6 +33,17 @@ public struct Fraction: Rational {
     }
 }
 
+extension Fraction: ExpressibleByIntegerLiteral {
+    
+    /// Create a `Fraction` with
+    public init(integerLiteral value: Int) {
+        self.init(value, 1)
+    }
+}
+
+// init with float value
+// init with int value
+
 /// - returns: Product of any two `Rational`-conforming types as a `Fraction`.
 public func * <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
     return Fraction(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator)
