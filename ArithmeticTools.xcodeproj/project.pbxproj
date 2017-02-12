@@ -67,6 +67,10 @@
 		078142BC1C7CF494004B68D3 /* SequenceTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */; };
 		0799D96F1E21777A00516ADF /* QuadraticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799D96E1E21777A00516ADF /* QuadraticTests.swift */; };
 		0799D9701E21777A00516ADF /* QuadraticTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0799D96E1E21777A00516ADF /* QuadraticTests.swift */; };
+		07A8B5C21E50F5A100260DE3 /* CategoryTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */; };
+		07A8B5C31E50F5A100260DE3 /* CategoryTheory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */; };
+		07A8B5C41E50FD6300260DE3 /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D664028AC29575BD5C05D506 /* Collections.framework */; };
+		07A8B5C51E50FD6900260DE3 /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D664028AC29575BD5C05D506 /* Collections.framework */; };
 		07C563761E226DE100E73FB2 /* ModuloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563751E226DE100E73FB2 /* ModuloTests.swift */; };
 		07C563771E226DE100E73FB2 /* ModuloTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563751E226DE100E73FB2 /* ModuloTests.swift */; };
 		07C563AF1E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */; };
@@ -175,6 +179,7 @@
 		078142B11C7CF494004B68D3 /* PrimeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PrimeTests.swift; sourceTree = "<group>"; };
 		078142B21C7CF494004B68D3 /* SequenceTypeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SequenceTypeTests.swift; sourceTree = "<group>"; };
 		0799D96E1E21777A00516ADF /* QuadraticTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuadraticTests.swift; sourceTree = "<group>"; };
+		07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryTheory.swift; sourceTree = "<group>"; };
 		07C563751E226DE100E73FB2 /* ModuloTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ModuloTests.swift; path = ArithmeticToolsTests/ModuloTests.swift; sourceTree = SOURCE_ROOT; };
 		07C563AE1E22B81A00E73FB2 /* BitwiseOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitwiseOperations.swift; sourceTree = "<group>"; };
 		07C563B11E22B88700E73FB2 /* BitwiseOperationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BitwiseOperationsTests.swift; sourceTree = "<group>"; };
@@ -208,6 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781425D1C7CECD5004B68D3 /* ArithmeticTools.framework in Frameworks */,
+				07A8B5C41E50FD6300260DE3 /* Collections.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +230,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0781427B1C7CECE0004B68D3 /* ArithmeticTools.framework in Frameworks */,
+				07A8B5C51E50FD6900260DE3 /* Collections.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +293,7 @@
 				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
 				07FD1C881E4E310100EB38EA /* IntervalRelation.swift */,
 				077554641E1B012700CF4A8A /* Rational.swift */,
+				07A8B5C11E50F5A100260DE3 /* CategoryTheory.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticTools;
@@ -576,6 +584,7 @@
 				078142AC1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07FD1C891E4E310100EB38EA /* IntervalRelation.swift in Sources */,
 				07C563AF1E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */,
+				07A8B5C21E50F5A100260DE3 /* CategoryTheory.swift in Sources */,
 				07C9DA441DF0BF130071B801 /* RandomProducing.swift in Sources */,
 				075F16E61CE2570600545125 /* FloatWrapping.swift in Sources */,
 				077554651E1B012700CF4A8A /* Rational.swift in Sources */,
@@ -632,6 +641,7 @@
 				078142AD1C7CF3F1004B68D3 /* SequenceExtensions.swift in Sources */,
 				07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */,
 				07C563B01E22B81A00E73FB2 /* BitwiseOperations.swift in Sources */,
+				07A8B5C31E50F5A100260DE3 /* CategoryTheory.swift in Sources */,
 				07C9DA451DF0BF130071B801 /* RandomProducing.swift in Sources */,
 				075F16E71CE2570600545125 /* FloatWrapping.swift in Sources */,
 				077554661E1B012700CF4A8A /* Rational.swift in Sources */,
@@ -841,7 +851,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -856,7 +869,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/iOS";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bean.ArithmeticToolsTests;
@@ -923,7 +939,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;
@@ -942,7 +961,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)/Carthage/Build/Mac";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SRCROOT)/Carthage/Build/Mac",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = ArithmeticToolsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.11;

@@ -7,29 +7,23 @@
 //
 
 import XCTest
+import Collections
 import ArithmeticTools
 
 class CumulativeTests: XCTestCase {
     
     func testIntArrayCumulative() {
         let array = [1,2,3]
-        XCTAssertEqual(array.cumulative, [0,1,3])
+        XCTAssertEqual(array.accumulatingRight, [0,1,3])
     }
     
     func testFloatArrayCumulative() {
+
         let array = [1.1, 2.2, 3.3]
         let expected = [0, 1.1, 3.3]
-        zip(array.cumulative, expected).forEach { actual, expected in
+        
+        zip(array.accumulatingRight, expected).forEach { actual, expected in
             XCTAssertEqualWithAccuracy(actual, expected, accuracy: 0.000001)
-        }
-    }
-    
-    func testIntArrayCumulativeWithValue() {
-        let array = [1,2,3]
-        let expected = [(0,1), (1,2), (3,3)]
-        zip(array.cumulativeWithValue, expected).forEach { actual, expected in
-            XCTAssertEqual(actual.0, expected.0)
-            XCTAssertEqual(actual.1, expected.1)
         }
     }
 }
