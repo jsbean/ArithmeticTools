@@ -203,6 +203,7 @@ extension CountableClosedRange: ClosedRangeProtocol { }
 
 extension ClosedRangeProtocol {
     
+    /// - returns: Union of two `ClosedRangeProtocol`-conforming types.
     public static func + (lhs: Self, rhs: Self) -> Self {
         let lower = min(lhs.lowerBound, rhs.upperBound)
         let upper = max(lhs.lowerBound, rhs.upperBound)
