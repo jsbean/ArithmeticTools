@@ -10,10 +10,16 @@ import Collections
 
 /// Model of ratio.
 public protocol Rational:
+    Monoid,
     Comparable,
     Hashable,
     CustomStringConvertible
 {
+
+    // MARK: - Type Properties
+    
+    static var unit: Self { get }
+    
     // MARK: - Instance Properties
     
     /// Float value.
@@ -58,6 +64,16 @@ public protocol Rational:
     /// - returns: A new `Rational` value with the given `denominator`, which is no longer
     /// guaranteed to provide the same arithmetic value as before.
     func mutating(denominator: Int) -> Self
+}
+
+extension Rational {
+    
+    // MARK: - Monoid
+    
+    /// Monoidal unit.
+    public static var unit: Self {
+        return Self(0,1)
+    }
 }
 
 extension Rational {
