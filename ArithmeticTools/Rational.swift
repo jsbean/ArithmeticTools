@@ -8,6 +8,31 @@
 
 import Collections
 
+/// Fraction structure.
+public struct Fraction: Rational {
+    
+    // MARK: - Instance Properties
+    
+    /// Numerator.
+    public let numerator: Int
+    
+    /// Denominator.
+    public let denominator: Int
+    
+    // MARK: - Initializers
+    
+    /// Create a `Rational` value with a given `numerator` and `denominator`.
+    public init(_ numerator: Int, _ denominator: Int) {
+        
+        guard denominator != 0 else {
+            fatalError("Cannot create a Fraction with denominator of 0")
+        }
+        
+        self.numerator = numerator
+        self.denominator = denominator
+    }
+}
+
 /// Model of ratio.
 public protocol Rational:
     Monoid,
