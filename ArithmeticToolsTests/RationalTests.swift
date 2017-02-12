@@ -163,4 +163,56 @@ class RationalTests: XCTestCase {
         let original = R(3,7)
         XCTAssertNil(original.respelling(denominator: 8))
     }
+    
+    // MARK: - Arithmetic
+    
+    func testAddSameDenominator() {
+        
+        let a = R(2,5)
+        let b = R(4,5)
+        
+        XCTAssertEqual(a + b, R(6,5))
+    }
+    
+    func testAddSameDenominatorAndAssign() {
+        
+        var a = R(2,5)
+        let b = R(4,5)
+        a += b
+        
+        XCTAssertEqual(a, R(6,5))
+    }
+    
+    func testAddDifferentDenominators() {
+        
+        let a = R(2,5) // 14/35
+        let b = R(2,7) // 10/35
+        
+        XCTAssertEqual(a + b, R(24,35))
+    }
+    
+    func testSubtractSameDenominator() {
+        
+        let a = R(2,5)
+        let b = R(4,5)
+        
+        XCTAssertEqual(a - b, R(-2,5))
+    }
+    
+    func testSubtractDifferentDenominators() {
+        
+        let a = R(2,5) // 14/35
+        let b = R(2,7) // 10/35
+        
+        XCTAssertEqual(a - b, R(4,35))
+    }
+    
+    func testSubtractDifferentDenominatorsAndAssign() {
+        
+        var a = R(2,5) // 14/35
+        let b = R(2,7) // 10/35
+        a -= b
+        
+        XCTAssertEqual(a, R(4,35))
+    }
 }
