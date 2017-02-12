@@ -1,0 +1,36 @@
+//
+//  GCDDomain.swift
+//  ArithmeticTools
+//
+//  Created by James Bean on 2/12/17.
+//  Copyright © 2017 James Bean. All rights reserved.
+//
+
+import Foundation
+
+/// - returns: Greatest common divisor of `a` and `b`.
+public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
+    let result = a % b
+    return result == 0 ? b : gcd(b, result)
+}
+
+/// - returns: Least common multiple of `a` and `b`.
+public func lcm <I: Integer> (_ a: I, _ b: I) -> I {
+    return (a / gcd(a,b)) * b
+}
+
+extension Sequence where Iterator.Element: Integer {
+    
+    /// Greatest common divisor of elements in Sequence.
+    ///
+    ///     `[8,12].gcd -> 4`
+    ///
+    public var gcd: Iterator.Element? {
+        
+        guard let min = self.min() else {
+            return nil
+        }
+        
+        return self.map { ArithmeticTools.gcd($0, min) }.min()
+    }
+}

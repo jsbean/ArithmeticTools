@@ -8,47 +8,6 @@
 
 import Foundation
 
-// TODO: Make `quadratic` generic over `FloatingPoint` type, when possible (Swift 3.1 / 4)
-
-/// - returns: A `Set` of either 0, 1, or 2 x-intercepts for the given coefficients.
-public func quadratic (_ a: Float, _ b: Float, _ c: Float) -> Set<Float> {
-    
-    let discriminant = pow(b,2) - 4 * a * c
-    
-    guard discriminant > 0 else {
-        return Set()
-    }
-    
-    return Set(
-        [1,-1].map { sign in (-b + sign * sqrt(discriminant)) / (2 * a) }
-    )
-}
-
-/// - returns: A `Set` of either 0, 1, or 2 x-intercepts for the given coefficients.
-public func quadratic (_ a: Double, _ b: Double, _ c: Double) -> Set<Double> {
-    
-    let discriminant = pow(b,2) - 4 * a * c
-    
-    guard discriminant > 0 else {
-        return Set()
-    }
-    
-    return Set(
-        [1,-1].map { sign in (-b + sign * sqrt(discriminant)) / (2 * a) }
-    )
-}
-
-/// - returns: Greatest common divisor of `a` and `b`.
-public func gcd <I: Integer> (_ a: I, _ b: I) -> I {
-    let result = a % b
-    return result == 0 ? b : gcd(b, result)
-}
-
-/// - returns: Least common multiple of `a` and `b`.
-public func lcm <I: Integer> (_ a: I, _ b: I) -> I {
-    return (a / gcd(a,b)) * b
-}
-
 /**
  Get the closer of two values to a target value.
  
