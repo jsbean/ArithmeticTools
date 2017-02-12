@@ -41,9 +41,6 @@ extension Fraction: ExpressibleByIntegerLiteral {
     }
 }
 
-// init with float value
-// init with int value
-
 /// - returns: Product of any two `Rational`-conforming types as a `Fraction`.
 public func * <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
     return Fraction(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator)
