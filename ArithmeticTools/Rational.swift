@@ -103,6 +103,10 @@ extension Rational {
     
     // MARK: - Arithmetic
     
+    public var reciprocal: Self {
+        return Self(denominator, numerator)
+    }
+    
     /// - returns: Sum of both `Rational` values.
     public static func + (lhs: Self, rhs: Self) -> Self {
         let (a,b) = normalized(lhs, rhs)
@@ -120,9 +124,29 @@ extension Rational {
         return Self(a.numerator - b.numerator, a.denominator).reduced
     }
     
-    /// Assigns the sum of both `Rational` values to the left-hand-side variable.
+    /// Assigns the differnce of both `Rational` values to the left-hand-side variable.
     public static func -= (lhs: inout Self, rhs: Self) {
         lhs = lhs - rhs
+    }
+    
+    /// - returns: Product of both `Rational` values.
+    public static func * (lhs: Self, rhs: Self) -> Self {
+        return Self(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator).reduced
+    }
+    
+    /// Assigns product of both `Rational` values to the left-hand-side variable.
+    public static func *= (lhs: inout Self, rhs: Self) {
+        lhs = lhs * rhs
+    }
+    
+    /// - returns: Quotient of both `Rational` values.
+    public static func / (lhs: Self, rhs: Self) -> Self {
+        return lhs * rhs.reciprocal
+    }
+    
+    /// Assigns the quotient of both `Rational` values to the left-hand-side variable.
+    public static func /= (lhs: inout Self, rhs: Self) {
+        lhs = lhs / rhs
     }
 }
 
@@ -238,5 +262,3 @@ extension Rational {
         return "\(numerator)/\(denominator)"
     }
 }
-
-// TODO: Arithmetic (+(=) / -(=) / *(=) / \/(=))
