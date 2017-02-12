@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Collections
 
 /// Interface defining objects with a single property:
 ///
@@ -25,13 +26,6 @@ public protocol Monoid: Semigroup {
     
     /// - returns: Identity value for this `Monoid` type value.
     static var unit: Self { get }
-}
-
-extension Array: Monoid {
-    
-    public static var unit: Array {
-        return []
-    }
 }
 
 extension Int: Monoid {
@@ -56,3 +50,22 @@ extension Double: Monoid {
 }
 
 // TODO: Flesh out conformances
+
+
+extension Array: Monoid {
+    
+    public static var unit: Array {
+        return []
+    }
+}
+
+extension Set: Monoid {
+    
+    public static func + <T> (lhs: Set<T>, rhs: Set<T>) -> Set<T> {
+        return lhs.union(rhs)
+    }
+    
+    public static var unit: Set {
+        return []
+    }
+}
