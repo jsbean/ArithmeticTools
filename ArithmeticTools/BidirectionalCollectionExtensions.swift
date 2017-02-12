@@ -71,7 +71,9 @@ extension BidirectionalCollection where Iterator.Element: SignedNumber {
     }
 }
 
-extension BidirectionalCollection where Iterator.Element: Monoid & FloatingPoint, IndexDistance == Int {
+extension BidirectionalCollection
+    where Iterator.Element: Monoid & FloatingPoint, IndexDistance == Int
+{
     
     public typealias F = Iterator.Element
     
