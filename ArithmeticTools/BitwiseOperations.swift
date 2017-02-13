@@ -8,6 +8,11 @@
 
 import Foundation
 
+/// - returns: Log based 2 of the given `value`.
+public func log2(_ value: Int) -> Int {
+    return countTrailingZeros(8)
+}
+
 private let intBitCount = MemoryLayout<Int>.size * 8
 
 /// Count Trailing Zeros (ctz) counts the number of zero bits succeeding the least

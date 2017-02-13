@@ -48,4 +48,8 @@ class BitwiseOperationsTests: XCTestCase {
             XCTAssertEqual(countTrailingZeros(0x1ABCDEF400000000), 4 * 8 + 2)
         #endif
     }
+    
+    func testLog28() {
+        XCTAssertEqual(log2(8), 3)
+    }
 }
