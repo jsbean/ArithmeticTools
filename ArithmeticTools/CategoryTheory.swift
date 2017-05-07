@@ -51,7 +51,6 @@ extension Double: Monoid {
 
 // TODO: Flesh out conformances
 
-
 extension Array: Monoid {
     
     public static var unit: Array {

@@ -10,7 +10,7 @@ import Foundation
 
 /// - returns: Log based 2 of the given `value`.
 public func log2(_ value: Int) -> Int {
-    return countTrailingZeros(8)
+    return countTrailingZeros(value)
 }
 
 private let intBitCount = MemoryLayout<Int>.size * 8
