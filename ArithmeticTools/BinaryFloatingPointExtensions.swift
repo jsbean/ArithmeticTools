@@ -13,18 +13,18 @@ extension BinaryFloatingPoint {
     /// Scales a `BinaryFloatingPoint` from the given `sourceRange` to the given
     /// `destinationRange`.
     public mutating func scale(
-        from sourceRange: ClosedRange<Self>,
-        to destinationRange: ClosedRange<Self>
+        from source: ClosedRange<Self>,
+        to destination: ClosedRange<Self>
     ) -> Self
     {
-        let sourceWidth = sourceRange.upperBound - sourceRange.lowerBound
-        let destinationWidth = destinationRange.upperBound - destinationRange.lowerBound
-        let position = (self - sourceRange.lowerBound) / sourceWidth
-        return position * destinationWidth + destinationRange.lowerBound
+        let sourceWidth = source.upperBound - source.lowerBound
+        let destinationWidth = destination.upperBound - destination.lowerBound
+        let position = (self - source.lowerBound) / sourceWidth
+        return position * destinationWidth + destination.lowerBound
     }
     
     /// - returns: A `BinaryFloatingPoint` value scaled from the given `sourceRange` to the
-    /// given `destinationRange`.
+    /// given `destinationRange`.i
     public func scaled(
         from sourceRange: ClosedRange<Self>,
         to destinationRange: ClosedRange<Self>
