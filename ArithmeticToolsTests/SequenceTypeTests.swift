@@ -30,20 +30,10 @@ class SequenceTypeTests: XCTestCase {
         let array: [Float] = [1.0,3.0,4.0]
         XCTAssertEqual(array.sum, 8)
     }
-    
-    func testGCDIntEmptyNil() {
-        let array: [Int] = []
-        XCTAssertNil(array.gcd)
-    }
-    
+
     func testGCDIntPair() {
         let array: [Int] = [8,12]
-        XCTAssertEqual(array.gcd!, 4)
-    }
-    
-    func testGCDIntNotNil() {
-        let array: [Int] = [9,12,21]
-        XCTAssertEqual(array.gcd!, 3)
+        XCTAssertEqual(array.gcd, 4)
     }
     
     func testClosestOver() {

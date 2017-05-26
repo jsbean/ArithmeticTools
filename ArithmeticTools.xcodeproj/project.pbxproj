@@ -17,8 +17,8 @@
 		071F3C731C8227F300F6BD28 /* RandomTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071F3C711C8227F300F6BD28 /* RandomTests.swift */; };
 		073A93481C8E6C5C003DAF9C /* IsDivisibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A93471C8E6C5C003DAF9C /* IsDivisibleTests.swift */; };
 		073A93491C8E6C5D003DAF9C /* IsDivisibleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073A93471C8E6C5C003DAF9C /* IsDivisibleTests.swift */; };
-		073EC7271E3D2D3C00B63692 /* LowestCommonMultipleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EC7261E3D2D3C00B63692 /* LowestCommonMultipleTests.swift */; };
-		073EC7281E3D2D3C00B63692 /* LowestCommonMultipleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EC7261E3D2D3C00B63692 /* LowestCommonMultipleTests.swift */; };
+		073EC7271E3D2D3C00B63692 /* LeastCommonMultipleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EC7261E3D2D3C00B63692 /* LeastCommonMultipleTests.swift */; };
+		073EC7281E3D2D3C00B63692 /* LeastCommonMultipleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073EC7261E3D2D3C00B63692 /* LeastCommonMultipleTests.swift */; };
 		074276C71C8768A100D50A30 /* PowerSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276C61C8768A100D50A30 /* PowerSequence.swift */; };
 		074276C81C8768A100D50A30 /* PowerSequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276C61C8768A100D50A30 /* PowerSequence.swift */; };
 		074276CA1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 074276C91C8775B800D50A30 /* PowerSequenceTests.swift */; };
@@ -158,7 +158,7 @@
 		071D19C41C94BEB100543F77 /* OrderedTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderedTests.swift; sourceTree = "<group>"; };
 		071F3C711C8227F300F6BD28 /* RandomTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomTests.swift; sourceTree = "<group>"; };
 		073A93471C8E6C5C003DAF9C /* IsDivisibleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsDivisibleTests.swift; sourceTree = "<group>"; };
-		073EC7261E3D2D3C00B63692 /* LowestCommonMultipleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LowestCommonMultipleTests.swift; sourceTree = "<group>"; };
+		073EC7261E3D2D3C00B63692 /* LeastCommonMultipleTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeastCommonMultipleTests.swift; sourceTree = "<group>"; };
 		074276C61C8768A100D50A30 /* PowerSequence.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSequence.swift; sourceTree = "<group>"; };
 		074276C91C8775B800D50A30 /* PowerSequenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerSequenceTests.swift; sourceTree = "<group>"; };
 		074276CC1C877EE400D50A30 /* Power.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Power.swift; sourceTree = "<group>"; };
@@ -322,7 +322,7 @@
 				07690BE11E0D913C0095F1D5 /* MeanTests.swift */,
 				071F3C711C8227F300F6BD28 /* RandomTests.swift */,
 				078142AF1C7CF494004B68D3 /* GreatestCommonDivisorTests.swift */,
-				073EC7261E3D2D3C00B63692 /* LowestCommonMultipleTests.swift */,
+				073EC7261E3D2D3C00B63692 /* LeastCommonMultipleTests.swift */,
 				07652E0F1C8788B300359A03 /* CloserToTests.swift */,
 				078142B01C7CF494004B68D3 /* OddTests.swift */,
 				078142B11C7CF494004B68D3 /* PrimeTests.swift */,
@@ -643,7 +643,7 @@
 				907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */,
 				073A93481C8E6C5C003DAF9C /* IsDivisibleTests.swift in Sources */,
 				071D19C51C94BEB100543F77 /* OrderedTests.swift in Sources */,
-				073EC7271E3D2D3C00B63692 /* LowestCommonMultipleTests.swift in Sources */,
+				073EC7271E3D2D3C00B63692 /* LeastCommonMultipleTests.swift in Sources */,
 				07652E101C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142B91C7CF494004B68D3 /* PrimeTests.swift in Sources */,
 				07690BE21E0D913C0095F1D5 /* MeanTests.swift in Sources */,
@@ -698,7 +698,7 @@
 				074276CB1C8775B800D50A30 /* PowerSequenceTests.swift in Sources */,
 				078142B41C7CF494004B68D3 /* EvenTests.swift in Sources */,
 				0799D9701E21777A00516ADF /* QuadraticTests.swift in Sources */,
-				073EC7281E3D2D3C00B63692 /* LowestCommonMultipleTests.swift in Sources */,
+				073EC7281E3D2D3C00B63692 /* LeastCommonMultipleTests.swift in Sources */,
 				07C9DA421DF0B8C80071B801 /* NumberFormattingTests.swift in Sources */,
 				07D91CE11E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */,
 				078142B81C7CF494004B68D3 /* OddTests.swift in Sources */,
