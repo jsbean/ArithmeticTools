@@ -25,12 +25,15 @@ extension Sequence where Iterator.Element: Integer {
     ///
     ///     `[8,12].gcd -> 4`
     ///
-    public var gcd: Iterator.Element? {
-        
-        guard let min = self.min() else {
-            return nil
-        }
-        
-        return self.map { ArithmeticTools.gcd($0, min) }.min()
+    public var gcd: Iterator.Element {
+        return reduce(0, ArithmeticTools.gcd)
+    }
+    
+    /// Least common multiple of elements in Sequence.
+    ///
+    ///     `[4,5,6].lcm -> 60`
+    ///
+    public var lcm: Iterator.Element {
+        return reduce(1, ArithmeticTools.lcm)
     }
 }
