@@ -21,7 +21,7 @@ public struct Fraction: Rational {
     
     // MARK: - Initializers
     
-    /// Create a `Rational` value with a given `numerator` and `denominator`.
+    /// Creates a `Fraction` value with a given `numerator` and `denominator`.
     public init(_ numerator: Int, _ denominator: Int) {
         
         guard denominator != 0 else {
@@ -31,11 +31,17 @@ public struct Fraction: Rational {
         self.numerator = numerator
         self.denominator = denominator
     }
+    
+    /// Creates a `Fraction` value with the given `rational` value.
+    public init <R: Rational> (_ rational: R) {
+        self.numerator = rational.numerator
+        self.denominator = rational.denominator
+    }
 }
 
 extension Fraction: ExpressibleByIntegerLiteral {
     
-    /// Create a `Fraction` with
+    /// Create a `Fraction` with an intger literal.
     public init(integerLiteral value: Int) {
         self.init(value, 1)
     }
@@ -67,6 +73,9 @@ public protocol Rational:
     
     /// Float value.
     var floatValue: Float { get }
+    
+    /// Double value.
+    var doubleValue: Double { get }
     
     /// Inverse of self, if `numerator != 0`. Otherwise, `nil`.
     var inverse: Self? { get }
@@ -242,6 +251,11 @@ extension Rational {
     /// Float value.
     public var floatValue: Float {
         return Float(numerator) / Float(denominator)
+    }
+    
+    /// Double value.
+    public var doubleValue: Double {
+        return Double(numerator) / Double(denominator)
     }
 }
 
