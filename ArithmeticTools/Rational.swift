@@ -21,7 +21,7 @@ public struct Fraction: Rational {
     
     // MARK: - Initializers
     
-    /// Create a `Rational` value with a given `numerator` and `denominator`.
+    /// Creates a `Fraction` value with a given `numerator` and `denominator`.
     public init(_ numerator: Int, _ denominator: Int) {
         
         guard denominator != 0 else {
@@ -30,6 +30,12 @@ public struct Fraction: Rational {
         
         self.numerator = numerator
         self.denominator = denominator
+    }
+    
+    /// Creates a `Fraction` value with the given `rational` value.
+    public init <R: Rational> (_ rational: R) {
+        self.numerator = rational.numerator
+        self.denominator = rational.denominator
     }
 }
 
