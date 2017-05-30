@@ -41,7 +41,13 @@ class SequenceTypeTests: XCTestCase {
         let closest = array.closest(to: 7.1)!
         XCTAssertEqual(closest, 6.7)
     }
-    
+
+    func testClosestEmpty() {
+        let array: [Float] = []
+        let closest = array.closest(to: 3.5)
+        XCTAssertNil(closest)
+    }
+
     func testClosestUnder() {
         let array = [1,4,7]
         let closest = array.closest(to: 6)
