@@ -108,6 +108,7 @@
 		07FD1C8F1E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
 		07FD1C901E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
 		907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
+		90A936541EDD01CB00CBC157 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
 		CE9D18DD4880C2C3390AE17F /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA73FEF407912A83BEC1554 /* Collections.framework */; };
 		E6B88D15871E1EEEF7D003A4 /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D664028AC29575BD5C05D506 /* Collections.framework */; };
 /* End PBXBuildFile section */
@@ -683,6 +684,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90A936541EDD01CB00CBC157 /* IsPowerOfTwoTests.swift in Sources */,
 				0719FA8B1C876792009EACB4 /* PowerGeneratorTests.swift in Sources */,
 				071F3C731C8227F300F6BD28 /* RandomTests.swift in Sources */,
 				07C9DA4E1DF0C66F0071B801 /* CumulativeTests.swift in Sources */,

@@ -46,4 +46,22 @@ class RandomTests: XCTestCase {
             XCTAssert(r <= (min + range))
         }
     }
+
+    func testDefaultDouble() {
+        for _ in 0..<1000 {
+            let r = Double.random()
+            XCTAssert(r >= 0.0)
+            XCTAssert(r <= 1.0)
+        }
+    }
+
+    func testDoubleRange() {
+        for _ in 0..<100 {
+            let min = Double.random(min: 0, max: 10000)
+            let range = Double.random(min: 1, max: 10000)
+            let r = Double.random(min: min, max: (min + range))
+            XCTAssert(r >= min)
+            XCTAssert(r <= (min + range))
+        }
+    }
 }

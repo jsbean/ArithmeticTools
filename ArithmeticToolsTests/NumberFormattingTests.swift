@@ -15,12 +15,9 @@ class NumberFormattingTests: XCTestCase {
         
         let digits = 3
         
-        let values = (0..<1000).map {
-            value in return value.formatted(digits: digits)
-        }
-        
-        values.forEach { value in
-            XCTAssertEqual(value.characters.count, digits)
+        (0..<1000).forEach { value in
+            let formatted = value.formatted(digits: digits)
+            XCTAssertEqual(formatted.characters.count, digits)
         }
     }
     
@@ -28,12 +25,19 @@ class NumberFormattingTests: XCTestCase {
         
         let digits = 4
         
-        let values = stride(from: Float(0.0), to: 0.1, by: 0.001).map {
-            value in return value.formatted(digits: digits)
+        stride(from: Float(0.0), to: 0.1, by: 0.001).forEach { value in
+            let formatted = value.formatted(digits: digits)
+            XCTAssertEqual(formatted.characters.count, digits + 2)
         }
+    }
+
+    func testFormattedDoubleDigits() {
+
+        let digits = 4
         
-        values.forEach { value in
-            XCTAssertEqual(value.characters.count, digits + 2)
+        stride(from: Double(0.0), to: 0.1, by: 0.001).forEach { value in
+            let formatted = value.formatted(digits: digits)
+            XCTAssertEqual(formatted.characters.count, digits + 2)
         }
     }
 }

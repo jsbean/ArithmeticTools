@@ -11,12 +11,24 @@ import ArithmeticTools
 
 class QuadraticTests: XCTestCase {
 
-    func testIsEmpty() {
+    func testIsEmptyFloat() {
         let result: Set<Float> = quadratic(2,1,3)
         XCTAssert(result.isEmpty)
     }
-    
-    func testQuadratic() {
-        XCTAssertEqual(quadratic(5,6,1), [-1, -0.2])
+
+    func testQuadraticFloat() {
+        let result: Set<Float> = quadratic(5,6,1)
+        XCTAssertEqual(result, [-1, -0.2])
     }
+
+    func testIsEmptyDouble() {
+        let result: Set<Double> = quadratic(2,1,3)
+        XCTAssert(result.isEmpty)
+    }
+
+    func testQuadraticDouble() {
+        let result: Set<Double> = quadratic(5,6,1)
+        XCTAssertEqual(result, [-1, -0.2])
+    }
+
 }
