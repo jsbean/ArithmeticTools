@@ -36,4 +36,17 @@ class NumberFormattingTests: XCTestCase {
             XCTAssertEqual(value.characters.count, digits + 2)
         }
     }
+
+    func testFormattedDoubleDigits() {
+
+        let digits = 4
+
+        let values = stride(from: Double(0.0), to: 0.1, by: 0.001).map {
+            value in return value.formatted(digits: digits)
+        }
+
+        values.forEach { value in
+            XCTAssertEqual(value.characters.count, digits + 2)
+        }
+    }
 }
