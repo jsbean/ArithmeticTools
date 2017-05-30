@@ -37,8 +37,10 @@ extension Collection where Iterator.Element: Monoid {
         return accumulate(Array(self), result: [], sum: .unit)
     }
     
+    /// - returns: An array of the values contained herein accumulating the running sum to the
+    /// left, start with `.unit`.
     public var accumulatingLeft: [Iterator.Element] {
-        return reversed().accumulatingRight.reversed()
+        return reversed().accumulatingRight
     }
 }
 
