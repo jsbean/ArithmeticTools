@@ -140,4 +140,117 @@ class IntervalRelationTests: XCTestCase {
         XCTAssertEqual(containedBy.inverse, contains)
         XCTAssertEqual(contains.inverse, containedBy)
     }
+
+    func testDescriptionPrecedes() {
+
+        let ir = IntervalRelation.precedes
+        let expected = "precedes"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionMeets() {
+
+        let ir = IntervalRelation.meets
+        let expected = "meets"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionOverlaps() {
+
+        let ir = IntervalRelation.overlaps
+        let expected = "overlaps"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionFinishedBy() {
+
+        let ir = IntervalRelation.finishedBy
+        let expected = "finishedBy"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionContains() {
+
+        let ir = IntervalRelation.contains
+        let expected = "contains"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionStarts() {
+
+        let ir = IntervalRelation.starts
+        let expected = "starts"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionEquals() {
+
+        let ir = IntervalRelation.equals
+        let expected = "equals"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionStartedBy() {
+
+        let ir = IntervalRelation.startedBy
+        let expected = "startedBy"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionDuring() {
+
+        let ir = IntervalRelation.containedBy
+        let expected = "during"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionFinishes() {
+
+        let ir = IntervalRelation.finishes
+        let expected = "finishes"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionOverlappedBy() {
+
+        let ir = IntervalRelation.overlappedBy
+        let expected = "overlappedBy"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionMetBy() {
+
+        let ir = IntervalRelation.metBy
+        let expected = "metBy"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionPrecededBy() {
+
+        let ir = IntervalRelation.precededBy
+        let expected = "precededBy"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
+    func testDescriptionRawValue() {
+
+        let ir = IntervalRelation(rawValue: 1 << 13)
+        let expected = "8192"
+
+        XCTAssertEqual(ir.description, expected)
+    }
+
 }
