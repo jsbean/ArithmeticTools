@@ -163,7 +163,7 @@ extension IntervalRelation: CustomStringConvertible {
         case 1 << 7:
             return "startedBy"
         case 1 << 8:
-            return "during"
+            return "containedBy"
         case 1 << 9:
             return "finishes"
         case 1 << 10:

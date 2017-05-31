@@ -208,7 +208,7 @@ class IntervalRelationTests: XCTestCase {
     func testDescriptionDuring() {
 
         let ir = IntervalRelation.containedBy
-        let expected = "during"
+        let expected = "containedBy"
 
         XCTAssertEqual(ir.description, expected)
     }
