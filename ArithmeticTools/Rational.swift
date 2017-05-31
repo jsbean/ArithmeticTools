@@ -60,6 +60,8 @@ public func / <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
 /// Model of ratio.
 public protocol Rational:
     Monoid,
+    SignedNumber,
+    Strideable,
     Comparable,
     Hashable,
     CustomStringConvertible
@@ -125,6 +127,31 @@ extension Rational {
     /// Monoidal unit.
     public static var unit: Self {
         return Self(0,1)
+    }
+}
+
+extension Rational {
+    
+    // MARK: - Signed Number
+    
+    /// Negate `Rational` type arithmetically.
+    public static prefix func -(rational: Self) -> Self {
+        return -rational
+    }
+}
+
+extension Rational {
+    
+    // MARK: - Strideable
+    
+    /// - returns: Self advanced by the given `n`.
+    public func advanced(by n: Self) -> Self {
+        return self + n
+    }
+    
+    /// - returns: Distance to the given `other`.
+    public func distance(to other: Self) -> Self {
+        return other - self
     }
 }
 

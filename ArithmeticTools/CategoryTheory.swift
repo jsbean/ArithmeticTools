@@ -12,6 +12,7 @@ import Collections
 /// Interface defining objects with a single property:
 ///
 /// - `Composition` operation.
+///
 public protocol Semigroup {
     
     /// - returns: Composition of two of the same `Semigroup` type values.
