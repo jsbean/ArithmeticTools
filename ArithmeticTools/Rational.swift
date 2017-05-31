@@ -135,7 +135,7 @@ extension Rational {
     // MARK: - Signed Number
     
     /// Negate `Rational` type arithmetically.
-    public static prefix func -(rational: Self) -> Self {
+    public static prefix func - (rational: Self) -> Self {
         return -rational
     }
 }
