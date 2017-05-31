@@ -253,4 +253,40 @@ class IntervalRelationTests: XCTestCase {
         XCTAssertEqual(ir.description, expected)
     }
 
+    func testUnionSeparate() {
+
+        let left = 1...2
+        let right = 3...4
+
+        XCTAssertEqual(left + right, 1...4)
+        XCTAssertEqual(right + left, 1...4)
+    }
+
+    func testUnionMeeting() {
+
+        let left = 1...2
+        let right = 2...4
+
+        XCTAssertEqual(left + right, 1...4)
+        XCTAssertEqual(right + left, 1...4)
+    }
+
+    func testUnionOverlapping() {
+
+        let left = 1...3
+        let right = 2...4
+
+        XCTAssertEqual(left + right, 1...4)
+        XCTAssertEqual(right + left, 1...4)
+    }
+
+    func testUnionEqual() {
+
+        let left = 1...8
+        let right = 1...8
+
+        XCTAssertEqual(left + right, 1...8)
+        XCTAssertEqual(right + left, 1...8)
+    }
+
 }
