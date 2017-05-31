@@ -10,23 +10,6 @@ import XCTest
 import ArithmeticTools
 
 class RationalTests: XCTestCase {
-
-//    // TODO: Use `Fraction`
-//    struct Fraction: Rational {
-//        
-//        var numerator: Int
-//        var denominator: Int
-//
-//        init(_ numerator: Int, _ denominator: Int) {
-//            
-//            guard denominator != 0 else {
-//                fatalError("Cannot have Rational with denominator of 0")
-//            }
-//            
-//            self.numerator = numerator
-//            self.denominator = denominator
-//        }
-//    }
     
     func testInit() {
         _ = Fraction(1,1)
