@@ -11,7 +11,7 @@ import ArithmeticTools
 
 class LinearRegressionTests: XCTestCase {
 
-    func testMultiplyLHSEmpty() {
+    func testFloatMultiplyLHSEmpty() {
         
         let a: [Float] = []
         let b: [Float] = [0.5,1,2,4,8]
@@ -21,7 +21,7 @@ class LinearRegressionTests: XCTestCase {
         XCTAssertEqual(a * b, expected)
     }
     
-    func testMultiplyRHSEmpty() {
+    func testFloatMultiplyRHSEmpty() {
         
         let a: [Float] = [1,2,3,4,5]
         let b: [Float] = []
@@ -31,7 +31,7 @@ class LinearRegressionTests: XCTestCase {
         XCTAssertEqual(a * b, expected)
     }
     
-    func testMultiplyOperatorNotEmpty() {
+    func testFloatMultiplyOperatorNotEmpty() {
         
         let a: [Float] = [1,2,3,4,5]
         let b: [Float] = [0.5,1,2,4,8]
@@ -40,7 +40,37 @@ class LinearRegressionTests: XCTestCase {
         
         XCTAssertEqual(a * b, expected)
     }
-    
+
+    func testIntegerMultiplyLHSEmpty() {
+
+        let a: [Int] = []
+        let b: [Int] = [0,1,2,3,4,5]
+
+        let expected: [Int] = []
+
+        XCTAssertEqual(a * b, expected)
+    }
+
+    func testIntMultiplyRHSEmpty() {
+
+        let a: [Int] = [1,2,3,4,5,6]
+        let b: [Int] = []
+
+        let expected: [Int] = []
+
+        XCTAssertEqual(a * b, expected)
+    }
+
+    func testIntMultiplyOperatorNotEmpty() {
+
+        let a: [Int] = [1,2,3,4,5]
+        let b: [Int] = [2,4,6,8,16]
+
+        let expected: [Int] = [2,8,18,32,80]
+
+        XCTAssertEqual(a * b, expected)
+    }
+
     func testSlope1() {
         
         let xs: [Float] = [0,1,2,3]
@@ -80,7 +110,52 @@ class LinearRegressionTests: XCTestCase {
         
         XCTAssertEqual(slope(xs, ys), expected)
     }
-    
+
+    func testDictSlope1() {
+
+        let xs: [Float: Float] = [0:0,1:1,2:2,3:3]
+
+        let expected: Float = 1
+
+        XCTAssertEqual(slope(xs), expected)
+    }
+
+    func testDictSlopeMinus1() {
+
+        let xs: [Float: Float] = [0:3,1:2,2:1,3:0]
+
+        let expected: Float = -1
+
+        XCTAssertEqual(slope(xs), expected)
+    }
+
+    func testDictSlopeHalf() {
+
+        let xs: [Float: Float] = [0:0.5, 1:1, 2:1.5, 3:2]
+
+        let expected: Float = 0.5
+
+        XCTAssertEqual(slope(xs), expected)
+    }
+
+    func testDictSlopeMinusHalf() {
+
+        let xs: [Float: Float] = [0:1.5, 1:1, 2:0.5, 3:0]
+
+        let expected: Float = -0.5
+
+        XCTAssertEqual(slope(xs), expected)
+    }
+
+    func testLinearRegressionEmpty() {
+
+        let values: [Float: Float] = [:]
+
+        let expected: Float = 0.0
+
+        XCTAssertEqual(linearRegression(values)(4), expected)
+    }
+
     func testLinearRegressionAfterEasy() {
         
         let values: [Float: Float] = [0:0,1:1,2:2,3:3]
