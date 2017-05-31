@@ -22,6 +22,7 @@ public protocol Semigroup {
 ///
 /// - `Unit` element
 /// - `Composition` operation (inherited from `Semigroup`).
+///
 public protocol Monoid: Semigroup {
     
     /// - returns: Identity value for this `Monoid` type value.

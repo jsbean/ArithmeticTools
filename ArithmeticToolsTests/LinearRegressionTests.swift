@@ -113,7 +113,7 @@ class LinearRegressionTests: XCTestCase {
 
     func testDictSlope1() {
 
-        let xs: [Float: Float] = [0:0,1:1,2:2,3:3]
+        let xs: [Float: Float] = [0: 0, 1: 1, 2: 2, 3: 3]
 
         let expected: Float = 1
 
@@ -122,7 +122,7 @@ class LinearRegressionTests: XCTestCase {
 
     func testDictSlopeMinus1() {
 
-        let xs: [Float: Float] = [0:3,1:2,2:1,3:0]
+        let xs: [Float: Float] = [0: 3, 1: 2, 2: 1, 3: 0]
 
         let expected: Float = -1
 
@@ -131,7 +131,7 @@ class LinearRegressionTests: XCTestCase {
 
     func testDictSlopeHalf() {
 
-        let xs: [Float: Float] = [0:0.5, 1:1, 2:1.5, 3:2]
+        let xs: [Float: Float] = [0: 0.5, 1: 1, 2: 1.5, 3: 2]
 
         let expected: Float = 0.5
 
@@ -140,7 +140,7 @@ class LinearRegressionTests: XCTestCase {
 
     func testDictSlopeMinusHalf() {
 
-        let xs: [Float: Float] = [0:1.5, 1:1, 2:0.5, 3:0]
+        let xs: [Float: Float] = [0: 1.5, 1: 1, 2: 0.5, 3: 0]
 
         let expected: Float = -0.5
 
@@ -158,7 +158,7 @@ class LinearRegressionTests: XCTestCase {
 
     func testLinearRegressionAfterEasy() {
         
-        let values: [Float: Float] = [0:0,1:1,2:2,3:3]
+        let values: [Float: Float] = [0: 0, 1: 1, 2: 2, 3: 3]
         
         let expected: Float = 4
         
@@ -167,7 +167,7 @@ class LinearRegressionTests: XCTestCase {
     
     func testLinearRegressionInsideEasy() {
         
-        let values: [Float: Float] = [0:0,1:1,2:2,3:3]
+        let values: [Float: Float] = [0: 0, 1: 1, 2: 2, 3: 3]
         
         let expected: Float = 2.5
         
