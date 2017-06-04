@@ -6,7 +6,7 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
-import Foundation
+import Darwin
 
 /// - returns: Greatest common divisor of `a` and `b`.
 public func gcd <I: Integer> (_ a: I, _ b: I) -> I {

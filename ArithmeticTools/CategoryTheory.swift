@@ -6,7 +6,6 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
-import Foundation
 import Collections
 
 /// Interface defining objects with a single property:

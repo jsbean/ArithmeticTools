@@ -6,7 +6,7 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
-import Foundation
+import Darwin
 
 /// - returns: Log based 2 of the given `value`.
 public func log2(_ value: Int) -> Int {

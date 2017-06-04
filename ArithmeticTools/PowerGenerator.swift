@@ -6,9 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
-
-fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+fileprivate func < <T: Comparable> (lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
         return l < r
@@ -19,7 +17,7 @@ fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     }
 }
 
-fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
+fileprivate func > <T: Comparable> (lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
         return l > r
