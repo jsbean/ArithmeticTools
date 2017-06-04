@@ -33,6 +33,8 @@
 		07502CAD1DD2A90E0095AB27 /* LinearRegressionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */; };
 		075F16E61CE2570600545125 /* FloatWrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F16E51CE2570600545125 /* FloatWrapping.swift */; };
 		075F16E71CE2570600545125 /* FloatWrapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075F16E51CE2570600545125 /* FloatWrapping.swift */; };
+		07600F971EE477640049E8B2 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F961EE477640049E8B2 /* Vector2.swift */; };
+		07600F981EE477640049E8B2 /* Vector2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07600F961EE477640049E8B2 /* Vector2.swift */; };
 		07652E101C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
 		07652E111C8788B300359A03 /* CloserToTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07652E0F1C8788B300359A03 /* CloserToTests.swift */; };
 		07690BE21E0D913C0095F1D5 /* MeanTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07690BE11E0D913C0095F1D5 /* MeanTests.swift */; };
@@ -167,6 +169,7 @@
 		07502CA81DD2A2A20095AB27 /* LinearRegression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegression.swift; sourceTree = "<group>"; };
 		07502CAB1DD2A90E0095AB27 /* LinearRegressionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinearRegressionTests.swift; sourceTree = "<group>"; };
 		075F16E51CE2570600545125 /* FloatWrapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatWrapping.swift; sourceTree = "<group>"; };
+		07600F961EE477640049E8B2 /* Vector2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Vector2.swift; sourceTree = "<group>"; };
 		07652E0F1C8788B300359A03 /* CloserToTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CloserToTests.swift; sourceTree = "<group>"; };
 		07690BE11E0D913C0095F1D5 /* MeanTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeanTests.swift; sourceTree = "<group>"; };
 		077554641E1B012700CF4A8A /* Rational.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Rational.swift; sourceTree = "<group>"; };
@@ -310,6 +313,7 @@
 				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
 				07FD1C881E4E310100EB38EA /* IntervalRelation.swift */,
 				077554641E1B012700CF4A8A /* Rational.swift */,
+				07600F961EE477640049E8B2 /* Vector2.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
 			);
 			path = ArithmeticTools;
@@ -596,6 +600,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A8B5CA1E51060A00260DE3 /* Quadratic.swift in Sources */,
+				07600F971EE477640049E8B2 /* Vector2.swift in Sources */,
 				0775546E1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
 				078142A81C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C71C8768A100D50A30 /* PowerSequence.swift in Sources */,
@@ -657,6 +662,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07A8B5CB1E51060A00260DE3 /* Quadratic.swift in Sources */,
+				07600F981EE477640049E8B2 /* Vector2.swift in Sources */,
 				0775546F1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
 				078142A91C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C81C8768A100D50A30 /* PowerSequence.swift in Sources */,

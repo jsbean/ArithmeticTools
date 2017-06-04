@@ -6,7 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+import Darwin
 
 /**
  Get the closer of two values to a target value.

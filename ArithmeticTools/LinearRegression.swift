@@ -6,7 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+import Darwin
 
 /// - returns: All given values risen to the power of two.
 public func squared <F: FloatingPoint> (_ values: [F]) -> [F] {

@@ -35,7 +35,7 @@ extension Float: RandomProducing {
 
 extension Double: RandomProducing {
     
-    public static func random( min: Double = 0, max: Double = 1.0) -> Double {
+    public static func random(min: Double = 0, max: Double = 1.0) -> Double {
         let (min, max) = ordered(min, max)
         let range = max - min
         return Double(arc4random_uniform(UInt32(range))) + min
