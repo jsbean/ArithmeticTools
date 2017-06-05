@@ -14,15 +14,15 @@ public struct Vector2 {
     // MARK: - Instance Properties
     
     /// Length of a `Vector2`
-    var length: Double {
+    public var length: Double {
         return hypot(x,y)
     }
     
     /// X value.
-    let x: Double
+    public let x: Double
     
     /// Y value.
-    let y: Double
+    public let y: Double
     
     // MARK: - Initializers
     
