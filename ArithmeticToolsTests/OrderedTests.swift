@@ -10,7 +10,7 @@ import XCTest
 @testable import ArithmeticTools
 
 class OrderedTests: XCTestCase {
-    
+
     func testOrderedEqual() {
         let a = 4
         let b = 4
@@ -18,7 +18,7 @@ class OrderedTests: XCTestCase {
         XCTAssertEqual(newA, a)
         XCTAssertEqual(newB, b)
     }
-    
+
     func testOrderInOrder() {
         let a = 4
         let b = 5
@@ -26,7 +26,7 @@ class OrderedTests: XCTestCase {
         XCTAssertEqual(newA, a)
         XCTAssertEqual(newB, b)
     }
-    
+
     func testOrderNeedsOrdering() {
         let a = 5
         let b = 4

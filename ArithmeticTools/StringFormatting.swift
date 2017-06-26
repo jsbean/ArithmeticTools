@@ -9,7 +9,7 @@
 import Foundation
 
 extension Int {
-    
+
     /// - returns: `String` with the given amount of digits.
     public func formatted(digits: Int = 0) -> String {
         let format = "%0\(digits)ld"
@@ -18,7 +18,7 @@ extension Int {
 }
 
 extension Float {
-    
+
     /// - returns: `String` with the given amount of digits.
     public func formatted(digits: Int = 0) -> String {
         return String(format: "%.0\(digits)f", self)
@@ -26,7 +26,7 @@ extension Float {
 }
 
 extension Double {
-    
+
     /// - returns: `String` with the given amount of digits.
     public func formatted(digits: Int = 0) -> String {
         return String(format: "%.0\(digits)f", self)

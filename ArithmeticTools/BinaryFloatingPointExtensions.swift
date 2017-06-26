@@ -9,7 +9,7 @@
 import Darwin
 
 extension BinaryFloatingPoint {
-    
+
     /// Scales a `BinaryFloatingPoint` from the given `sourceRange` to the given
     /// `destinationRange`.
     public mutating func scale(
@@ -22,7 +22,7 @@ extension BinaryFloatingPoint {
         let position = (self - source.lowerBound) / sourceWidth
         self = position * destinationWidth + destination.lowerBound
     }
-    
+
     /// - returns: A `BinaryFloatingPoint` value scaled from the given `sourceRange` to the
     /// given `destinationRange`.i
     public func scaled(

@@ -10,22 +10,22 @@ import Darwin
 
 /// Two-dimensional Vector.
 public struct Vector2 {
-    
+
     // MARK: - Instance Properties
-    
+
     /// Length of a `Vector2`
     public var length: Double {
         return hypot(x,y)
     }
-    
+
     /// X value.
     public let x: Double
-    
+
     /// Y value.
     public let y: Double
-    
+
     // MARK: - Initializers
-    
+
     /// Creates a `Vector2` with the given `x` and `y` values.
     public init(x: Double, y: Double) {
         self.x = x

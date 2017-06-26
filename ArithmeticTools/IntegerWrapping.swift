@@ -7,34 +7,34 @@
 //
 
 public protocol IntegerWrapping: ExpressibleByIntegerLiteral, Hashable, Comparable {
-    
+
     var value: Int { get }
-    
+
     init(integerLiteral: Int)
 }
 
 extension IntegerWrapping {
-    
+
     // MARK: - `Equatable`
-    
+
     public static func == (lhs: Self, rhs: Self) -> Bool {
         return lhs.value == rhs.value
     }
 }
 
 extension IntegerWrapping {
-    
+
     // MARK: - `Comparable`
-    
+
     public static func < (lhs: Self, rhs: Self) -> Bool {
         return lhs.value < rhs.value
     }
 }
 
 extension IntegerWrapping {
-    
+
     // MARK: - `Hashable`
-    
+
     public var hashValue: Int {
         return value.hashValue
     }

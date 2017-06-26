@@ -23,7 +23,7 @@ public protocol FloatWrapping:
 }
 
 extension FloatWrapping {
-    
+
     public init(_ float: Float) {
         self.init(floatLiteral: float)
     }
@@ -31,9 +31,9 @@ extension FloatWrapping {
 
 
 extension FloatWrapping {
-    
+
     // MARK: - `Hashable`
-    
+
     public var hashValue: Int { return value.hashValue }
 }
 

@@ -10,9 +10,9 @@ import XCTest
 import ArithmeticTools
 
 class BitwiseOperationsTests: XCTestCase {
-    
+
     let intBitCount = MemoryLayout<Int>.size * 8
-        
+
     func testCountLeadingZeros() {
         XCTAssertEqual(countLeadingZeros(-1), 0)
         XCTAssertEqual(countLeadingZeros(-112348123), 0)
@@ -21,7 +21,7 @@ class BitwiseOperationsTests: XCTestCase {
         XCTAssertEqual(countLeadingZeros(1), intBitCount-1)
         XCTAssertEqual(countLeadingZeros(3), intBitCount-2)
     }
-    
+
     func testCoundLeadingZeros64Bit() {
         #if (arch(x86_64) || arch(arm64))
             XCTAssertEqual(countLeadingZeros(-0x8000000000000000), 0)
@@ -36,7 +36,7 @@ class BitwiseOperationsTests: XCTestCase {
 		XCTAssertEqual(countTrailingZeros(-112348124), 2)
 		XCTAssertEqual(countTrailingZeros(-2), 1)
 	}
-    
+
     func testCountTrailingZeros64Bit() {
         #if (arch(x86_64) || arch(arm64))
             XCTAssertEqual(countTrailingZeros(0), intBitCount)
@@ -48,7 +48,7 @@ class BitwiseOperationsTests: XCTestCase {
             XCTAssertEqual(countTrailingZeros(0x1ABCDEF400000000), 4 * 8 + 2)
         #endif
     }
-    
+
     func testLog28() {
         XCTAssertEqual(log2(8), 3)
     }
