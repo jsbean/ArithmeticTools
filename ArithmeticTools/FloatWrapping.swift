@@ -111,8 +111,8 @@ public func * <T: FloatWrapping>(lhs: Float, rhs: T) -> Float {
     return lhs * rhs.value
 }
 
-public func / <T: FloatWrapping>(augend: T, addend: T) -> T {
-    return T(floatLiteral: augend.value / addend.value)
+public func / <T: FloatWrapping>(dividend: T, divisor: T) -> T {
+    return T(floatLiteral: dividend.value / divisor.value)
 }
 
 public func / <T: FloatWrapping>(dividend: T, divisor: T) -> Float {
