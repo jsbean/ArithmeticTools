@@ -40,12 +40,12 @@ public func slope (_ xs: [Float], _ ys: [Float]) -> Float {
 ///
 /// - note: Modified from: [Ray Wenderlich Swift Algorithm Club](https://github.com/raywenderlich/swift-algorithm-club/tree/master/Linear%20Regression)
 public func linearRegression (_ xs: [Float], _ ys: [Float]) -> (Float) -> (Float) {
-    
+
     guard !(xs.isEmpty || ys.isEmpty) else { return { _ in 0 } }
-    
+
     let m = slope(xs,ys)
     let intercept = ys.mean! - (m * xs.mean!)
-    
+
     return { x in m * x + intercept }
 }
 

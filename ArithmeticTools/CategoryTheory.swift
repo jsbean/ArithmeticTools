@@ -13,7 +13,7 @@ import Collections
 ///
 /// - `Composition` operation.
 public protocol Semigroup {
-    
+
     /// - returns: Composition of two of the same `Semigroup` type values.
     static func + (lhs: Self, rhs: Self) -> Self
 }
@@ -24,27 +24,27 @@ public protocol Semigroup {
 /// - `Composition` operation (inherited from `Semigroup`).
 ///
 public protocol Monoid: Semigroup {
-    
+
     /// - returns: Identity value for this `Monoid` type value.
     static var unit: Self { get }
 }
 
 extension Int: Monoid {
-    
+
     public static var unit: Int {
         return 0
     }
 }
 
 extension Float: Monoid {
-    
+
     public static var unit: Float {
         return 0
     }
 }
 
 extension Double: Monoid {
-    
+
     public static var unit: Double {
         return 0
     }
@@ -53,18 +53,18 @@ extension Double: Monoid {
 // TODO: Flesh out conformances
 
 extension Array: Monoid {
-    
+
     public static var unit: Array {
         return []
     }
 }
 
 extension Set: Monoid {
-    
+
     public static func + <T> (lhs: Set<T>, rhs: Set<T>) -> Set<T> {
         return lhs.union(rhs)
     }
-    
+
     public static var unit: Set {
         return []
     }

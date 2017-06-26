@@ -31,28 +31,28 @@ fileprivate func > <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 /// Power-of-two Generator
 internal class PowerGenerator<T: Integer>: IteratorProtocol {
-    
+
     // MARK: - Associated Types
-    
+
     /// This GeneratorType generates ArithmeticType values
     internal typealias Element = T
-    
+
     fileprivate let doOvershoot: Bool
     fileprivate var hasOvershot: Bool = false
-    
+
     fileprivate var power: T
     fileprivate var coefficient: T
     fileprivate var max: T?
-    
+
     // MARK: - Initializers
-    
+
     /**
      Create a PowerGenerator.
-     
+
      - parameter coefficient: Coefficient that multiplies base of exponential expression
      - parameter max:         Maximum value of generated powers-of-two
      - parameter doOvershoot: If generator includes the next power-of-two greater than max
-     
+
      - returns: Initialized PowerGenerator
      */
     internal init(coefficient: T, max: T? = nil, doOvershoot: Bool = false) {
@@ -61,7 +61,7 @@ internal class PowerGenerator<T: Integer>: IteratorProtocol {
         self.max = max
         self.doOvershoot = doOvershoot
     }
-    
+
     // MARK: - Instance Methods
 
     /// Advance to the next element and return it, or nil if no next element exists.

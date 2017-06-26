@@ -20,7 +20,7 @@ public func lcm <I: Integer> (_ a: I, _ b: I) -> I {
 }
 
 extension Sequence where Iterator.Element: Integer {
-    
+
     /// Greatest common divisor of elements in Sequence.
     ///
     ///     `[8,12].gcd -> 4`
@@ -28,7 +28,7 @@ extension Sequence where Iterator.Element: Integer {
     public var gcd: Iterator.Element {
         return reduce(0, ArithmeticTools.gcd)
     }
-    
+
     /// Least common multiple of elements in Sequence.
     ///
     ///     `[4,5,6].lcm -> 60`

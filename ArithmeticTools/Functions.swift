@@ -10,12 +10,12 @@ import Foundation
 
 /**
  Get the closer of two values to a target value.
- 
+
  >`closer(to: 11, a: 12, b: 3) -> 12`
- 
+
  - note: If the distances between both values and the target value are equivalent, the first
  value (a) is returned.
- 
+
  >`closer(to: 6, a: 4, b: 8) -> 4`
 
  - returns: Value closer to target value
@@ -26,7 +26,7 @@ public func closer <T: SignedNumber> (to target: T, a: T, b: T) -> T {
 
 /**
  - note: If both values are equal, they are returned in the order in which they were given
- 
+
  - returns: 2-tuple of two `Comparable` types, in order.
  */
 public func ordered <T: Comparable> (_ a: T, _ b: T) -> (T, T) {

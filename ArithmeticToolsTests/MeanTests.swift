@@ -10,13 +10,13 @@ import XCTest
 import ArithmeticTools
 
 class MeanTests: XCTestCase {
-    
+
     func testMeanEasy() {
         let a = 2.0
         let b = 4.0
         XCTAssertEqual(mean(a,b), 3.0)
     }
-    
+
     func testMeanHarder() {
         let a = 2.0
         let b = 5.5
