@@ -9,14 +9,14 @@
 import Darwin
 
 public protocol RandomProducing {
-    
+
     static func random(min: Self, max: Self) -> Self
-    
+
     // TODO: Gaussian random
 }
 
 extension Int: RandomProducing {
-    
+
     public static func random(min: Int = 0, max: Int = 1) -> Int {
         let (min, max) = ordered(min, max)
         let range = max - min
@@ -25,7 +25,7 @@ extension Int: RandomProducing {
 }
 
 extension Float: RandomProducing {
-    
+
     public static func random(min: Float = 0.0, max: Float = 1.0) -> Float {
         let (min, max) = ordered(min, max)
         let range = max - min
@@ -34,7 +34,7 @@ extension Float: RandomProducing {
 }
 
 extension Double: RandomProducing {
-    
+
     public static func random(min: Double = 0, max: Double = 1.0) -> Double {
         let (min, max) = ordered(min, max)
         let range = max - min

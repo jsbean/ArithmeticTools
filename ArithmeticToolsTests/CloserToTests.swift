@@ -15,7 +15,7 @@ class CloserToTests: XCTestCase {
         let result = closer(to: 6, a: 3, b: 7)
         XCTAssertEqual(result, 7)
     }
-    
+
     func testCloserToEquiv() {
         let result = closer(to: 6, a: 4, b: 8)
         XCTAssertEqual(result, 4)

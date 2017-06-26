@@ -10,7 +10,7 @@ import XCTest
 @testable import ArithmeticTools
 
 class RandomTests: XCTestCase {
-    
+
     func testDefaultInt() {
         for _ in 0..<1000 {
             let r = Int.random()
@@ -18,7 +18,7 @@ class RandomTests: XCTestCase {
             XCTAssert(r <= Int(UInt32.max / 2))
         }
     }
-    
+
     func testIntRange() {
         for _ in 0..<1000 {
             let min = Int.random(max: 10000)
@@ -28,7 +28,7 @@ class RandomTests: XCTestCase {
             XCTAssert(r <= (min + range))
         }
     }
-    
+
     func testDefaultFloat() {
         for _ in 0..<1000 {
             let r = Float.random()
@@ -36,7 +36,7 @@ class RandomTests: XCTestCase {
             XCTAssert(r <= 1.0)
         }
     }
-    
+
     func testFloatRange() {
         for _ in 0..<100 {
             let min = Float.random(min: 0, max: 10000)

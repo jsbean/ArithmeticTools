@@ -10,11 +10,11 @@ import XCTest
 @testable import ArithmeticTools
 
 class OddTests: XCTestCase {
-    
+
     func testIntOddTrue() {
         XCTAssertTrue(5.isOdd)
     }
-    
+
     func testIntOddFalse() {
         XCTAssertFalse(4.isOdd)
     }

@@ -10,11 +10,11 @@ import Foundation
 
 /**
  >`closestPowerOfTwo(to: 13) -> 16`
- 
+
  - note: If two values are equidistant from the target value, the lesser value is returned.
- 
+
  >`closestPowerOfTwo(to: 12) -> 8 (not 16)`
- 
+
  - returns: Power-of-two value closest to target value
  */
 public func closestPowerOfTwo(to target: Int) -> Int? {
@@ -32,12 +32,12 @@ public func closestPowerOfTwo(under target: Int) -> Int? {
  >`closestPowerOfTwo(coefficient: 3, to: 22) -> 24`
 
  - note: If two values are equidistant from the target value, the lesser value is returned.
- 
+
  >`closestPowerOfTwo(coefficient: 3, to: 18) -> 12 (not 24)`
- 
+
  - parameter coefficient: Coefficient of exponential expression
  - parameter target:      Value to check for closest power-of-two
- 
+
  - returns: Power-of-two value (with coefficient) closest to target value
  */
 public func closestPowerOfTwo(coefficient: Int, to target: Int) -> Int? {
@@ -52,18 +52,18 @@ public func closestPowerOfTwo(coefficient: Int, under target: Int) -> Int? {
 }
 
 private func closer(to sequence: PowerSequence<Int>, target: Int) -> Int? {
-    
+
     let sequence = Array(sequence)
 
     guard !sequence.isEmpty else {
         return nil
     }
-    
+
     let lastPair = sequence.last(amount: 2)
-    
+
     guard !lastPair.isEmpty else {
         return sequence[0]
     }
-    
+
     return closer(to: target, a: lastPair[0], b: lastPair[1])
 }

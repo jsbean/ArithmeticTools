@@ -8,13 +8,13 @@
 
 /// Comparison between two values.
 public enum Comparison {
-    
+
     /// Values are equal.
     case equal
-    
+
     /// Left value is less than right value.
     case lessThan
-    
+
     /// Left value is greater than right value.
     case greaterThan
 }

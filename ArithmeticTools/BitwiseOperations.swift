@@ -24,11 +24,11 @@ public func countTrailingZeros(_ n: Int) -> Int {
 	var mask = 1
 
 	for index in 0...intBitCount {
-		
+
         if mask & n != 0 {
 			return index
 		}
-        
+
 		mask <<= 1
 	}
 
@@ -39,15 +39,15 @@ public func countTrailingZeros(_ n: Int) -> Int {
 /// significant one bit. For example, the clz of 0x00F00000 is 8, and the clz of
 /// 0x00000001 is 31.
 public func countLeadingZeros(_ n: Int) -> Int {
-    
+
 	var mask = 1 << (intBitCount - 1)
 
 	for index in 0...intBitCount {
-		
+
         if mask & n != 0 {
 			return index
 		}
-        
+
         mask >>>= 1
 	}
 

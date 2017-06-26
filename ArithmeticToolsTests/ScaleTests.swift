@@ -10,13 +10,13 @@ import XCTest
 import ArithmeticTools
 
 class ScaleTests: XCTestCase {
-    
+
     func testFloatEqualsSelfInEquivalentRanges() {
         let range: ClosedRange<Float> = 0...1
         let value: Float = 0.5
         XCTAssertEqual(value.scaled(from: range, to: range), value)
     }
-    
+
     func testFloatScaled() {
         let sourceRange: ClosedRange<Float> = 0...1
         let destinationRange: ClosedRange<Float> = 0...100
