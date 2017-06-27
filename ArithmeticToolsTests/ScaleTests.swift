@@ -31,7 +31,7 @@ class ScaleTests: XCTestCase {
         let expecteds = [1.0, sqrt(2), 2]
 
         for (value, expected) in zip(values, expecteds) {
-            let result = value.scaledLinearToExponential(from: source, to: destination)
+            let result = value.scaled(from: source, toExponential: destination)
             XCTAssertEqual(result, expected)
         }
     }

@@ -12,9 +12,9 @@ extension Double {
 
     /// Exponentially scales a `Double` from the given `source` to the given
     /// `destination`.
-    public mutating func scaleLinearToExponential(
+    public mutating func scale(
         from source: ClosedRange<Double>,
-        to destination: ClosedRange<Double>
+        toExponential destination: ClosedRange<Double>
     )
     {
         let sourceWidth = source.upperBound - source.lowerBound
@@ -25,13 +25,13 @@ extension Double {
 
     /// - returns: A `Double` value scaled from the given `source` range to the
     /// given `destination` range.
-    public func scaledLinearToExponential(
+    public func scaled(
         from source: ClosedRange<Double>,
-        to destination: ClosedRange<Double>
+        toExponential destination: ClosedRange<Double>
     ) -> Double
     {
         var copy = self
-        copy.scaleLinearToExponential(from: source, to: destination)
+        copy.scale(from: source, toExponential: destination)
         return copy
     }
 }
