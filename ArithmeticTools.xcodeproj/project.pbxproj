@@ -109,6 +109,8 @@
 		07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8F1E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
 		07FD1C901E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
+		9066E8A91F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */; };
+		9066E8AA1F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */; };
 		907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
 		90A936541EDD01CB00CBC157 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
 		CE9D18DD4880C2C3390AE17F /* Collections.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DA73FEF407912A83BEC1554 /* Collections.framework */; };
@@ -211,6 +213,7 @@
 		07FD1C881E4E310100EB38EA /* IntervalRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelation.swift; sourceTree = "<group>"; };
 		07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelationTests.swift; sourceTree = "<group>"; };
 		1DA73FEF407912A83BEC1554 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/Mac/Collections.framework; sourceTree = "<group>"; };
+		9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsPowerOfTwoTests.swift; sourceTree = "<group>"; };
 		D664028AC29575BD5C05D506 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -300,6 +303,7 @@
 				0775546D1E1B0FBE00CF4A8A /* IntegerWrapping.swift */,
 				07F5382E1CE3AEAC001294CC /* Comparison.swift */,
 				078B1CFB1EBF73BB003AFECC /* BinaryFloatingPointExtensions.swift */,
+				9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */,
 				07C9DA491DF0C4D60071B801 /* IntegerExtensions.swift */,
 				07C9DA461DF0C4A00071B801 /* StringFormatting.swift */,
 				07C9DA431DF0BF130071B801 /* RandomProducing.swift */,
@@ -614,6 +618,7 @@
 				077554651E1B012700CF4A8A /* Rational.swift in Sources */,
 				078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA471DF0C4A00071B801 /* StringFormatting.swift in Sources */,
+				9066E8A91F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */,
 				07C9DA4A1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
 				074276CD1C877EE400D50A30 /* Power.swift in Sources */,
 				07F5382F1CE3AEAC001294CC /* Comparison.swift in Sources */,
@@ -676,6 +681,7 @@
 				077554661E1B012700CF4A8A /* Rational.swift in Sources */,
 				078142AB1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA481DF0C4A00071B801 /* StringFormatting.swift in Sources */,
+				9066E8AA1F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */,
 				07C9DA4B1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
 				074276CE1C877EE400D50A30 /* Power.swift in Sources */,
 				07F538301CE3AEAC001294CC /* Comparison.swift in Sources */,

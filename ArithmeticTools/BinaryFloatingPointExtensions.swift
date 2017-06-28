@@ -24,7 +24,7 @@ extension BinaryFloatingPoint {
     }
 
     /// - returns: A `BinaryFloatingPoint` value scaled from the given `sourceRange` to the
-    /// given `destinationRange`.i
+    /// given `destinationRange`.
     public func scaled(
         from sourceRange: ClosedRange<Self>,
         to destinationRange: ClosedRange<Self>
