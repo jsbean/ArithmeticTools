@@ -19,7 +19,17 @@ public enum Comparison {
     case greaterThan
 }
 
-/// - returns: The `Comparison` between the two given values.
+/// - Returns: The `Comparison` between the two given values.
 public func compare <T: Comparable> (_ a: T, _ b: T) -> Comparison {
     return a < b ? .lessThan : a > b ? .greaterThan : .equal
+}
+
+/// - Returns: The greater of the two elements.
+public func greaterOf <T: Comparable> (_ a: T, _ b: T) -> T {
+    return a > b ? a : b
+}
+
+/// - Returns: The lesser of the two elements.
+public func lesserOf <T: Comparable> (_ a: T, _ b: T) -> T {
+    return a < b ? a : b
 }
