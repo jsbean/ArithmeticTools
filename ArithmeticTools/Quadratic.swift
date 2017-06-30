@@ -8,30 +8,18 @@
 
 import Darwin
 
-/// - returns: A `Set` of 0, 1, or 2 x-intercepts for the given coefficients.
-public func quadratic (_ a: Float, _ b: Float, _ c: Float) -> Set<Float> {
-
-    let discriminant = pow(b,2) - 4 * a * c
-
+public func quadratic <T: FloatingPoint> (_ a: T, _ b: T, _ c: T) -> Set<T> {
+    
+    let discriminant = b * b - 4 * a * c
+    
     guard discriminant > 0 else {
-        return Set()
+        return Set<T>()
     }
-
-    return Set(
-        [1,-1].map { sign in (-b + sign * sqrt(discriminant)) / (2 * a) }
-    )
-}
-
-/// - returns: A `Set` of 0, 1, or 2 x-intercepts for the given coefficients.
-public func quadratic (_ a: Double, _ b: Double, _ c: Double) -> Set<Double> {
-
-    let discriminant = pow(b,2) - 4 * a * c
-
-    guard discriminant > 0 else {
-        return Set()
-    }
-
-    return Set(
-        [1,-1].map { sign in (-b + sign * sqrt(discriminant)) / (2 * a) }
-    )
+    
+    let denominator = 2 * a
+    
+    let pos: T = (-b + sqrt(discriminant)) / denominator
+    let neg: T = (-b - sqrt(discriminant)) / denominator
+    
+    return Set<T>([pos,neg])
 }
