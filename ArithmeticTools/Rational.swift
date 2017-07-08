@@ -183,6 +183,10 @@ extension Rational {
             return self
         }
 
+        guard numerator == 0 else {
+            return Self(0, newDenominator)
+        }
+
         let quotient = Float(newDenominator) / Float(denominator)
         let newNumerator = Float(numerator) * quotient
 
