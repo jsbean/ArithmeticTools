@@ -183,7 +183,7 @@ extension Rational {
             return self
         }
 
-        guard numerator == 0 else {
+        guard numerator != 0 else {
             return Self(0, newDenominator)
         }
 
