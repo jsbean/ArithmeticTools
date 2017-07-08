@@ -109,6 +109,8 @@
 		07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8F1E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
 		07FD1C901E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
+		905A4F2E1F117EAB008C904F /* RangeTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A4F2D1F117EAB008C904F /* RangeTypeExtensions.swift */; };
+		905A4F2F1F117EAB008C904F /* RangeTypeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 905A4F2D1F117EAB008C904F /* RangeTypeExtensions.swift */; };
 		9066E8A91F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */; };
 		9066E8AA1F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */; };
 		907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */; };
@@ -213,6 +215,7 @@
 		07FD1C881E4E310100EB38EA /* IntervalRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelation.swift; sourceTree = "<group>"; };
 		07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelationTests.swift; sourceTree = "<group>"; };
 		1DA73FEF407912A83BEC1554 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/Mac/Collections.framework; sourceTree = "<group>"; };
+		905A4F2D1F117EAB008C904F /* RangeTypeExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeTypeExtensions.swift; sourceTree = "<group>"; };
 		9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		9073358F1DFE2523000504C8 /* IsPowerOfTwoTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IsPowerOfTwoTests.swift; sourceTree = "<group>"; };
 		D664028AC29575BD5C05D506 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/iOS/Collections.framework; sourceTree = "<group>"; };
@@ -305,6 +308,7 @@
 				078B1CFB1EBF73BB003AFECC /* BinaryFloatingPointExtensions.swift */,
 				9066E8A81F01ECFE00B70F4D /* DoubleExtensions.swift */,
 				07C9DA491DF0C4D60071B801 /* IntegerExtensions.swift */,
+				905A4F2D1F117EAB008C904F /* RangeTypeExtensions.swift */,
 				07C9DA461DF0C4A00071B801 /* StringFormatting.swift */,
 				07C9DA431DF0BF130071B801 /* RandomProducing.swift */,
 				078142A31C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift */,
@@ -606,6 +610,7 @@
 				07A8B5CA1E51060A00260DE3 /* Quadratic.swift in Sources */,
 				07600F971EE477640049E8B2 /* Vector2.swift in Sources */,
 				0775546E1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
+				905A4F2E1F117EAB008C904F /* RangeTypeExtensions.swift in Sources */,
 				078142A81C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C71C8768A100D50A30 /* PowerSequence.swift in Sources */,
 				07A8B5C71E51056F00260DE3 /* GCDDomain.swift in Sources */,
@@ -669,6 +674,7 @@
 				07A8B5CB1E51060A00260DE3 /* Quadratic.swift in Sources */,
 				07600F981EE477640049E8B2 /* Vector2.swift in Sources */,
 				0775546F1E1B0FBE00CF4A8A /* IntegerWrapping.swift in Sources */,
+				905A4F2F1F117EAB008C904F /* RangeTypeExtensions.swift in Sources */,
 				078142A91C7CF3F1004B68D3 /* BidirectionalCollectionExtensions.swift in Sources */,
 				074276C81C8768A100D50A30 /* PowerSequence.swift in Sources */,
 				07A8B5C81E51056F00260DE3 /* GCDDomain.swift in Sources */,
