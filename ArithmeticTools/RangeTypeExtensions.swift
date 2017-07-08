@@ -7,24 +7,32 @@
 //
 
 extension Range where Bound: SignedNumber {
+
+    /// - returns: The length of this range (upperBound - lowerBound)
     public var length: Bound {
         return upperBound - lowerBound
     }
 }
 
 extension CountableRange where Bound: SignedNumber {
+
+    /// - returns: The length of this range (upperBound - lowerBound)
     public var length: Bound {
         return upperBound - lowerBound
     }
 }
 
 extension CountableClosedRange where Bound: SignedNumber {
+
+    /// - returns: The length of this range (upperBound - lowerBound)
     public var length: Bound {
         return upperBound - lowerBound
     }
 }
 
 extension ClosedRange where Bound: SignedNumber {
+
+    /// - returns: The length of this range (upperBound - lowerBound)
     public var length: Bound {
         return upperBound - lowerBound
     }
