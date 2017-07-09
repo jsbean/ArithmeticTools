@@ -100,13 +100,13 @@ public protocol Rational:
     /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
     ///
     /// > Preserves the arithmetic value of the original `Rational` value.
-    func respelling(numerator: Int) -> Self
+    func scaling(numerator: Int) -> Self
 
     /// - returns: Representation of a `Rational` value with a given `denominator`, if
     /// possible. Assumes the denominator is not 0.
     ///
     /// > Preserves the arithmetic value of the original `Rational` value.
-    func respelling(denominator: Int) -> Self
+    func scaling(denominator: Int) -> Self
 
     /// - returns: A new `Rational` value with the given `numerator`, which is no longer
     /// guaranteed to provide the same arithmetic value as before.
@@ -155,7 +155,7 @@ extension Rational {
 extension Rational {
 
     /// - returns: Representation of a `Rational` value with a given `numerator`.
-    public func respelling(numerator newNumerator: Int) -> Self {
+    public func scaling(numerator newNumerator: Int) -> Self {
 
         guard newNumerator != numerator else {
             return self
@@ -170,7 +170,7 @@ extension Rational {
     }
 
     /// - returns: Representation of a `Rational` value with a given `denominator`.
-    public func respelling(denominator newDenominator: Int) -> Self {
+    public func scaling(denominator newDenominator: Int) -> Self {
 
         guard newDenominator != denominator else {
             return self
@@ -318,7 +318,7 @@ extension Rational {
     /// - returns: Pair of `Rational` values, with common denominators.
     public static func normalized <R: Rational> (_ a: R, _ b: R) -> (R, R) {
         let commonDenominator = lcm(a.denominator, b.denominator)
-        return map(a,b) { $0.respelling(denominator: commonDenominator) }
+        return map(a,b) { $0.scaling(denominator: commonDenominator) }
     }
 
     /// - returns: `true` if both values are equivalent in their most-reduced form.

@@ -117,42 +117,42 @@ class RationalTests: XCTestCase {
 
     func testRespellWithNumeratorEqualToSelfValid() {
         let original = Fraction(1,13)
-        let new = original.respelling(numerator: 1)
+        let new = original.scaling(numerator: 1)
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 13)
     }
 
     func testRespellWithNumeratorGreaterThanValid() {
         let original = Fraction(1,13)
-        let new = original.respelling(numerator: 3)
+        let new = original.scaling(numerator: 3)
         XCTAssertEqual(new.numerator, 3)
         XCTAssertEqual(new.denominator, 39)
     }
 
     func testRespellWithNumeratorLessThanValid() {
         let original = Fraction(5,15)
-        let new = original.respelling(numerator: 1)
+        let new = original.scaling(numerator: 1)
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 3)
     }
 
     func testRespellWithDenominatorEqualToSelfValid() {
         let original = Fraction(1,13)
-        let new = original.respelling(denominator: 13)
+        let new = original.scaling(denominator: 13)
         XCTAssertEqual(new.numerator, 1)
         XCTAssertEqual(new.denominator, 13)
     }
 
     func testRespellWithDenominatorLessThanValid() {
         let original = Fraction(5,10)
-        let new = original.respelling(denominator: 6)
+        let new = original.scaling(denominator: 6)
         XCTAssertEqual(new.numerator, 3)
         XCTAssertEqual(new.denominator, 6)
     }
 
     func testRespellWithDenominatorGreaterThanValid() {
         let original = Fraction(3,12)
-        let new = original.respelling(denominator: 48)
+        let new = original.scaling(denominator: 48)
         XCTAssertEqual(new.numerator, 12)
         XCTAssertEqual(new.denominator, 48)
     }
