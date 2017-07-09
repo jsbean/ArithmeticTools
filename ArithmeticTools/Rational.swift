@@ -24,9 +24,7 @@ public struct Fraction: Rational {
     /// Creates a `Fraction` value with a given `numerator` and `denominator`.
     public init(_ numerator: Int, _ denominator: Int) {
 
-        guard denominator != 0 else {
-            fatalError("Cannot create a Fraction with denominator of 0")
-        }
+        assert(denominator != 0, "Cannot create a Fraction with denominator of 0")
 
         self.numerator = numerator
         self.denominator = denominator
@@ -79,8 +77,8 @@ public protocol Rational:
     /// Double value.
     var doubleValue: Double { get }
 
-    /// Inverse of self, if `numerator != 0`. Otherwise, `nil`.
-    var inverse: Self? { get }
+    /// Inverse of self. Assumes `numerator != 0`.
+    var inverse: Self { get }
 
     /// Reduced form of `self`.
     var reduced: Self { get }
@@ -256,11 +254,6 @@ extension Rational {
     /// - returns: A new `Rational` value with the given `denominator`, which is no longer
     /// guaranteed to provide the same arithmetic value as before.
     public func mutating(denominator newDenominator: Int) -> Self {
-
-        guard newDenominator != 0 else {
-            fatalError("Cannot create a Rational type with a denominator of 0")
-        }
-
         return Self(numerator, newDenominator)
     }
 }
@@ -289,12 +282,7 @@ extension Rational {
 extension Rational {
 
     /// Inverts `denominator` and `numerator` values.
-    public var inverse: Self? {
-
-        guard numerator != 0 else {
-            return nil
-        }
-
+    public var inverse: Self {
         return Self(denominator, numerator)
     }
 }

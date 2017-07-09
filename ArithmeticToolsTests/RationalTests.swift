@@ -48,19 +48,14 @@ class RationalTests: XCTestCase {
         XCTAssertEqual(r.floatValue, -(1/5))
     }
 
-    func testInverseNil() {
-        let r = Fraction(0,1)
-        XCTAssertNil(r.inverse)
-    }
-
     func testInverse() {
         let r = Fraction(1,13)
-        XCTAssertEqual(r.inverse!, Fraction(13,1))
+        XCTAssertEqual(r.inverse, Fraction(13,1))
     }
 
     func testInverseNegative() {
         let r = Fraction(1,-13)
-        XCTAssertEqual(r.inverse!, Fraction(-13,1))
+        XCTAssertEqual(r.inverse, Fraction(-13,1))
     }
 
     func testComparableSameDenominator() {
