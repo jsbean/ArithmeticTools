@@ -100,13 +100,12 @@ public protocol Rational:
     init(_ numerator: Int, _ denominator: Int)
 
     /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
-    /// Otherwise, `nil`.
     ///
     /// > Preserves the arithmetic value of the original `Rational` value.
     func respelling(numerator: Int) -> Self
 
     /// - returns: Representation of a `Rational` value with a given `denominator`, if
-    /// possible. Otherwise, `nil`.
+    /// possible. Assumes the denominator is not 0.
     ///
     /// > Preserves the arithmetic value of the original `Rational` value.
     func respelling(denominator: Int) -> Self
@@ -157,8 +156,7 @@ extension Rational {
 
 extension Rational {
 
-    /// - returns: Representation of a `Rational` value with a given `numerator`, if possible.
-    /// Otherwise, `nil`.
+    /// - returns: Representation of a `Rational` value with a given `numerator`.
     public func respelling(numerator newNumerator: Int) -> Self {
 
         guard newNumerator != numerator else {
@@ -173,8 +171,7 @@ extension Rational {
         return Self(newNumerator, Int(newDenominator))
     }
 
-    /// - returns: Representation of a `Rational` value with a given `denominator`, if
-    /// possible. Otherwise, `nil`.
+    /// - returns: Representation of a `Rational` value with a given `denominator`.
     public func respelling(denominator newDenominator: Int) -> Self {
 
         guard newDenominator != denominator else {
