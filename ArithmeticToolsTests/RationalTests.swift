@@ -58,6 +58,30 @@ class RationalTests: XCTestCase {
         XCTAssertEqual(r.inverse, Fraction(-13,1))
     }
 
+    func testReduced() {
+        let r = Fraction(3, 21).reduced
+        XCTAssertEqual(r.numerator, 1)
+        XCTAssertEqual(r.denominator, 7)
+    }
+
+    func testReducedNegative() {
+        let r = Fraction(-3, 21).reduced
+        XCTAssertEqual(r.numerator, -1)
+        XCTAssertEqual(r.denominator, 7)
+    }
+
+    func testReducedNegativeDenominator() {
+        let r = Fraction(3, -21).reduced
+        XCTAssertEqual(r.numerator, -1)
+        XCTAssertEqual(r.denominator, 7)
+    }
+
+    func testReducedDoubleNegative() {
+        let r = Fraction(-3, -21).reduced
+        XCTAssertEqual(r.numerator, 1)
+        XCTAssertEqual(r.denominator, 7)
+    }
+
     func testComparableSameDenominator() {
         let a = Fraction(1,2)
         let b = Fraction(2,3)
