@@ -254,11 +254,6 @@ extension Rational {
     /// - returns: A new `Rational` value with the given `denominator`, which is no longer
     /// guaranteed to provide the same arithmetic value as before.
     public func mutating(denominator newDenominator: Int) -> Self {
-
-        guard newDenominator != 0 else {
-            fatalError("Cannot create a Rational type with a denominator of 0")
-        }
-
         return Self(numerator, newDenominator)
     }
 }
