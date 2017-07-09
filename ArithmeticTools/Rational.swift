@@ -24,9 +24,7 @@ public struct Fraction: Rational {
     /// Creates a `Fraction` value with a given `numerator` and `denominator`.
     public init(_ numerator: Int, _ denominator: Int) {
 
-        guard denominator != 0 else {
-            fatalError("Cannot create a Fraction with denominator of 0")
-        }
+        assert(denominator != 0, "Cannot create a Fraction with denominator of 0")
 
         self.numerator = numerator
         self.denominator = denominator
