@@ -168,9 +168,7 @@ extension Rational {
         let quotient = Double(newNumerator) / Double(numerator)
         let newDenominator = Double(denominator) * quotient
 
-        guard newDenominator.truncatingRemainder(dividingBy: 1) == 0 else {
-            return nil
-        }
+        assert(newDenominator.truncatingRemainder(dividingBy: 1) == 0)
 
         return Self(newNumerator, Int(newDenominator))
     }
@@ -190,9 +188,7 @@ extension Rational {
         let quotient = Double(newDenominator) / Double(denominator)
         let newNumerator = Double(numerator) * quotient
 
-        guard newNumerator.truncatingRemainder(dividingBy: 1) == 0 else {
-            return nil
-        }
+        assert(newNumerator.truncatingRemainder(dividingBy: 1) == 0)
 
         return Self(Int(newNumerator), newDenominator)
     }
