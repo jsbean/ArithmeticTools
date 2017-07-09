@@ -77,8 +77,8 @@ public protocol Rational:
     /// Double value.
     var doubleValue: Double { get }
 
-    /// Inverse of self, if `numerator != 0`. Otherwise, `nil`.
-    var inverse: Self? { get }
+    /// Inverse of self. Assumes `numerator != 0`.
+    var inverse: Self { get }
 
     /// Reduced form of `self`.
     var reduced: Self { get }
@@ -282,12 +282,7 @@ extension Rational {
 extension Rational {
 
     /// Inverts `denominator` and `numerator` values.
-    public var inverse: Self? {
-
-        guard numerator != 0 else {
-            return nil
-        }
-
+    public var inverse: Self {
         return Self(denominator, numerator)
     }
 }
