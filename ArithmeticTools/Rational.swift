@@ -165,8 +165,8 @@ extension Rational {
             return self
         }
 
-        let quotient = Float(newNumerator) / Float(numerator)
-        let newDenominator = Float(denominator) * quotient
+        let quotient = Double(newNumerator) / Double(numerator)
+        let newDenominator = Double(denominator) * quotient
 
         guard newDenominator.truncatingRemainder(dividingBy: 1) == 0 else {
             return nil
@@ -187,8 +187,8 @@ extension Rational {
             return Self(0, newDenominator)
         }
 
-        let quotient = Float(newDenominator) / Float(denominator)
-        let newNumerator = Float(numerator) * quotient
+        let quotient = Double(newDenominator) / Double(denominator)
+        let newNumerator = Double(numerator) * quotient
 
         guard newNumerator.truncatingRemainder(dividingBy: 1) == 0 else {
             return nil
