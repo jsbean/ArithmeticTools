@@ -14,7 +14,7 @@ extension Range where Bound: SignedNumber {
     }
 
     /// - returns: A new range equal to this range with bounds shifted by the given amount
-    public func shift(by amount: Bound) -> Range {
+    public func shifted(by amount: Bound) -> Range {
         return (lowerBound + amount)..<(upperBound + amount)
     }
 }
@@ -27,7 +27,7 @@ extension CountableRange where Bound: SignedNumber {
     }
 
     /// - returns: A new range equal to this range with bounds shifted by the given amount
-    public func shift(by amount: Bound) -> CountableRange {
+    public func shifted(by amount: Bound) -> CountableRange {
         return (lowerBound + amount)..<(upperBound + amount)
     }
 }
@@ -40,7 +40,7 @@ extension CountableClosedRange where Bound: SignedNumber {
     }
 
     /// - returns: A new range equal to this range with bounds shifted by the given amount
-    public func shift(by amount: Bound) -> CountableClosedRange {
+    public func shifted(by amount: Bound) -> CountableClosedRange {
         return (lowerBound + amount)...(upperBound + amount)
     }
 }
@@ -53,7 +53,7 @@ extension ClosedRange where Bound: SignedNumber {
     }
 
     /// - returns: A new range equal to this range with bounds shifted by the given amount
-    public func shift(by amount: Bound) -> ClosedRange {
+    public func shifted(by amount: Bound) -> ClosedRange {
         return (lowerBound + amount)...(upperBound + amount)
     }
 }
