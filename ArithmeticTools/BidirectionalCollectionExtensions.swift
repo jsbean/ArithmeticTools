@@ -9,14 +9,6 @@
 import Algebra
 import Collections
 
-extension SignedNumber {
-
-    /// - returns: Sum of two `SignedNumber` values.
-    public static func + (lhs: Self, rhs: Self) -> Self {
-        return lhs - -rhs
-    }
-}
-
 extension Collection where Iterator.Element: Additive {
 
     typealias M = Iterator.Element

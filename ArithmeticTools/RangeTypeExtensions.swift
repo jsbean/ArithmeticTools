@@ -6,7 +6,7 @@
 //  Copyright © 2017 Brian Heim. All rights reserved.
 //
 
-extension Range where Bound: SignedNumber {
+extension Range where Bound: IntegerArithmetic {
 
     /// - Returns: The length of this range (upperBound - lowerBound).
     public var length: Bound {
@@ -19,7 +19,7 @@ extension Range where Bound: SignedNumber {
     }
 }
 
-extension CountableRange where Bound: SignedNumber {
+extension CountableRange where Bound: IntegerArithmetic {
 
     /// - Returns: The length of this range (upperBound - lowerBound).
     public var length: Bound {
@@ -32,7 +32,7 @@ extension CountableRange where Bound: SignedNumber {
     }
 }
 
-extension CountableClosedRange where Bound: SignedNumber {
+extension CountableClosedRange where Bound: IntegerArithmetic {
 
     /// - Returns: The length of this range (upperBound - lowerBound).
     public var length: Bound {
@@ -45,7 +45,7 @@ extension CountableClosedRange where Bound: SignedNumber {
     }
 }
 
-extension ClosedRange where Bound: SignedNumber {
+extension ClosedRange where Bound: IntegerArithmetic {
 
     /// - Returns: The length of this range (upperBound - lowerBound).
     public var length: Bound {

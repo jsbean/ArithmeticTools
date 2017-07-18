@@ -8,7 +8,7 @@
 
 import Algebra
 
-public protocol RangeProtocol/*: Additive*/ {
+public protocol RangeProtocol {
     associatedtype Bound: Comparable
     var lowerBound: Bound { get }
     var upperBound: Bound { get }
@@ -18,8 +18,6 @@ public protocol RangeProtocol/*: Additive*/ {
 // FIXME: Use conditional conformances in Swift 4.
 // https://github.com/apple/swift-evolution/blob/master/proposals/0143-conditional-conformances.md
 extension RangeProtocol where Bound: Additive {
-
-    // MARK: - Additive
 
     public static var zero: Self {
         return Self(uncheckedBounds: (lower: .zero, upper: .zero))
