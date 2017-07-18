@@ -30,6 +30,19 @@ extension RangeProtocol where Bound: Additive {
     }
 }
 
+extension RangeProtocol where Bound: IntegerArithmetic {
+
+    /// - Returns: The length of this range (upperBound - lowerBound).
+    public var length: Bound {
+        return upperBound - lowerBound
+    }
+
+    /// - Returns: A new range equal to this range with bounds shifted by the given amount.
+    public func shifted(by amount: Bound) -> Self {
+        return Self(uncheckedBounds: (lower: lowerBound + amount, upper: upperBound + amount))
+    }
+}
+
 extension Range: RangeProtocol { }
 extension CountableRange: RangeProtocol { }
 extension ClosedRange: RangeProtocol { }
