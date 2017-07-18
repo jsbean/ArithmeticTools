@@ -302,7 +302,6 @@
 			children = (
 				07F538341CE3AF11001294CC /* Power */,
 				075F16E51CE2570600545125 /* FloatWrapping.swift */,
-				07F68A651F1E4B3900E74540 /* Algebra.swift */,
 				0775546D1E1B0FBE00CF4A8A /* IntegerWrapping.swift */,
 				07F5382E1CE3AEAC001294CC /* Comparison.swift */,
 				078B1CFB1EBF73BB003AFECC /* BinaryFloatingPointExtensions.swift */,
@@ -389,6 +388,7 @@
 		07F538341CE3AF11001294CC /* Power */ = {
 			isa = PBXGroup;
 			children = (
+				07F68A651F1E4B3900E74540 /* Algebra.swift */,
 				0719FA861C875584009EACB4 /* PowerGenerator.swift */,
 				074276C61C8768A100D50A30 /* PowerSequence.swift */,
 				074276CC1C877EE400D50A30 /* Power.swift */,

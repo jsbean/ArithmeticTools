@@ -31,3 +31,5 @@ extension Double: Additive {
 extension Double: Multiplicative {
     public static let one: Double = 1
 }
+
+// FIXME: Flesh out

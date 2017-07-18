@@ -16,7 +16,7 @@ public func squared <F: FloatingPoint> (_ values: [F]) -> [F] {
 
 /// - returns: All values of `lhs` multiplied by the corresponding value in `rhs`.
 public func * <F: FloatingPoint> (lhs: [F], rhs: [F]) -> [F] {
-    return zip(lhs, rhs).map(*)
+    return zip(lhs,rhs).map(*)
 }
 
 /// - returns: All given values risen to the power of two.
@@ -26,7 +26,7 @@ public func squared <I: Integer> (_ values: [I]) -> [I] {
 
 /// - returns: All values of `lhs` multiplied by the corresponding value in `rhs`.
 public func * <I: Integer> (lhs: [I], rhs: [I]) -> [I] {
-    return zip(lhs, rhs).map(*)
+    return zip(lhs,rhs).map(*)
 }
 
 /// - returns: Slope of linear regression of given x-values and y-values.
