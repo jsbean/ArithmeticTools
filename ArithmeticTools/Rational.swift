@@ -57,7 +57,7 @@ public func / <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
 
 /// Model of ratio.
 public protocol Rational:
-    Monoid,
+    //Monoid,
     SignedNumber,
     Strideable,
     Comparable,
