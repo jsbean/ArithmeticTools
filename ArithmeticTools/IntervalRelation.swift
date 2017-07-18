@@ -178,42 +178,8 @@ extension IntervalRelation: CustomStringConvertible {
     }
 }
 
-import Algebra
+extension RangeProtocol {
 
-/// Interface retroactively unifying `ClosedRange` and `CountableClosedRange`, which are, for
-/// some reason, not unified by a common super-protocol.
-public protocol ClosedRangeProtocol/*: Semigroup*/ {
-
-    /// Type of bounds.
-    associatedtype Bound: Comparable
-
-    /// Lower bound.
-    var lowerBound: Bound { get }
-
-    /// Upper bound.
-    var upperBound: Bound { get }
-
-    /// Create a `ClosedRangeProtocol` type with the given `uncheckedBounds`.
-    init(uncheckedBounds: (lower: Bound, upper: Bound))
-}
-
-/// Retroactively model `ClosedRange` as conforming to `ClosedRangeProtocol`.
-extension ClosedRange: ClosedRangeProtocol { }
-
-/// Retroactively model `CountableClosedRange` as conforming to `ClosedRangeProtocol`.
-extension CountableClosedRange: ClosedRangeProtocol { }
-
-extension ClosedRangeProtocol {
-
-    /// - returns: Union of two `ClosedRangeProtocol`-conforming types.
-    public static func + (lhs: Self, rhs: Self) -> Self {
-        let lower = min(lhs.lowerBound, rhs.lowerBound)
-        let upper = max(lhs.upperBound, rhs.upperBound)
-        return Self(uncheckedBounds: (lower: lower, upper: upper))
-    }
-
-    /// - returns: `IntervalRelationship` between this `ClosedRangeProtocol`-conform type and
-    /// another.
     public func relation(with range: Self) -> IntervalRelation {
 
         if upperBound < range.lowerBound {
