@@ -248,7 +248,7 @@ class IntervalRelationTests: XCTestCase {
     func testDescriptionRawValue() {
 
         let ir = IntervalRelation(rawValue: 1 << 13)
-        let expected = "8192"
+        let expected = "Unknown IntervalRelation: 8192"
 
         XCTAssertEqual(ir.description, expected)
     }

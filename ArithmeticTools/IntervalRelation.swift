@@ -173,7 +173,7 @@ extension IntervalRelation: CustomStringConvertible {
         case IntervalRelation.precededBy.rawValue:
             return "precededBy"
         default:
-            fatalError("Unknown IntervalRelation: \(rawValue)")
+            return "Unknown IntervalRelation: \(rawValue)"
         }
     }
 }
