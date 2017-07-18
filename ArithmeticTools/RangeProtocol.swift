@@ -30,12 +30,15 @@ extension RangeProtocol where Bound: Additive {
     }
 }
 
-extension RangeProtocol where Bound: IntegerArithmetic {
+extension RangeProtocol where Bound: SignedNumber {
 
     /// - Returns: The length of this range (upperBound - lowerBound).
     public var length: Bound {
         return upperBound - lowerBound
     }
+}
+
+extension RangeProtocol where Bound: IntegerArithmetic {
 
     /// - Returns: A new range equal to this range with bounds shifted by the given amount.
     public func shifted(by amount: Bound) -> Self {

@@ -9,8 +9,6 @@
 /// Fraction structure.
 public struct Fraction: Rational {
 
-    // MARK: - Instance Properties
-
     /// Numerator.
     public let numerator: Int
 
