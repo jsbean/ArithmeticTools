@@ -105,6 +105,8 @@
 		07F68A641F1E492C00E74540 /* RangeProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A621F1E492C00E74540 /* RangeProtocol.swift */; };
 		07F68A661F1E4B3900E74540 /* Algebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A651F1E4B3900E74540 /* Algebra.swift */; };
 		07F68A671F1E4B3900E74540 /* Algebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A651F1E4B3900E74540 /* Algebra.swift */; };
+		07F68A691F1E570E00E74540 /* RangeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */; };
+		07F68A6A1F1E570E00E74540 /* RangeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */; };
 		07FD1C891E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8F1E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
@@ -210,6 +212,7 @@
 		07F538311CE3AEC6001294CC /* ComparisonTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComparisonTests.swift; sourceTree = "<group>"; };
 		07F68A621F1E492C00E74540 /* RangeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeProtocol.swift; sourceTree = "<group>"; };
 		07F68A651F1E4B3900E74540 /* Algebra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algebra.swift; sourceTree = "<group>"; };
+		07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeProtocolTests.swift; sourceTree = "<group>"; };
 		07FD1C881E4E310100EB38EA /* IntervalRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelation.swift; sourceTree = "<group>"; };
 		07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelationTests.swift; sourceTree = "<group>"; };
 		1DA73FEF407912A83BEC1554 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/Mac/Collections.framework; sourceTree = "<group>"; };
@@ -350,6 +353,7 @@
 				07C563B11E22B88700E73FB2 /* BitwiseOperationsTests.swift */,
 				07D91CDF1E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift */,
 				07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */,
+				07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */,
 				078B1D011EBF7438003AFECC /* ScaleTests.swift */,
 				074276C51C8767FD00D50A30 /* Supporting Files */,
 			);
@@ -656,6 +660,7 @@
 				907335901DFE2523000504C8 /* IsPowerOfTwoTests.swift in Sources */,
 				073A93481C8E6C5C003DAF9C /* IsDivisibleTests.swift in Sources */,
 				071D19C51C94BEB100543F77 /* OrderedTests.swift in Sources */,
+				07F68A691F1E570E00E74540 /* RangeProtocolTests.swift in Sources */,
 				073EC7271E3D2D3C00B63692 /* LeastCommonMultipleTests.swift in Sources */,
 				07652E101C8788B300359A03 /* CloserToTests.swift in Sources */,
 				078142B91C7CF494004B68D3 /* PrimeTests.swift in Sources */,
@@ -719,6 +724,7 @@
 				07D91CE11E4CE7B8006DBA11 /* InvertibleOptionSetTests.swift in Sources */,
 				078142B81C7CF494004B68D3 /* OddTests.swift in Sources */,
 				073A93491C8E6C5D003DAF9C /* IsDivisibleTests.swift in Sources */,
+				07F68A6A1F1E570E00E74540 /* RangeProtocolTests.swift in Sources */,
 				071D19C61C94BEB100543F77 /* OrderedTests.swift in Sources */,
 				07FD1C901E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */,
 				07652E111C8788B300359A03 /* CloserToTests.swift in Sources */,
