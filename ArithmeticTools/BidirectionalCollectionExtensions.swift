@@ -6,7 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
-import Foundation
+import Algebra
 import Collections
 
 extension SignedNumber {
@@ -17,7 +17,7 @@ extension SignedNumber {
     }
 }
 
-extension Collection where Iterator.Element: Monoid {
+extension Collection where Iterator.Element: Additive {
 
     typealias M = Iterator.Element
 
@@ -34,7 +34,7 @@ extension Collection where Iterator.Element: Monoid {
             return accumulate(tail, result: result + [sum], sum: sum + head)
         }
 
-        return accumulate(Array(self), result: [], sum: .unit)
+        return accumulate(Array(self), result: [], sum: .zero)
     }
 
     /// - returns: An array of the values contained herein accumulating the running sum to the
@@ -73,21 +73,11 @@ extension BidirectionalCollection where Iterator.Element: SignedNumber {
     }
 }
 
-extension BidirectionalCollection
-    where Iterator.Element: Monoid & FloatingPoint, IndexDistance == Int
-{
-
-    public typealias F = Iterator.Element
-
+extension BidirectionalCollection where Iterator.Element: FloatingPoint & Additive, IndexDistance == Int {
 
     /// - returns: Average of all values contained herein, if there are more than 0 elements.
     /// Otherwise, `nil`.
-    public var mean: F? {
-
-        guard !isEmpty else {
-            return nil
-        }
-
-        return sum / F(count)
+    public var mean: Iterator.Element? {
+        return isEmpty ? nil : sum / Iterator.Element(count)
     }
 }

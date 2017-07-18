@@ -6,6 +6,7 @@
 //  Copyright © 2016 James Bean. All rights reserved.
 //
 
+import Algebra
 import Darwin
 
 /// - returns: All given values risen to the power of two.

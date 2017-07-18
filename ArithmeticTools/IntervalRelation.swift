@@ -178,9 +178,11 @@ extension IntervalRelation: CustomStringConvertible {
     }
 }
 
+import Algebra
+
 /// Interface retroactively unifying `ClosedRange` and `CountableClosedRange`, which are, for
 /// some reason, not unified by a common super-protocol.
-public protocol ClosedRangeProtocol: Semigroup {
+public protocol ClosedRangeProtocol/*: Semigroup*/ {
 
     /// Type of bounds.
     associatedtype Bound: Comparable
