@@ -107,6 +107,8 @@
 		07F68A671F1E4B3900E74540 /* Algebra.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A651F1E4B3900E74540 /* Algebra.swift */; };
 		07F68A691F1E570E00E74540 /* RangeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */; };
 		07F68A6A1F1E570E00E74540 /* RangeProtocolTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */; };
+		07F68A6C1F1E580E00E74540 /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A6B1F1E580E00E74540 /* Fraction.swift */; };
+		07F68A6D1F1E580E00E74540 /* Fraction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F68A6B1F1E580E00E74540 /* Fraction.swift */; };
 		07FD1C891E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8A1E4E310100EB38EA /* IntervalRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C881E4E310100EB38EA /* IntervalRelation.swift */; };
 		07FD1C8F1E4E32B800EB38EA /* IntervalRelationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */; };
@@ -213,6 +215,7 @@
 		07F68A621F1E492C00E74540 /* RangeProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeProtocol.swift; sourceTree = "<group>"; };
 		07F68A651F1E4B3900E74540 /* Algebra.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Algebra.swift; sourceTree = "<group>"; };
 		07F68A681F1E570E00E74540 /* RangeProtocolTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RangeProtocolTests.swift; sourceTree = "<group>"; };
+		07F68A6B1F1E580E00E74540 /* Fraction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fraction.swift; sourceTree = "<group>"; };
 		07FD1C881E4E310100EB38EA /* IntervalRelation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelation.swift; sourceTree = "<group>"; };
 		07FD1C8E1E4E32B800EB38EA /* IntervalRelationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntervalRelationTests.swift; sourceTree = "<group>"; };
 		1DA73FEF407912A83BEC1554 /* Collections.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Collections.framework; path = Carthage/Build/Mac/Collections.framework; sourceTree = "<group>"; };
@@ -319,6 +322,7 @@
 				07502CA81DD2A2A20095AB27 /* LinearRegression.swift */,
 				07FD1C881E4E310100EB38EA /* IntervalRelation.swift */,
 				077554641E1B012700CF4A8A /* Rational.swift */,
+				07F68A6B1F1E580E00E74540 /* Fraction.swift */,
 				07600F961EE477640049E8B2 /* Vector2.swift */,
 				074276C41C8767F300D50A30 /* Supporting Files */,
 			);
@@ -624,6 +628,7 @@
 				078142AA1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA471DF0C4A00071B801 /* StringFormatting.swift in Sources */,
 				9066E8A91F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */,
+				07F68A6C1F1E580E00E74540 /* Fraction.swift in Sources */,
 				07C9DA4A1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
 				074276CD1C877EE400D50A30 /* Power.swift in Sources */,
 				07F5382F1CE3AEAC001294CC /* Comparison.swift in Sources */,
@@ -688,6 +693,7 @@
 				078142AB1C7CF3F1004B68D3 /* Functions.swift in Sources */,
 				07C9DA481DF0C4A00071B801 /* StringFormatting.swift in Sources */,
 				9066E8AA1F01ECFE00B70F4D /* DoubleExtensions.swift in Sources */,
+				07F68A6D1F1E580E00E74540 /* Fraction.swift in Sources */,
 				07C9DA4B1DF0C4D60071B801 /* IntegerExtensions.swift in Sources */,
 				074276CE1C877EE400D50A30 /* Power.swift in Sources */,
 				07F538301CE3AEAC001294CC /* Comparison.swift in Sources */,

@@ -6,68 +6,19 @@
 //  Copyright © 2017 James Bean. All rights reserved.
 //
 
+import Algebra
 import Collections
-
-/// Fraction structure.
-public struct Fraction: Rational {
-
-    // MARK: - Instance Properties
-
-    /// Numerator.
-    public let numerator: Int
-
-    /// Denominator.
-    public let denominator: Int
-
-    // MARK: - Initializers
-
-    /// Creates a `Fraction` value with a given `numerator` and `denominator`.
-    public init(_ numerator: Int, _ denominator: Int) {
-
-        assert(denominator != 0, "Cannot create a Fraction with denominator of 0")
-
-        self.numerator = numerator
-        self.denominator = denominator
-    }
-
-    /// Creates a `Fraction` value with the given `rational` value.
-    public init <R: Rational> (_ rational: R) {
-        self.numerator = rational.numerator
-        self.denominator = rational.denominator
-    }
-}
-
-extension Fraction: ExpressibleByIntegerLiteral {
-
-    /// Create a `Fraction` with an intger literal.
-    public init(integerLiteral value: Int) {
-        self.init(value, 1)
-    }
-}
-
-/// - returns: Product of any two `Rational`-conforming types as a `Fraction`.
-public func * <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
-    return Fraction(lhs.numerator * rhs.numerator, lhs.denominator * rhs.denominator)
-}
-
-/// - returns: Quotient of any two `Rational`-conforming types as a `Fraction`.
-public func / <T: Rational, U: Rational> (lhs: T, rhs: U) -> Fraction {
-    return lhs * rhs.reciprocal
-}
 
 /// Model of ratio.
 public protocol Rational:
-    //Monoid,
+    Additive,
+    Multiplicative,
     SignedNumber,
     Strideable,
     Comparable,
     Hashable,
     CustomStringConvertible
 {
-
-    // MARK: - Type Properties
-
-    static var unit: Self { get }
 
     // MARK: - Instance Properties
 
@@ -119,11 +70,19 @@ public protocol Rational:
 
 extension Rational {
 
-    // MARK: - Monoid
+    // MARK: - Additive
 
-    /// Monoidal unit.
-    public static var unit: Self {
+    public static var zero: Self {
         return Self(0,1)
+    }
+}
+
+extension Rational {
+
+    // MARK: - Multiplicative
+
+    public static var one: Self {
+        return Self(1,1)
     }
 }
 

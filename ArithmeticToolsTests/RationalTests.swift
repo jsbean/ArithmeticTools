@@ -256,7 +256,7 @@ class RationalTests: XCTestCase {
     }
 
     func testStrideableSameDenominator() {
-        let result = Array(stride(from: Fraction.unit, to: Fraction(4,4), by: Fraction(1,4)))
+        let result = Array(stride(from: Fraction.zero, to: Fraction(4,4), by: Fraction(1,4)))
         let expected = [Fraction(0,1), Fraction(1,4), Fraction(2,4), Fraction(3,4)]
         XCTAssertEqual(result, expected)
     }
