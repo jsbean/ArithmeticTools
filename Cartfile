@@ -1,2 +1,2 @@
-github "dn-m/Algebra"
-github "dn-m/Collections"
+github "dn-m/Algebra" == 0.4
+github "dn-m/Collections" == 2.4.3
